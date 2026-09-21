@@ -1,0 +1,21 @@
+# Secrets and saved logins
+.env
+auth/
+
+# Per-run output
+run_state/
+reports/
+test-results/
+playwright-report/
+
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
