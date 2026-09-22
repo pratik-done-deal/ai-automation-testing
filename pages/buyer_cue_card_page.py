@@ -38,11 +38,6 @@ class BuyerCueCardPage(BasePage):
         return ((self.cue_card_payload or {}).get("data") or {}).get("dealStatus")
 
     @property
-    def note_mandatory(self) -> bool:
-        """Company outside the buyer's preferences: the founder note is required (actionHelper.js:52)."""
-        return bool(find_key(self.cue_card_payload or {}, "expressNoteIsMandatory"))
-
-    @property
     def title(self) -> str:
         # Same field NewCueCard uses for the document title (res.data.title), e.g. "S6604 : Fintech > Payments".
         data = (self.cue_card_payload or {}).get("data") or {}

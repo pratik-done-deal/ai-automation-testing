@@ -67,9 +67,6 @@ check on that tab, in order: slot modal → **Request Call (real)** → document
 step fails, the rest are skipped. It uses up one company per run and records it in
 `run_state/phase1.json`, so phase 2 can use that deal.
 
-`tests/buyer/test_buyer_outside_preference_journey.py` does the same on one company outside your
-preferences (mandatory note). Its final Request Call is mocked, so that company stays available.
-
 ## Handy commands
 
 ```bash
@@ -91,7 +88,6 @@ Express interest can happen only once per buyer/company pair, so the tests use u
 | `DD_BROWSE_INTEREST_COUNT` | phase 1 | How many companies to pick from /buyer/browse (default 1). Picked companies are recorded and never reused. |
 | `DD_PHASE2_SELLER_CUE_CARD_UID` | phase 2 | Which phase 1 uid the saved seller session belongs to (only needed with several). |
 | `DD_FRESH_COMPANY_UIDS` | buyer + api tests | One uid per destructive test (about 15 per full run). **The last uid is kept for read-only tests** and is never submitted. |
-| `DD_OUTSIDE_PREF_COMPANY_UID` | outside-preference tests | Only opened, never submitted. |
 | `DD_SELLER_COMPANY_ID`, `DD_BUYER_DISPLAY_NAME` | phase 2 | Optional. Blank = the logged-in seller's own company and the newest Interest Received row. |
 | `DD_ADMIN_DEAL_*_UID` | admin tests | Existing deals, read-only. |
 

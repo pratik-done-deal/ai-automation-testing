@@ -1,4 +1,5 @@
 import re
+import sys
 
 import pytest
 from playwright.sync_api import expect
@@ -8,6 +9,14 @@ from pages.base_page import BasePage
 from pages.buyer_cue_card_page import BuyerCueCardPage
 
 CUE_CARD_HREF = re.compile(r"buyer/cue-card/([^/?#]+)")
+
+
+class CueCardLoadError(Exception):
+    """A listing whose cue card data didn't load; `cue_card.page` is the (still open) tab."""
+
+    def __init__(self, cue_card, reason):
+        super().__init__(reason)
+        self.cue_card = cue_card
 
 
 class BuyerBrowsePage(BasePage):
@@ -41,18 +50,40 @@ class BuyerBrowsePage(BasePage):
         return self.view_listing_links().count() > before
 
     def open_listing(self, uid: str) -> BuyerCueCardPage:
-        """Click that card's View Listing and return the cue card opened in the new tab."""
+        """Click that card's View Listing and return the cue card opened in the new tab.
+
+        Raises CueCardLoadError (with the tab still open) when the card's data request fails or
+        never arrives, so callers can skip that company.
+        """
         link = self.page.locator(f"a[href*='buyer/cue-card/{uid}']").filter(has_text="View Listing").first
         link.scroll_into_view_if_needed()
         context = self.page.context
-        with context.expect_page() as new_tab:
-            with context.expect_event("response", lambda r: BuyerCueCardPage.CUE_CARD_API.search(r.url) and r.ok,
-                                      timeout=30_000) as cue_card_response:
+        responses = []
+
+        def on_response(response):
+            if BuyerCueCardPage.CUE_CARD_API.search(response.url):
+                responses.append(response)
+
+        context.on("response", on_response)  # registered before the click: the tab fetches at once
+        try:
+            with context.expect_page() as new_tab:
                 link.click()
-        tab = new_tab.value
-        tab.wait_for_load_state("networkidle")
+            tab = new_tab.value
+            for _ in range(40):  # up to ~20s
+                if any(r.frame.page == tab for r in responses):
+                    break
+                tab.wait_for_timeout(500)
+        finally:
+            context.remove_listener("response", on_response)
+
         cue_card = BuyerCueCardPage(tab)
-        cue_card.cue_card_payload = cue_card_response.value.json()
+        response = next((r for r in responses if r.frame.page == tab), None)
+        if response is None:
+            raise CueCardLoadError(cue_card, f"no company/cue/card/fetch request within 20s (tab at {tab.url})")
+        if not response.ok:
+            raise CueCardLoadError(cue_card, f"company/cue/card/fetch returned HTTP {response.status}")
+        tab.wait_for_load_state("networkidle")
+        cue_card.cue_card_payload = response.json()
         return cue_card
 
     def back_to_browse(self, cue_card: BuyerCueCardPage):
@@ -72,35 +103,14 @@ class BuyerBrowsePage(BasePage):
                     break
                 continue
             skip.add(uid)
-            cue_card = self.open_listing(uid)
+            try:
+                cue_card = self.open_listing(uid)
+            except CueCardLoadError as error:
+                sys.__stdout__.write(f"\n  skipped {uid}: {error}\n")
+                self.back_to_browse(error.cue_card)
+                continue
             if cue_card.can_express_interest():
                 return uid, cue_card
             self.back_to_browse(cue_card)
         pytest.skip(f"No company on /buyer/browse still offers Express Interest (skipped {len(skip)}); "
                     "raise DD_BROWSE_MAX_CARDS or reset the buyer's deals")
-
-    def open_journey_card(self, used: set, outside_pref: bool, limit: int):
-        """Open listings until one matches `outside_pref`; returns (uid, cue_card, modal) with the
-        Express Interest modal open, or None. The tab stays open for the rest of the session.
-
-        A card of the other kind met on the way is kept (not closed) for the next call.
-        """
-        self.seen = getattr(self, "seen", set(used))
-        self.parked = getattr(self, "parked", {})
-        if outside_pref in self.parked:
-            uid, cue_card, modal = self.parked.pop(outside_pref)
-            used.add(uid)
-            return uid, cue_card, modal
-        for _ in range(limit):
-            uid, cue_card = self.open_next_fresh_listing(self.seen)
-            modal = cue_card.click_express_interest()
-            # The Figma warning banner isn't built; the mandatory note is the only sign in the app.
-            is_outside = cue_card.note_mandatory or modal.note_label.count() > 0
-            if is_outside == outside_pref:
-                used.add(uid)
-                return uid, cue_card, modal
-            if is_outside not in self.parked:
-                self.parked[is_outside] = (uid, cue_card, modal)
-            else:
-                self.back_to_browse(cue_card)
-        return None

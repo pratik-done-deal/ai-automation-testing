@@ -30,8 +30,6 @@ class Settings:
     phase2_seller_cue_card_uid: str = os.getenv("DD_PHASE2_SELLER_CUE_CARD_UID", "")
     # How many /buyer/browse listings a picker opens before giving up.
     browse_max_cards: int = int(os.getenv("DD_BROWSE_MAX_CARDS", "40"))
-    # Optional override; otherwise an outside-preference company is looked for on /buyer/browse.
-    outside_pref_company_uid: str = os.getenv("DD_OUTSIDE_PREF_COMPANY_UID", "")
 
     # Optional overrides for the admin Data Room pair (DR-46/47); otherwise phase 1's deals are used.
     admin_deal_with_request_uid: str = os.getenv("DD_ADMIN_DEAL_WITH_REQUEST_UID", "")

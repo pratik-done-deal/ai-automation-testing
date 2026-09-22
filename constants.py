@@ -67,8 +67,7 @@ class Copy:
 
     # Buyer: slot scheduler (SlotSchedulerModal)
     SLOT_LABEL = "Add preferred slots for meet"  # matches "meet (IST)" and "meeting (IST)"
-    ADD_SECOND_SLOT = "Add Second Slot"
-    OUTSIDE_PREF_WARNING = "You are expressing interest in a company outside your preferences"
+    ADD_SECOND_SLOT = "Add more"  # Figma says "Add Second Slot" (SlotSchedulerModal/index.js:411)
     NOTE_LABEL = "Add a note to send to the founder"
     REQUEST_CALL = "Request Call"
     EI_SUCCESS_SNACKBAR = "Successfully sent interest to company"

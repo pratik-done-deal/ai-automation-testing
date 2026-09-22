@@ -6,9 +6,11 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+import os  # noqa: E402
+
 from config import settings  # noqa: E402
+from designcheck.checker import DesignRun  # noqa: E402
 from pages.buyer_browse_page import BuyerBrowsePage  # noqa: E402
-from pages.buyer_cue_card_page import BuyerCueCardPage  # noqa: E402
 from utils.api_client import DoneDealApi  # noqa: E402
 from utils.flows import express_interest_on  # noqa: E402
 from utils.run_state import load_all  # noqa: E402
@@ -64,7 +66,7 @@ def browse_used():
 
 # ---------------------------------------------------------------- buyer journeys: one cue card, no reloads
 # A journey module opens ONE cue card via View Listing and runs its tests in order on that tab,
-# each picking up where the previous one stopped (marker `incremental`).
+# each picking up where the previous one stopped. A failing step doesn't stop the others.
 
 @pytest.fixture(scope="session")
 def buyer_browse(browser, browse_used):
@@ -78,25 +80,12 @@ def buyer_browse(browser, browse_used):
 
 @pytest.fixture(scope="session")
 def journey_card(buyer_browse, browse_used):
-    """(uid, cue_card, modal): an in-preference company, Express Interest modal open. Opened once."""
-    opened = buyer_browse.open_journey_card(browse_used, outside_pref=False, limit=10)
-    if not opened:
-        pytest.skip("No in-preference company offering Express Interest on /buyer/browse")
-    return opened
-
-
-@pytest.fixture(scope="session")
-def outside_pref_journey_card(buyer_browse, browse_used):
-    """(uid, cue_card, modal): a company outside the buyer's preferences, modal open. Opened once."""
-    if settings.outside_pref_company_uid:
-        uid = settings.outside_pref_company_uid
-        cue_card = BuyerCueCardPage(buyer_browse.page.context.new_page()).open_cue_card(uid)
-        return uid, cue_card, cue_card.click_express_interest()
-    opened = buyer_browse.open_journey_card(browse_used, outside_pref=True, limit=8)
-    if not opened:
-        pytest.skip("No outside-preference company in the first /buyer/browse listings; "
-                    "set DD_OUTSIDE_PREF_COMPANY_UID")
-    return opened
+    """(uid, cue_card, None): the first company on /buyer/browse that still offers Express Interest,
+    opened once. The journey fills the founder note whenever the modal asks for one."""
+    uid, cue_card = buyer_browse.open_next_fresh_listing(buyer_browse.seen)
+    browse_used.add(uid)
+    sys.__stdout__.write(f"\n  journey card: {cue_card.title} | uid {uid}\n")
+    return uid, cue_card, None
 
 
 @pytest.fixture
@@ -154,8 +143,6 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     if report.when != "call" or not report.failed:
         return
-    if "incremental" in item.keywords:
-        item.parent._journey_failed = item.name
     # Save every open tab (browse page, cue card tab, seller, admin) as reports/screenshots/<test>-<n>.png
     SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
     safe_name = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in item.nodeid.split("::")[-1])
@@ -169,10 +156,58 @@ def pytest_runtest_makereport(item, call):
                 report.sections.append(("screenshot", f"{page.url} -> {path}"))
             except Exception:
                 pass
+    if item.config.getoption("--pause-on-failure") and item.config.getoption("headed"):
+        pages = [page for ctx in OPEN_CONTEXTS for page in ctx.pages]
+        if pages:  # the most recently opened tab is the one the test was driving
+            pages[-1].bring_to_front()
+            pages[-1].pause()
 
 
-def pytest_runtest_setup(item):
-    # Journey steps build on each other: after a real failure, skip the rest instead of cascading.
-    failed = getattr(item.parent, "_journey_failed", None)
-    if failed and "incremental" in item.keywords:
-        pytest.skip(f"earlier journey step failed: {failed}")
+# ---------------------------------------------------------------- design checks (no AI, no Figma calls)
+# design.check("<flow step id>") compares the page with docs/features/<slug>/refs/<step>.spec.json (+ .png).
+# Off unless --design / DD_DESIGN_CHECK=1. Differences never fail a test; DD_DESIGN_STRICT=1 fails the run
+# at the end when any feature has high-severity design issues.
+
+def pytest_addoption(parser):
+    parser.addoption("--design", action="store_true", help="run design checks against the saved Figma refs")
+    parser.addoption("--pause-on-failure", action="store_true",
+                     help="with --headed: when a test fails, keep the browser as it is and open the Playwright "
+                          "Inspector; click Resume to go on with the next test")
+
+
+def pytest_configure(config):
+    enabled = config.getoption("--design") or os.getenv("DD_DESIGN_CHECK") == "1"
+    config._design_run = DesignRun(enabled=enabled, strict=os.getenv("DD_DESIGN_STRICT") == "1")
+
+
+class _DesignFixture:
+    def __init__(self, run, slug):
+        self._run, self._slug = run, slug
+
+    def check(self, step_id, page, scope=None):
+        """Screenshot and compare this moment with flow step `step_id` (a no-op without --design)."""
+        if not self._slug:
+            raise RuntimeError("Set DESIGN_FEATURE = '<slug>' in the test module to use design.check()")
+        return self._run.check(self._slug, page, step_id, scope)
+
+
+@pytest.fixture(scope="module")
+def design(request):
+    """Bound to the module's DESIGN_FEATURE (a folder name under docs/features/)."""
+    return _DesignFixture(request.config._design_run, getattr(request.module, "DESIGN_FEATURE", None))
+
+
+def pytest_sessionfinish(session):
+    run = session.config._design_run
+    session.config._design_reports = run.finish() if run.enabled else []
+    if run.strict and any(high for _, _, high in session.config._design_reports):
+        session.exitstatus = 1
+
+
+def pytest_terminal_summary(terminalreporter, config):
+    reports = getattr(config, "_design_reports", [])
+    if not reports:
+        return
+    terminalreporter.section("design check")
+    for feature, report, high in reports:
+        terminalreporter.write_line(f"{feature}: {high} high-severity issue(s) -> {report}")

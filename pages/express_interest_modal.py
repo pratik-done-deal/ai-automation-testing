@@ -26,10 +26,6 @@ class ExpressInterestModal(BasePage):
         return self.page.get_by_role("button", name=Copy.CANCEL, exact=True).first
 
     @property
-    def outside_pref_warning(self):
-        return self.page.get_by_text(re.compile(Copy.OUTSIDE_PREF_WARNING, re.I))
-
-    @property
     def note_label(self):
         return self.page.get_by_text(Copy.NOTE_LABEL)
 
