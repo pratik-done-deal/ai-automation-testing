@@ -59,13 +59,24 @@ DD_PHASE2_SELLER_CUE_CARD_UID=<uid1> pytest -m phase2             # phase 1 used
 
 With several sellers, repeat for each one: save that seller's session, then run with its uid.
 
+## Buyer journey (one cue card, no reloads)
+
+`tests/buyer/test_buyer_journey.py` opens **one** company from /buyer/browse and runs every buyer
+check on that tab, in order: slot modal → **Request Call (real)** → document step → **Send request
+(real)** → after-submit checks. Each test continues from where the previous one left the page. If a
+step fails, the rest are skipped. It uses up one company per run and records it in
+`run_state/phase1.json`, so phase 2 can use that deal.
+
+`tests/buyer/test_buyer_outside_preference_journey.py` does the same on one company outside your
+preferences (mandatory note). Its final Request Call is mocked, so that company stays available.
+
 ## Handy commands
 
 ```bash
 pytest -m smoke                          # quick check after a deploy
 pytest -m "not destructive"              # read-only: creates no deals
 pytest -m "not not_implemented_yet"      # skip PRD items that aren't built yet
-pytest tests/buyer/test_express_interest_slots.py::test_add_second_slot   # one test
+pytest tests/buyer/test_buyer_journey.py --headed   # buyer journey: one cue card, tests in order, no reloads
 pytest -m phase1 --headed --slowmo 300   # watch it in a visible browser
 ```
 
@@ -88,37 +99,30 @@ A test that is missing data **skips** rather than fails.
 
 ## Coverage map
 
-| PRD item | Tests |
-|---|---|
-| Story 1: buyer requests documents | `tests/buyer/test_document_request_modal.py`, `test_request_after_submit.py`, `e2e/test_phase1_buyer_requests.py` |
-| Only existing doc types, no free text | `test_options_come_only_from_existing_document_list`, `api/…::test_free_text_or_unknown_types_are_rejected` |
-| One-time capture / lock | `test_backend_rejects_adding_documents_after_lock`, `api/…::test_second_submission_cannot_extend_request`, `api/…::test_request_locked_after_modal_closed_empty` |
-| Edge case: close without selecting | `test_close_without_selection_creates_no_request`, `api/…::test_empty_list_creates_no_request` |
-| Buyer sees docs and status (pending/fulfilled) | `test_request_after_submit.py`, phase 2 `test_04`, `test_05` |
-| Story 3: seller sees the request while accepting | `seller/test_accept_interest_modal.py`, phase 2 `test_01`, `test_02` |
-| Not mandatory: seller isn't blocked | `test_accept_is_not_blocked_by_unfulfilled_non_deck_requests`, phase 2 `test_02` |
-| Fulfilment no matter who uploads | phase 2 `test_02` (seller UI), `test_05` (API upload) |
-| Edge case: non-requested upload | phase 2 `test_03` |
-| Edge case: partial upload keeps request open | phase 2 `test_04` |
-| Single deal note holds the request | phase 2 `test_06` |
-| Story 4: admin Data Room | phase 2 `test_07`, `admin/test_admin_document_request.py` |
-| Story 5: biz user skips the step | `admin/…::test_biz_user_moving_deal_never_sees_document_request_step` |
-| Slot step (Figma calendar / time / outside preferences) | `tests/buyer/test_express_interest_slots.py` |
+The requirement-by-requirement mapping (DR-01 to DR-53 → test functions) is in
+[`docs/prd/data-room-document-request.test-plan.md`](../docs/prd/data-room-document-request.test-plan.md),
+generated from the `DR-xx` ids referenced in each test.
 
-### Marked `not_implemented_yet` (expected to fail until built)
+### Marked `not_implemented_yet` (strict xfail: they fail until the feature is built)
 
-- **Admin > Deal > Data Room "Topics for the intro call" card**: no frontend code exists for it yet.
-- **Buyer deals tab showing requested docs with pending/fulfilled status**: not built yet (the detailed cue card already has it).
+- **DR-03**: the other 4 PRD doc types (Registration & Licenses, ITR, GST Filing, Credit rating) in the buyer step.
+- **DR-04**: buyer options grouped into Company / Financial / Others.
+- **DR-21**: buyer deals tab shows requested docs with pending/fulfilled status.
+- **DR-22**: buyer can raise a request at introduction_pending. There's no design yet, so the test asserts the stored outcome.
+- **DR-46 + DR-47** (one paired test): admin deal → Data Room "Topics for the intro call" card, shown only when a request exists.
+
+Once one of these starts passing, strict xfail reports it as `XPASS(strict)`. Remove the marker then.
 
 ### Not automated (check manually)
 
-- **Seller express-interest / intro-pending email** (Story 2): documents and note appear only when a request exists.
-- **Daily AI summary** (fulfilled vs. still-open diff): runs as a daily backend job and can't be checked in a single run.
-- **Pending-action reminder attached to the note, and on_hold pause/resume**: runs on the backend scheduler with no UI surface.
+- **Seller EI / intro-pending email** (DR-25 to DR-27): documents and note appear only when a request exists; per-doc upload status.
+- **Daily AI summary** (DR-50): fulfilled vs. still-open diff from a daily backend job.
+- **Pending-action reminder, on_hold pause/resume** (DR-49, DR-51): run on the backend scheduler with no UI.
+- **Success metrics** (DR-52): there's no buyer "request sent" analytics event yet.
 
 ## Known design / PRD / code gaps (raise with product)
 
-1. PRD section 7 lists 8 document types; the buyer modal offers only 4 (Pitchdeck, MIS, Cap Table, Audited Financials) because `SuccessView.DOCUMENT_REQUEST_OPTIONS` comments out the rest. The tests follow the code and still check that every option is in the PRD list.
+1. PRD section 8 lists 8 document types; the buyer modal offers only 4 (Pitchdeck, MIS, Cap Table, Audited Financials) because `SuccessView.DOCUMENT_REQUEST_OPTIONS` comments out the rest. The tests follow the code and still check that every option is in the PRD list.
 2. Figma modal title reads "Express Interest in this company"; the app shows "Express Interest". The label reads "slots for meet" in Figma and "slots for meeting" in the app. Tests match either.
 3. The seller accept modal always pins a mandatory Pitch Deck row, even when the buyer didn't request one.
 

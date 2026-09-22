@@ -1,6 +1,5 @@
-"""Shared fixtures: one browser context per role, API clients, and test data pools."""
+"""Shared fixtures: one browser context per role, API clients, browse-picked companies and test files."""
 import sys
-import threading
 from pathlib import Path
 
 import pytest
@@ -8,15 +7,12 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import settings  # noqa: E402
+from pages.buyer_browse_page import BuyerBrowsePage  # noqa: E402
+from pages.buyer_cue_card_page import BuyerCueCardPage  # noqa: E402
 from utils.api_client import DoneDealApi  # noqa: E402
-from utils.flows import run_express_interest  # noqa: E402
+from utils.flows import express_interest_on  # noqa: E402
+from utils.run_state import load_all  # noqa: E402
 from utils.sessions import OPEN_CONTEXTS, STATE_BY_ROLE, new_role_page, require_state  # noqa: E402
-
-
-def _require(value, name):
-    if not value:
-        pytest.skip(f"{name} is not configured in automation/.env")
-    return value
 
 
 # ---------------------------------------------------------------- browser contexts per role
@@ -58,50 +54,69 @@ def seller_api(playwright):
     api.dispose()
 
 
-@pytest.fixture(scope="session")
-def admin_api(playwright):
-    api = DoneDealApi(playwright, settings.api_url, require_state(STATE_BY_ROLE["admin"], "admin"))
-    yield api
-    api.dispose()
-
-
-# ---------------------------------------------------------------- test data
-
-class _UidPool:
-    """Hands out each fresh cue card uid once per run; an express interest can only happen once per company."""
-
-    def __init__(self, uids):
-        self._uids = list(uids)
-        self._lock = threading.Lock()
-
-    def take(self):
-        with self._lock:
-            if not self._uids:
-                pytest.skip("DD_FRESH_COMPANY_UIDS exhausted: add more uids or reset the buyer's deals")
-            return self._uids.pop(0)
-
+# ---------------------------------------------------------------- companies picked from /buyer/browse
 
 @pytest.fixture(scope="session")
-def uid_pool():
-    # The last uid is reserved for read-only checks (open modal, then cancel) and never submitted.
-    return _UidPool(settings.fresh_company_uids[:-1])
+def browse_used():
+    """Cue card uids already claimed: earlier phase 1 runs plus anything picked in this session."""
+    return set(load_all())
+
+
+# ---------------------------------------------------------------- buyer journeys: one cue card, no reloads
+# A journey module opens ONE cue card via View Listing and runs its tests in order on that tab,
+# each picking up where the previous one stopped (marker `incremental`).
+
+@pytest.fixture(scope="session")
+def buyer_browse(browser, browse_used):
+    """The session's single buyer context, sitting on /buyer/browse."""
+    ctx, page = new_role_page(browser, "buyer")
+    browse = BuyerBrowsePage(page).open_browse()
+    browse.seen = set(browse_used)
+    yield browse
+    ctx.close()
+
+
+@pytest.fixture(scope="session")
+def journey_card(buyer_browse, browse_used):
+    """(uid, cue_card, modal): an in-preference company, Express Interest modal open. Opened once."""
+    opened = buyer_browse.open_journey_card(browse_used, outside_pref=False, limit=10)
+    if not opened:
+        pytest.skip("No in-preference company offering Express Interest on /buyer/browse")
+    return opened
+
+
+@pytest.fixture(scope="session")
+def outside_pref_journey_card(buyer_browse, browse_used):
+    """(uid, cue_card, modal): a company outside the buyer's preferences, modal open. Opened once."""
+    if settings.outside_pref_company_uid:
+        uid = settings.outside_pref_company_uid
+        cue_card = BuyerCueCardPage(buyer_browse.page.context.new_page()).open_cue_card(uid)
+        return uid, cue_card, cue_card.click_express_interest()
+    opened = buyer_browse.open_journey_card(browse_used, outside_pref=True, limit=8)
+    if not opened:
+        pytest.skip("No outside-preference company in the first /buyer/browse listings; "
+                    "set DD_OUTSIDE_PREF_COMPANY_UID")
+    return opened
 
 
 @pytest.fixture
-def fresh_company_uid(uid_pool):
-    return uid_pool.take()
+def fresh_listing(buyer_page, browse_used):
+    """(uid, cue_card) for a company opened from /buyer/browse via View Listing. Tests using it consume it."""
+    return BuyerBrowsePage(buyer_page).open_browse().open_next_fresh_listing(browse_used)
 
 
-@pytest.fixture(scope="session")
-def readonly_company_uid():
-    if not settings.fresh_company_uids:
-        pytest.skip("DD_FRESH_COMPANY_UIDS is not configured in automation/.env")
-    return settings.fresh_company_uids[-1]
+# ---------------------------------------------------------------- buyer at the document request step
+
+@pytest.fixture
+def live_success_view(fresh_listing):
+    """SuccessView after a real express interest (destructive: uses up the company)."""
+    uid, cue_card = fresh_listing
+    return express_interest_on(cue_card, uid)
 
 
-@pytest.fixture(scope="session")
-def sample_pdf(tmp_path_factory):
-    path = tmp_path_factory.mktemp("docs") / "automation-sample.pdf"
+# ---------------------------------------------------------------- files
+
+def _write_pdf(path):
     path.write_bytes(
         b"%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n"
         b"2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\n"
@@ -112,22 +127,16 @@ def sample_pdf(tmp_path_factory):
 
 
 @pytest.fixture(scope="session")
-def seller_company_id():
-    # Optional: without it /deals opens the logged-in seller's own company.
-    return settings.seller_company_id
+def make_pdf(tmp_path_factory):
+    """make_pdf("mis") -> a small PDF with a distinct name, so rows and share toggles can tell files apart."""
+    folder = tmp_path_factory.mktemp("docs")
+    return lambda tag: _write_pdf(folder / f"automation-{tag}.pdf")
 
 
 @pytest.fixture(scope="session")
-def buyer_display_name():
-    # Optional: without it the seller tests use the newest Interest Received row.
-    return settings.buyer_display_name
-
-
-# ---------------------------------------------------------------- composite buyer flows
-
-@pytest.fixture
-def buyer_at_success_view(buyer_page, fresh_company_uid):
-    return run_express_interest(buyer_page, fresh_company_uid)
+def seller_company_id():
+    # Optional: without it /deals opens the logged-in seller's own company.
+    return settings.seller_company_id
 
 
 def pytest_collection_modifyitems(items):
@@ -145,6 +154,8 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     if report.when != "call" or not report.failed:
         return
+    if "incremental" in item.keywords:
+        item.parent._journey_failed = item.name
     # Save every open tab (browse page, cue card tab, seller, admin) as reports/screenshots/<test>-<n>.png
     SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
     safe_name = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in item.nodeid.split("::")[-1])
@@ -158,3 +169,10 @@ def pytest_runtest_makereport(item, call):
                 report.sections.append(("screenshot", f"{page.url} -> {path}"))
             except Exception:
                 pass
+
+
+def pytest_runtest_setup(item):
+    # Journey steps build on each other: after a real failure, skip the rest instead of cascading.
+    failed = getattr(item.parent, "_journey_failed", None)
+    if failed and "incremental" in item.keywords:
+        pytest.skip(f"earlier journey step failed: {failed}")

@@ -4,3 +4,4 @@ playwright==1.47.0
 pytest-html==4.1.1
 pytest-rerunfailures==14.0
 python-dotenv==1.0.1
+pyflakes==3.4.0

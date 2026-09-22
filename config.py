@@ -1,6 +1,6 @@
 """Environment-driven settings for the document-request suite."""
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -9,8 +9,8 @@ ROOT = Path(__file__).parent
 load_dotenv(ROOT / ".env")
 
 
-def _list(name):
-    return [v.strip() for v in os.getenv(name, "").split(",") if v.strip()]
+def _flag(name, default="1"):
+    return os.getenv(name, default).strip().lower() not in ("0", "false", "no", "")
 
 
 @dataclass(frozen=True)
@@ -23,13 +23,17 @@ class Settings:
     admin_state: Path = ROOT / os.getenv("DD_ADMIN_STATE", "auth/admin.json")
 
     seller_company_id: str = os.getenv("DD_SELLER_COMPANY_ID", "")
-    buyer_display_name: str = os.getenv("DD_BUYER_DISPLAY_NAME", "")
-    # Phase 1: how many companies to pick from /buyer/browse. Phase 2: which one to test now.
+    # Phase 1: how many companies get a document request. Phase 2: which phase 1 uid to test now.
     browse_interest_count: int = int(os.getenv("DD_BROWSE_INTEREST_COUNT", "1"))
+    # Phase 1 also expresses interest in one more company and closes without requesting (DR-13/18/31/47).
+    phase1_no_request_round: bool = _flag("DD_PHASE1_NO_REQUEST_ROUND")
     phase2_seller_cue_card_uid: str = os.getenv("DD_PHASE2_SELLER_CUE_CARD_UID", "")
-    fresh_company_uids: list = field(default_factory=lambda: _list("DD_FRESH_COMPANY_UIDS"))
+    # How many /buyer/browse listings a picker opens before giving up.
+    browse_max_cards: int = int(os.getenv("DD_BROWSE_MAX_CARDS", "40"))
+    # Optional override; otherwise an outside-preference company is looked for on /buyer/browse.
     outside_pref_company_uid: str = os.getenv("DD_OUTSIDE_PREF_COMPANY_UID", "")
 
+    # Optional overrides for the admin Data Room pair (DR-46/47); otherwise phase 1's deals are used.
     admin_deal_with_request_uid: str = os.getenv("DD_ADMIN_DEAL_WITH_REQUEST_UID", "")
     admin_deal_without_request_uid: str = os.getenv("DD_ADMIN_DEAL_WITHOUT_REQUEST_UID", "")
 

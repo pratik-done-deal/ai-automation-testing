@@ -1,7 +1,9 @@
 import re
 
+import pytest
 from playwright.sync_api import expect
 
+from config import settings
 from pages.base_page import BasePage
 from pages.buyer_cue_card_page import BuyerCueCardPage
 
@@ -56,3 +58,49 @@ class BuyerBrowsePage(BasePage):
     def back_to_browse(self, cue_card: BuyerCueCardPage):
         cue_card.page.close()
         self.page.bring_to_front()
+
+    def open_next_fresh_listing(self, skip: set):
+        """Open listings in turn until one still offers Express Interest; returns (uid, cue_card).
+
+        Every uid opened is added to `skip`, so a company is never offered twice. Companies the buyer
+        already expressed interest in are closed again and passed over.
+        """
+        for _ in range(settings.browse_max_cards):
+            uid = next((u for u in self.listing_uids() if u not in skip), None)
+            if uid is None:
+                if not self.load_more():
+                    break
+                continue
+            skip.add(uid)
+            cue_card = self.open_listing(uid)
+            if cue_card.can_express_interest():
+                return uid, cue_card
+            self.back_to_browse(cue_card)
+        pytest.skip(f"No company on /buyer/browse still offers Express Interest (skipped {len(skip)}); "
+                    "raise DD_BROWSE_MAX_CARDS or reset the buyer's deals")
+
+    def open_journey_card(self, used: set, outside_pref: bool, limit: int):
+        """Open listings until one matches `outside_pref`; returns (uid, cue_card, modal) with the
+        Express Interest modal open, or None. The tab stays open for the rest of the session.
+
+        A card of the other kind met on the way is kept (not closed) for the next call.
+        """
+        self.seen = getattr(self, "seen", set(used))
+        self.parked = getattr(self, "parked", {})
+        if outside_pref in self.parked:
+            uid, cue_card, modal = self.parked.pop(outside_pref)
+            used.add(uid)
+            return uid, cue_card, modal
+        for _ in range(limit):
+            uid, cue_card = self.open_next_fresh_listing(self.seen)
+            modal = cue_card.click_express_interest()
+            # The Figma warning banner isn't built; the mandatory note is the only sign in the app.
+            is_outside = cue_card.note_mandatory or modal.note_label.count() > 0
+            if is_outside == outside_pref:
+                used.add(uid)
+                return uid, cue_card, modal
+            if is_outside not in self.parked:
+                self.parked[is_outside] = (uid, cue_card, modal)
+            else:
+                self.back_to_browse(cue_card)
+        return None

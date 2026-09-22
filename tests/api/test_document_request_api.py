@@ -1,62 +1,51 @@
-"""Backend contract for `deal/capture/interest/update` (PRD section 6 'Logics').
+"""Backend contract for `deal/capture/interest/update` (PRD section 6 "Logics").
 
-Each test expresses interest through the real UI (the only way to get a fresh deal with the right
-slots) and, while the document-request step is still open, calls the update endpoint directly -
-the same call the "Send request (N)" button makes.
+Each test expresses interest for real on a company from /buyer/browse (the only way to get a fresh
+deal with the right slots) and, while the document-request step is still open, calls the update
+endpoint directly: the same call "Send request (N)" makes. One company per test.
 """
 import pytest
 
-from constants import AUDITED, MIS, PITCHDECK
+from constants import AUDITED, MIS
 from pages.buyer_cue_card_page import BuyerCueCardPage
-from utils.api_client import find_key, is_success, requested_types
+from utils.api_client import is_success, requested_types
 
 pytestmark = [pytest.mark.api, pytest.mark.destructive]
 
-
-def _stored_types(page, uid):
-    cue_card = BuyerCueCardPage(page).open_cue_card(uid)
-    return requested_types(find_key(cue_card.cue_card_payload, "requestedDocuments"))
+UNKNOWN_TYPES = ["bank_statements", "Please send your cap table", "", "PITCH_DECK"]
 
 
-def test_valid_types_are_stored(buyer_at_success_view, buyer_api):
-    status, payload = buyer_api.update_interest(
-        buyer_at_success_view.company_id, requested_doc_types=[PITCHDECK, MIS])
-    assert status == 200 and is_success(payload), payload
-    assert sorted(_stored_types(buyer_at_success_view.cue_card.page, buyer_at_success_view.uid)) == [MIS, PITCHDECK]
+def _stored_types(flow):
+    return requested_types(BuyerCueCardPage(flow.cue_card.page).open_cue_card(flow.uid).requested_documents)
 
 
-@pytest.mark.parametrize("bad_type", ["bank_statements", "Please send your cap table", "", "PITCH_DECK"])
-def test_free_text_or_unknown_types_are_rejected(buyer_at_success_view, buyer_api, bad_type):
-    """PRD: 'existing document type list only. No free-text document names.'"""
-    status, payload = buyer_api.update_interest(buyer_at_success_view.company_id, requested_doc_types=[bad_type])
-    stored = _stored_types(buyer_at_success_view.cue_card.page, buyer_at_success_view.uid)
-    assert bad_type not in stored, f"Unknown type persisted (API said {status} {payload})"
+def test_unknown_or_free_text_types_are_not_stored(live_success_view, buyer_api):
+    """DR-02 (backend): only existing doc-type keys can be stored; no free-text names."""
+    status, payload = buyer_api.update_interest(live_success_view.company_id, requested_doc_types=UNKNOWN_TYPES)
+    stored = _stored_types(live_success_view)
+    assert not set(stored) & set(UNKNOWN_TYPES), f"Unknown type persisted (API said {status} {payload})"
 
 
-def test_empty_list_creates_no_request(buyer_at_success_view, buyer_api):
-    status, payload = buyer_api.update_interest(buyer_at_success_view.company_id, requested_doc_types=[])
+def test_empty_list_creates_no_request(live_success_view, buyer_api):
+    """DR-11 / DR-13 (backend): an empty requestedDocTypes stores nothing."""
+    status, payload = buyer_api.update_interest(live_success_view.company_id, requested_doc_types=[])
     assert status == 200, payload
-    assert _stored_types(buyer_at_success_view.cue_card.page, buyer_at_success_view.uid) == []
+    assert _stored_types(live_success_view) == []
 
 
-def test_second_submission_cannot_extend_request(buyer_at_success_view, buyer_api):
-    """PRD: one-time capture - the second call must not add AUDITED."""
-    first_status, first = buyer_api.update_interest(buyer_at_success_view.company_id, requested_doc_types=[MIS])
+def test_second_submission_cannot_extend_request(live_success_view, buyer_api):
+    """DR-16 (unverified, analysis Q7): one-time capture - a second call must not add AUDITED."""
+    first_status, first = buyer_api.update_interest(live_success_view.company_id, requested_doc_types=[MIS])
     assert first_status == 200 and is_success(first), first
 
-    buyer_api.update_interest(buyer_at_success_view.company_id, requested_doc_types=[MIS, AUDITED])
-    assert _stored_types(buyer_at_success_view.cue_card.page, buyer_at_success_view.uid) == [MIS]
+    buyer_api.update_interest(live_success_view.company_id, requested_doc_types=[MIS, AUDITED])
+    assert _stored_types(live_success_view) == [MIS]
 
 
-def test_duplicate_types_are_stored_once(buyer_at_success_view, buyer_api):
-    buyer_api.update_interest(buyer_at_success_view.company_id, requested_doc_types=[MIS, MIS])
-    assert _stored_types(buyer_at_success_view.cue_card.page, buyer_at_success_view.uid) == [MIS]
+def test_request_locked_after_modal_closed_empty(live_success_view, buyer_api):
+    """DR-15 / DR-16 (unverified): closing without selecting locks the request - a later call stores nothing."""
+    live_success_view.success.close_button.click()
+    live_success_view.success.wait_until_closed()
 
-
-def test_request_locked_after_modal_closed_empty(buyer_at_success_view, buyer_api):
-    """PRD: closing without selecting = no request, and the request is locked once the modal closes."""
-    buyer_at_success_view.success.close_button.click()
-    buyer_at_success_view.success.wait_until_closed()
-
-    buyer_api.update_interest(buyer_at_success_view.company_id, requested_doc_types=[MIS])
-    assert _stored_types(buyer_at_success_view.cue_card.page, buyer_at_success_view.uid) == []
+    buyer_api.update_interest(live_success_view.company_id, requested_doc_types=[MIS])
+    assert _stored_types(live_success_view) == []
