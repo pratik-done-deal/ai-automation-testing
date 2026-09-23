@@ -1,0 +1,5648 @@
+{
+  "figmaNode": "43762:142649",
+  "name": "Detailled cue card_New design system_Financial Details missing",
+  "type": "FRAME",
+  "id": "43762:142649",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 812
+  },
+  "fills": [
+    "#f9fafb"
+  ],
+  "children": [
+    {
+      "name": "Frame 1707481626",
+      "type": "FRAME",
+      "id": "43762:142650",
+      "box": {
+        "x": 98,
+        "y": 40,
+        "w": 746,
+        "h": 38
+      },
+      "layout": {
+        "direction": "row",
+        "gap": 24,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "align": "MAX"
+      },
+      "children": [
+        {
+          "name": "S626 : D2C > Food & Beverages",
+          "type": "TEXT",
+          "id": "43762:142651",
+          "box": {
+            "x": 98,
+            "y": 40,
+            "w": 448,
+            "h": 38
+          },
+          "fills": [
+            "#000000"
+          ],
+          "text": "S626 : D2C > Food & Beverages",
+          "font": {
+            "family": "Instrument Sans",
+            "size": 32,
+            "weight": 600,
+            "lineHeight": 38.4,
+            "letterSpacing": -0.64,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Frame 1707481621",
+          "type": "FRAME",
+          "id": "43762:142652",
+          "box": {
+            "x": 570,
+            "y": 51,
+            "w": 274,
+            "h": 27
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "_Badge base",
+              "type": "FRAME",
+              "id": "43762:142653",
+              "box": {
+                "x": 570,
+                "y": 51,
+                "w": 199,
+                "h": 27
+              },
+              "fills": [
+                {
+                  "type": "GRADIENT_RADIAL",
+                  "stops": [
+                    "#fde75c",
+                    "#f9b31a"
+                  ]
+                }
+              ],
+              "radius": 8,
+              "layout": {
+                "direction": "row",
+                "gap": 4,
+                "padding": [
+                  6,
+                  8,
+                  6,
+                  8
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Text",
+                  "type": "TEXT",
+                  "id": "43762:142654",
+                  "box": {
+                    "x": 578,
+                    "y": 57,
+                    "w": 183,
+                    "h": 15
+                  },
+                  "fills": [
+                    "#7b3703"
+                  ],
+                  "text": "In Conversation with 5+ Investors",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 12,
+                    "weight": 500,
+                    "lineHeight": 14.64,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "_Badge base",
+              "type": "FRAME",
+              "id": "43762:142655",
+              "box": {
+                "x": 777,
+                "y": 51,
+                "w": 67,
+                "h": 27
+              },
+              "fills": [
+                {
+                  "type": "GRADIENT_RADIAL",
+                  "stops": [
+                    "#4e5ba6",
+                    "#363f72"
+                  ]
+                }
+              ],
+              "radius": 8,
+              "layout": {
+                "direction": "row",
+                "gap": 4,
+                "padding": [
+                  6,
+                  8,
+                  6,
+                  8
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Text",
+                  "type": "TEXT",
+                  "id": "43762:142656",
+                  "box": {
+                    "x": 785,
+                    "y": 57,
+                    "w": 51,
+                    "h": 15
+                  },
+                  "fills": [
+                    "#f9fafb"
+                  ],
+                  "text": "Featured",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 12,
+                    "weight": 500,
+                    "lineHeight": 14.64,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481638",
+      "type": "FRAME",
+      "id": "43762:142657",
+      "box": {
+        "x": 98,
+        "y": 102,
+        "w": 940,
+        "h": 1095
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "justify": "MAX"
+      },
+      "children": [
+        {
+          "name": "Frame 1707481632",
+          "type": "FRAME",
+          "id": "43762:142658",
+          "box": {
+            "x": 98,
+            "y": 102,
+            "w": 940,
+            "h": 326
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "radius": 16,
+          "layout": {
+            "direction": "column",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 8,
+              "offset": {
+                "x": 0,
+                "y": 0
+              },
+              "color": "#00000014"
+            }
+          ],
+          "children": [
+            {
+              "name": "Frame 1707481628",
+              "type": "FRAME",
+              "id": "43762:142659",
+              "box": {
+                "x": 98,
+                "y": 102,
+                "w": 940,
+                "h": 48
+              },
+              "fills": [
+                "#fdf8e9"
+              ],
+              "border": {
+                "colors": [
+                  "#ea8a0966"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                16,
+                0,
+                0
+              ],
+              "layout": {
+                "direction": "row",
+                "gap": 24,
+                "padding": [
+                  12,
+                  16,
+                  12,
+                  16
+                ],
+                "justify": "SPACE_BETWEEN",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Frame 1707481629",
+                  "type": "FRAME",
+                  "id": "43762:142660",
+                  "box": {
+                    "x": 114,
+                    "y": 114,
+                    "w": 398,
+                    "h": 24
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 12,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "⭐",
+                      "type": "VECTOR",
+                      "id": "43762:142661",
+                      "box": {
+                        "x": 114,
+                        "y": 114,
+                        "w": 24,
+                        "h": 24
+                      },
+                      "fills": [
+                        "#ffffff"
+                      ]
+                    },
+                    {
+                      "name": "Top company based on Done Deals analysis",
+                      "type": "TEXT",
+                      "id": "43762:142662",
+                      "box": {
+                        "x": 150,
+                        "y": 115,
+                        "w": 362,
+                        "h": 22
+                      },
+                      "fills": [
+                        "#b24608"
+                      ],
+                      "text": "Top company based on Done Deals analysis",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 18,
+                        "weight": 500,
+                        "lineHeight": 21.96,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Badge",
+                  "type": "INSTANCE",
+                  "id": "43762:142663",
+                  "box": {
+                    "x": 857,
+                    "y": 115,
+                    "w": 165,
+                    "h": 22
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "_Badge base",
+                      "type": "INSTANCE",
+                      "id": "I43762:142663;1046:5230",
+                      "box": {
+                        "x": 857,
+                        "y": 115,
+                        "w": 165,
+                        "h": 22
+                      },
+                      "fills": [
+                        "#f0f9ff"
+                      ],
+                      "border": {
+                        "colors": [
+                          "#94d7f7"
+                        ],
+                        "weight": 1,
+                        "align": "INSIDE"
+                      },
+                      "radius": 16,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 6,
+                        "padding": [
+                          2,
+                          8,
+                          2,
+                          6
+                        ],
+                        "justify": "CENTER",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "_Dot",
+                          "type": "INSTANCE",
+                          "id": "I43762:142663;1046:5230;1046:12313",
+                          "box": {
+                            "x": 863,
+                            "y": 122,
+                            "w": 8,
+                            "h": 8
+                          },
+                          "children": [
+                            {
+                              "name": "Dot",
+                              "type": "ELLIPSE",
+                              "id": "I43762:142663;1046:5230;1046:12313;1046:12312",
+                              "box": {
+                                "x": 864,
+                                "y": 123,
+                                "w": 6,
+                                "h": 6
+                              },
+                              "fills": [
+                                "#0ba5ec"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "I43762:142663;1046:5230;1046:30",
+                          "box": {
+                            "x": 877,
+                            "y": 117,
+                            "w": 137,
+                            "h": 18
+                          },
+                          "fills": [
+                            "#026aa2"
+                          ],
+                          "text": "Operating since 4+ years",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 12,
+                            "weight": 500,
+                            "lineHeight": 18,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707481622",
+              "type": "FRAME",
+              "id": "43762:142664",
+              "box": {
+                "x": 98,
+                "y": 150,
+                "w": 940,
+                "h": 278
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "layout": {
+                "direction": "column",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "children": [
+                {
+                  "name": "Frame 1707481658",
+                  "type": "FRAME",
+                  "id": "43762:142665",
+                  "box": {
+                    "x": 118,
+                    "y": 170,
+                    "w": 758,
+                    "h": 182
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707481630",
+                      "type": "FRAME",
+                      "id": "43762:142666",
+                      "box": {
+                        "x": 118,
+                        "y": 170,
+                        "w": 758,
+                        "h": 65
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "About the company",
+                          "type": "TEXT",
+                          "id": "43762:142667",
+                          "box": {
+                            "x": 118,
+                            "y": 170,
+                            "w": 131,
+                            "h": 17
+                          },
+                          "fills": [
+                            "#475467"
+                          ],
+                          "text": "About the company ",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 600,
+                            "lineHeight": 17.08,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        },
+                        {
+                          "name": "We are into manufacturing, marketing and distribution of sparkling juices and energy drinks We are into manufacturing, marketing and distribution of sparkling juices and energy drinks",
+                          "type": "TEXT",
+                          "id": "43762:142668",
+                          "box": {
+                            "x": 118,
+                            "y": 195,
+                            "w": 758,
+                            "h": 40
+                          },
+                          "fills": [
+                            "#101828"
+                          ],
+                          "text": "We are into manufacturing, marketing and distribution of sparkling juices and energy drinks We are into manufacturing, marketing and distribution of sparkling juices and energy drinks",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 400,
+                            "lineHeight": 19.6,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707481631",
+                      "type": "FRAME",
+                      "id": "43762:142669",
+                      "box": {
+                        "x": 118,
+                        "y": 251,
+                        "w": 758,
+                        "h": 101
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 12,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Company Highlights",
+                          "type": "TEXT",
+                          "id": "43762:142670",
+                          "box": {
+                            "x": 118,
+                            "y": 251,
+                            "w": 135,
+                            "h": 17
+                          },
+                          "fills": [
+                            "#475467"
+                          ],
+                          "text": "Company Highlights",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 600,
+                            "lineHeight": 17.08,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        },
+                        {
+                          "name": "Frame 1707480168",
+                          "type": "FRAME",
+                          "id": "43762:142671",
+                          "box": {
+                            "x": 118,
+                            "y": 280,
+                            "w": 758,
+                            "h": 72
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 6,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "Frame 1707480165",
+                              "type": "FRAME",
+                              "id": "43762:142672",
+                              "box": {
+                                "x": 118,
+                                "y": 280,
+                                "w": 758,
+                                "h": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 6,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "CheckSquare",
+                                  "type": "FRAME",
+                                  "id": "43762:142673",
+                                  "box": {
+                                    "x": 118,
+                                    "y": 280,
+                                    "w": 20,
+                                    "h": 20
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Vector",
+                                      "type": "VECTOR",
+                                      "id": "43762:142674",
+                                      "box": {
+                                        "x": 120.5,
+                                        "y": 282.5,
+                                        "w": 15,
+                                        "h": 15
+                                      },
+                                      "fills": [
+                                        "#6172f3"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Led by seasoned founders with over 10 years in the beverage industry",
+                                  "type": "TEXT",
+                                  "id": "43762:142675",
+                                  "box": {
+                                    "x": 144,
+                                    "y": 280,
+                                    "w": 732,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#101828"
+                                  ],
+                                  "text": "Led by seasoned founders with over 10 years in the beverage industry",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 19.6,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707480167",
+                              "type": "FRAME",
+                              "id": "43762:142676",
+                              "box": {
+                                "x": 118,
+                                "y": 306,
+                                "w": 758,
+                                "h": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 6,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "CheckSquare",
+                                  "type": "FRAME",
+                                  "id": "43762:142677",
+                                  "box": {
+                                    "x": 118,
+                                    "y": 306,
+                                    "w": 20,
+                                    "h": 20
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Vector",
+                                      "type": "VECTOR",
+                                      "id": "43762:142678",
+                                      "box": {
+                                        "x": 120.5,
+                                        "y": 308.5,
+                                        "w": 15,
+                                        "h": 15
+                                      },
+                                      "fills": [
+                                        "#6172f3"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Bootstrapped, EBITDA-positive D2C brand",
+                                  "type": "TEXT",
+                                  "id": "43762:142679",
+                                  "box": {
+                                    "x": 144,
+                                    "y": 306,
+                                    "w": 732,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#101828"
+                                  ],
+                                  "text": "Bootstrapped, EBITDA-positive D2C brand",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 19.6,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707480166",
+                              "type": "FRAME",
+                              "id": "43762:142680",
+                              "box": {
+                                "x": 118,
+                                "y": 332,
+                                "w": 758,
+                                "h": 20
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 6,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "CheckSquare",
+                                  "type": "FRAME",
+                                  "id": "43762:142681",
+                                  "box": {
+                                    "x": 118,
+                                    "y": 332,
+                                    "w": 20,
+                                    "h": 20
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Vector",
+                                      "type": "VECTOR",
+                                      "id": "43762:142682",
+                                      "box": {
+                                        "x": 120.5,
+                                        "y": 334.5,
+                                        "w": 15,
+                                        "h": 15
+                                      },
+                                      "fills": [
+                                        "#6172f3"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Scaled impressively and established a robust distributor network, reaching 25 cities nationwide",
+                                  "type": "TEXT",
+                                  "id": "43762:142683",
+                                  "box": {
+                                    "x": 144,
+                                    "y": 332,
+                                    "w": 732,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#101828"
+                                  ],
+                                  "text": "Scaled impressively and established a robust distributor network, reaching 25 cities nationwide",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 19.6,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 1707481633",
+                  "type": "FRAME",
+                  "id": "43762:142684",
+                  "box": {
+                    "x": 118,
+                    "y": 368,
+                    "w": 900,
+                    "h": 40
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Badge",
+                      "type": "FRAME",
+                      "id": "43762:142685",
+                      "box": {
+                        "x": 118,
+                        "y": 368,
+                        "w": 361,
+                        "h": 40
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Badge base",
+                          "type": "FRAME",
+                          "id": "43762:142686",
+                          "box": {
+                            "x": 118,
+                            "y": 368,
+                            "w": 361,
+                            "h": 40
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              2,
+                              8,
+                              2,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "43762:142687",
+                              "box": {
+                                "x": 126,
+                                "y": 370,
+                                "w": 345,
+                                "h": 36
+                              },
+                              "fills": [
+                                "#6941c6"
+                              ],
+                              "text": "Founder Pedigree:  Educational Expertise, Industry Expertise, Exited Founder, Female Founder, C-level Experience",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Badge",
+                      "type": "INSTANCE",
+                      "id": "43762:142688",
+                      "box": {
+                        "x": 487,
+                        "y": 368,
+                        "w": 86,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Badge base",
+                          "type": "INSTANCE",
+                          "id": "I43762:142688;1046:3816",
+                          "box": {
+                            "x": 487,
+                            "y": 368,
+                            "w": 86,
+                            "h": 22
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              2,
+                              8,
+                              2,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:142688;1046:3816;1046:26",
+                              "box": {
+                                "x": 495,
+                                "y": 370,
+                                "w": 70,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#6941c6"
+                              ],
+                              "text": "High growth",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Badge",
+                      "type": "INSTANCE",
+                      "id": "43762:142689",
+                      "box": {
+                        "x": 581,
+                        "y": 368,
+                        "w": 72,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Badge base",
+                          "type": "INSTANCE",
+                          "id": "I43762:142689;1046:3816",
+                          "box": {
+                            "x": 581,
+                            "y": 368,
+                            "w": 72,
+                            "h": 22
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              2,
+                              8,
+                              2,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:142689;1046:3816;1046:26",
+                              "box": {
+                                "x": 589,
+                                "y": 370,
+                                "w": 56,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#6941c6"
+                              ],
+                              "text": "Profitable",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Badge",
+                      "type": "INSTANCE",
+                      "id": "43762:142690",
+                      "box": {
+                        "x": 661,
+                        "y": 368,
+                        "w": 95,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Badge base",
+                          "type": "INSTANCE",
+                          "id": "I43762:142690;1046:3816",
+                          "box": {
+                            "x": 661,
+                            "y": 368,
+                            "w": 95,
+                            "h": 22
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              2,
+                              8,
+                              2,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:142690;1046:3816;1046:26",
+                              "box": {
+                                "x": 669,
+                                "y": 370,
+                                "w": 79,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#6941c6"
+                              ],
+                              "text": "Tech-Enabled",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Badge",
+                      "type": "INSTANCE",
+                      "id": "43762:142691",
+                      "box": {
+                        "x": 764,
+                        "y": 368,
+                        "w": 152,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Badge base",
+                          "type": "INSTANCE",
+                          "id": "I43762:142691;1046:3816",
+                          "box": {
+                            "x": 764,
+                            "y": 368,
+                            "w": 152,
+                            "h": 22
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              2,
+                              8,
+                              2,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:142691;1046:3816;1046:26",
+                              "box": {
+                                "x": 772,
+                                "y": 370,
+                                "w": 136,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#6941c6"
+                              ],
+                              "text": "In-house Manufacturing",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 1707481633",
+          "type": "FRAME",
+          "id": "43762:142692",
+          "box": {
+            "x": 98,
+            "y": 444,
+            "w": 940,
+            "h": 339
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "radius": 16,
+          "layout": {
+            "direction": "column",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 8,
+              "offset": {
+                "x": 0,
+                "y": 0
+              },
+              "color": "#00000014"
+            }
+          ],
+          "children": [
+            {
+              "name": "Frame 1707481628",
+              "type": "FRAME",
+              "id": "43762:142693",
+              "box": {
+                "x": 98,
+                "y": 444,
+                "w": 940,
+                "h": 56
+              },
+              "fills": [
+                "#eef4ff"
+              ],
+              "border": {
+                "colors": [
+                  "#6172f366"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                16,
+                0,
+                0
+              ],
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  12,
+                  16,
+                  12,
+                  16
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "CurrencyInr",
+                  "type": "FRAME",
+                  "id": "43762:142694",
+                  "box": {
+                    "x": 114,
+                    "y": 460,
+                    "w": 24,
+                    "h": 24
+                  },
+                  "fills": [
+                    "#6172f3"
+                  ],
+                  "radius": 4,
+                  "children": [
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43762:142695",
+                      "box": {
+                        "x": 120,
+                        "y": 463,
+                        "w": 13.5,
+                        "h": 18.76
+                      },
+                      "fills": [
+                        "#ffffff"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Funding Details",
+                  "type": "TEXT",
+                  "id": "43762:142696",
+                  "box": {
+                    "x": 150,
+                    "y": 461,
+                    "w": 131,
+                    "h": 22
+                  },
+                  "fills": [
+                    "#3538cd"
+                  ],
+                  "text": "Funding Details",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 18,
+                    "weight": 500,
+                    "lineHeight": 21.96,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707481622",
+              "type": "FRAME",
+              "id": "43762:142697",
+              "box": {
+                "x": 98,
+                "y": 500,
+                "w": 940,
+                "h": 283
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "layout": {
+                "direction": "column",
+                "gap": 24,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "children": [
+                {
+                  "name": "Frame 1707481659",
+                  "type": "FRAME",
+                  "id": "43762:142698",
+                  "box": {
+                    "x": 118,
+                    "y": 520,
+                    "w": 900,
+                    "h": 146
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707481630",
+                      "type": "FRAME",
+                      "id": "43762:142699",
+                      "box": {
+                        "x": 118,
+                        "y": 520,
+                        "w": 900,
+                        "h": 65
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Reason for Raising Capital",
+                          "type": "TEXT",
+                          "id": "43762:142700",
+                          "box": {
+                            "x": 118,
+                            "y": 520,
+                            "w": 171,
+                            "h": 17
+                          },
+                          "fills": [
+                            "#475467"
+                          ],
+                          "text": "Reason for Raising Capital",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 600,
+                            "lineHeight": 17.08,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        },
+                        {
+                          "name": "We are raising capital to scale Bangalore to ₹50 crore/year, replicate this model in Hyderabad, Pune, and Mumbai, and grow the business to ₹250 crore/year by FY27 with strong EBITDA. We'll be following up this round with a Series A same time next year.",
+                          "type": "TEXT",
+                          "id": "43762:142701",
+                          "box": {
+                            "x": 118,
+                            "y": 545,
+                            "w": 900,
+                            "h": 40
+                          },
+                          "fills": [
+                            "#101828"
+                          ],
+                          "text": "We are raising capital to scale Bangalore to ₹50 crore/year, replicate this model in Hyderabad, Pune, and Mumbai, and grow the business to ₹250 crore/year by FY27 with strong EBITDA. We'll be following up this round with a Series A same time next year.",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 400,
+                            "lineHeight": 19.6,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707481631",
+                      "type": "FRAME",
+                      "id": "43762:142702",
+                      "box": {
+                        "x": 118,
+                        "y": 601,
+                        "w": 900,
+                        "h": 65
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Why you should invest in this company?",
+                          "type": "TEXT",
+                          "id": "43762:142703",
+                          "box": {
+                            "x": 118,
+                            "y": 601,
+                            "w": 263,
+                            "h": 17
+                          },
+                          "fills": [
+                            "#475467"
+                          ],
+                          "text": "Why you should invest in this company?",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 600,
+                            "lineHeight": 17.08,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        },
+                        {
+                          "name": "Invest in us to support a proven model that reduces food waste, boosts farmer incomes, and delivers cost savings to businesses, all while driving climate impact.",
+                          "type": "TEXT",
+                          "id": "43762:142704",
+                          "box": {
+                            "x": 118,
+                            "y": 626,
+                            "w": 900,
+                            "h": 40
+                          },
+                          "fills": [
+                            "#101828"
+                          ],
+                          "text": "Invest in us to support a proven model that reduces food waste, boosts farmer incomes, and delivers cost savings to businesses, all while driving climate impact.",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 400,
+                            "lineHeight": 19.6,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 1707481660",
+                  "type": "FRAME",
+                  "id": "43762:142705",
+                  "box": {
+                    "x": 118,
+                    "y": 690,
+                    "w": 900,
+                    "h": 73
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707481636",
+                      "type": "FRAME",
+                      "id": "43762:142706",
+                      "box": {
+                        "x": 118,
+                        "y": 690,
+                        "w": 442,
+                        "h": 73
+                      },
+                      "border": {
+                        "colors": [
+                          "#94d7f7"
+                        ],
+                        "weight": 1,
+                        "align": "INSIDE"
+                      },
+                      "radius": 8,
+                      "layout": {
+                        "direction": "column",
+                        "gap": 12,
+                        "padding": [
+                          16,
+                          16,
+                          12,
+                          16
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707481637",
+                          "type": "FRAME",
+                          "id": "43762:142707",
+                          "box": {
+                            "x": 134,
+                            "y": 706,
+                            "w": 410,
+                            "h": 45
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 221,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "justify": "SPACE_BETWEEN",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Frame 1707481632",
+                              "type": "FRAME",
+                              "id": "43762:142708",
+                              "box": {
+                                "x": 134,
+                                "y": 706,
+                                "w": 71,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "Fund Raise",
+                                  "type": "TEXT",
+                                  "id": "43762:142709",
+                                  "box": {
+                                    "x": 134,
+                                    "y": 706,
+                                    "w": 71,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "Fund Raise",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "₹10 cr",
+                                  "type": "TEXT",
+                                  "id": "43762:142710",
+                                  "box": {
+                                    "x": 134,
+                                    "y": 731,
+                                    "w": 45,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#026aa2"
+                                  ],
+                                  "text": "₹10 cr",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707481633",
+                              "type": "FRAME",
+                              "id": "43762:142711",
+                              "box": {
+                                "x": 297,
+                                "y": 706,
+                                "w": 61,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "Valuation",
+                                  "type": "TEXT",
+                                  "id": "43762:142712",
+                                  "box": {
+                                    "x": 297,
+                                    "y": 706,
+                                    "w": 61,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "Valuation",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "₹80 cr",
+                                  "type": "TEXT",
+                                  "id": "43762:142713",
+                                  "box": {
+                                    "x": 297,
+                                    "y": 731,
+                                    "w": 48,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#026aa2"
+                                  ],
+                                  "text": "₹80 cr",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707481634",
+                              "type": "FRAME",
+                              "id": "43762:142714",
+                              "box": {
+                                "x": 450,
+                                "y": 706,
+                                "w": 94,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "Commitments",
+                                  "type": "TEXT",
+                                  "id": "43762:142715",
+                                  "box": {
+                                    "x": 450,
+                                    "y": 706,
+                                    "w": 94,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "Commitments",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "₹1 cr",
+                                  "type": "TEXT",
+                                  "id": "43762:142716",
+                                  "box": {
+                                    "x": 450,
+                                    "y": 731,
+                                    "w": 34,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#026aa2"
+                                  ],
+                                  "text": "₹1 cr",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "_Badge base",
+                          "type": "FRAME",
+                          "id": "43762:142717",
+                          "box": {
+                            "x": 134,
+                            "y": 679,
+                            "w": 119,
+                            "h": 22
+                          },
+                          "fills": [
+                            "#f0f9ff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#0ba5ec66"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 6,
+                            "padding": [
+                              2,
+                              8,
+                              2,
+                              6
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "_Dot",
+                              "type": "INSTANCE",
+                              "id": "43762:142718",
+                              "box": {
+                                "x": 140,
+                                "y": 686,
+                                "w": 8,
+                                "h": 8
+                              },
+                              "children": [
+                                {
+                                  "name": "Dot",
+                                  "type": "ELLIPSE",
+                                  "id": "I43762:142718;1046:12312",
+                                  "box": {
+                                    "x": 141,
+                                    "y": 687,
+                                    "w": 6,
+                                    "h": 6
+                                  },
+                                  "fills": [
+                                    "#0ba5ec"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "43762:142719",
+                              "box": {
+                                "x": 154,
+                                "y": 681,
+                                "w": 91,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#026aa2"
+                              ],
+                              "text": "Pre-seed Round",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707481635",
+                      "type": "FRAME",
+                      "id": "43762:142720",
+                      "box": {
+                        "x": 576,
+                        "y": 690,
+                        "w": 442,
+                        "h": 73
+                      },
+                      "border": {
+                        "colors": [
+                          "#c6c8cc"
+                        ],
+                        "weight": 1,
+                        "align": "INSIDE"
+                      },
+                      "radius": 8,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 32,
+                        "padding": [
+                          12,
+                          16,
+                          12,
+                          16
+                        ],
+                        "justify": "SPACE_BETWEEN",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707481632",
+                          "type": "FRAME",
+                          "id": "43762:142721",
+                          "box": {
+                            "x": 592,
+                            "y": 704,
+                            "w": 104,
+                            "h": 45
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 8,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "Founder’s Share",
+                              "type": "TEXT",
+                              "id": "43762:142722",
+                              "box": {
+                                "x": 592,
+                                "y": 704,
+                                "w": 104,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#475467"
+                              ],
+                              "text": "Founder’s Share",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 400,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            },
+                            {
+                              "name": "30%",
+                              "type": "TEXT",
+                              "id": "43762:142723",
+                              "box": {
+                                "x": 592,
+                                "y": 729,
+                                "w": 33,
+                                "h": 20
+                              },
+                              "fills": [
+                                "#101828"
+                              ],
+                              "text": "30%",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 16,
+                                "weight": 600,
+                                "lineHeight": 19.52,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Frame 1707481633",
+                          "type": "FRAME",
+                          "id": "43762:142724",
+                          "box": {
+                            "x": 738.5,
+                            "y": 704,
+                            "w": 132,
+                            "h": 45
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 8,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "Funds raised till date",
+                              "type": "TEXT",
+                              "id": "43762:142725",
+                              "box": {
+                                "x": 738.5,
+                                "y": 704,
+                                "w": 132,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#475467"
+                              ],
+                              "text": "Funds raised till date",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 400,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            },
+                            {
+                              "name": "₹1 cr",
+                              "type": "TEXT",
+                              "id": "43762:142726",
+                              "box": {
+                                "x": 738.5,
+                                "y": 729,
+                                "w": 34,
+                                "h": 20
+                              },
+                              "fills": [
+                                "#101828"
+                              ],
+                              "text": "₹1 cr",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 16,
+                                "weight": 600,
+                                "lineHeight": 19.52,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Frame 1707481634",
+                          "type": "FRAME",
+                          "id": "43762:142727",
+                          "box": {
+                            "x": 913,
+                            "y": 704,
+                            "w": 89,
+                            "h": 45
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 8,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "External Debt",
+                              "type": "TEXT",
+                              "id": "43762:142728",
+                              "box": {
+                                "x": 913,
+                                "y": 704,
+                                "w": 89,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#475467"
+                              ],
+                              "text": "External Debt",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 400,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            },
+                            {
+                              "name": "₹25 cr",
+                              "type": "TEXT",
+                              "id": "43762:142729",
+                              "box": {
+                                "x": 913,
+                                "y": 729,
+                                "w": 46,
+                                "h": 20
+                              },
+                              "fills": [
+                                "#101828"
+                              ],
+                              "text": "₹25 cr",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 16,
+                                "weight": 600,
+                                "lineHeight": 19.52,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 1707481635",
+          "type": "FRAME",
+          "id": "43762:142730",
+          "box": {
+            "x": 98,
+            "y": 799,
+            "w": 940,
+            "h": 181
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "radius": 16,
+          "layout": {
+            "direction": "column",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 8,
+              "offset": {
+                "x": 0,
+                "y": 0
+              },
+              "color": "#00000014"
+            }
+          ],
+          "children": [
+            {
+              "name": "Frame 1707481628",
+              "type": "FRAME",
+              "id": "43762:142731",
+              "box": {
+                "x": 98,
+                "y": 799,
+                "w": 940,
+                "h": 56
+              },
+              "fills": [
+                "#eef4ff"
+              ],
+              "border": {
+                "colors": [
+                  "#6172f366"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                16,
+                0,
+                0
+              ],
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  12,
+                  16,
+                  12,
+                  16
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "UserList",
+                  "type": "FRAME",
+                  "id": "43762:142732",
+                  "box": {
+                    "x": 114,
+                    "y": 815,
+                    "w": 24,
+                    "h": 24
+                  },
+                  "fills": [
+                    "#6172f3"
+                  ],
+                  "radius": 4,
+                  "children": [
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43762:142733",
+                      "box": {
+                        "x": 115,
+                        "y": 821.46,
+                        "w": 22,
+                        "h": 12
+                      },
+                      "fills": [
+                        "#ffffff"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Customer Details",
+                  "type": "TEXT",
+                  "id": "43762:142734",
+                  "box": {
+                    "x": 150,
+                    "y": 816,
+                    "w": 146,
+                    "h": 22
+                  },
+                  "fills": [
+                    "#3538cd"
+                  ],
+                  "text": "Customer Details",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 18,
+                    "weight": 500,
+                    "lineHeight": 21.96,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707481622",
+              "type": "FRAME",
+              "id": "43762:142735",
+              "box": {
+                "x": 98,
+                "y": 855,
+                "w": 940,
+                "h": 125
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "layout": {
+                "direction": "row",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "children": [
+                {
+                  "name": "Frame 1707481630",
+                  "type": "FRAME",
+                  "id": "43762:142736",
+                  "box": {
+                    "x": 118,
+                    "y": 875,
+                    "w": 684,
+                    "h": 85
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Customer Profile",
+                      "type": "TEXT",
+                      "id": "43762:142737",
+                      "box": {
+                        "x": 118,
+                        "y": 875,
+                        "w": 112,
+                        "h": 17
+                      },
+                      "fills": [
+                        "#475467"
+                      ],
+                      "text": "Customer Profile",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 600,
+                        "lineHeight": 17.08,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    },
+                    {
+                      "name": "We are raising capital to scale Bangalore to ₹50 crore/year, replicate this model in Hyderabad, Pune, and Mumbai, and grow the business to ₹250 crore/year by FY27 with strong EBITDA. We'll be following up this round with a Series A same time next year",
+                      "type": "TEXT",
+                      "id": "43762:142738",
+                      "box": {
+                        "x": 118,
+                        "y": 900,
+                        "w": 684,
+                        "h": 60
+                      },
+                      "fills": [
+                        "#101828"
+                      ],
+                      "text": "We are raising capital to scale Bangalore to ₹50 crore/year, replicate this model in Hyderabad, Pune, and Mumbai, and grow the business to ₹250 crore/year by FY27 with strong EBITDA. We'll be following up this round with a Series A same time next year",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 400,
+                        "lineHeight": 19.6,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 1707481631",
+                  "type": "FRAME",
+                  "id": "43762:142739",
+                  "box": {
+                    "x": 818,
+                    "y": 875,
+                    "w": 200,
+                    "h": 47
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Business Model",
+                      "type": "TEXT",
+                      "id": "43762:142740",
+                      "box": {
+                        "x": 818,
+                        "y": 875,
+                        "w": 103,
+                        "h": 17
+                      },
+                      "fills": [
+                        "#475467"
+                      ],
+                      "text": "Business Model",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 600,
+                        "lineHeight": 17.08,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    },
+                    {
+                      "name": "Frame 1707481633",
+                      "type": "FRAME",
+                      "id": "43762:142741",
+                      "box": {
+                        "x": 818,
+                        "y": 900,
+                        "w": 200,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Badge",
+                          "type": "INSTANCE",
+                          "id": "43762:142742",
+                          "box": {
+                            "x": 818,
+                            "y": 900,
+                            "w": 38,
+                            "h": 22
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "_Badge base",
+                              "type": "INSTANCE",
+                              "id": "I43762:142742;1046:3816",
+                              "box": {
+                                "x": 818,
+                                "y": 900,
+                                "w": 38,
+                                "h": 22
+                              },
+                              "fills": [
+                                "#f9f5ff"
+                              ],
+                              "radius": 16,
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "padding": [
+                                  2,
+                                  8,
+                                  2,
+                                  8
+                                ],
+                                "justify": "CENTER",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Text",
+                                  "type": "TEXT",
+                                  "id": "I43762:142742;1046:3816;1046:26",
+                                  "box": {
+                                    "x": 826,
+                                    "y": 902,
+                                    "w": 22,
+                                    "h": 18
+                                  },
+                                  "fills": [
+                                    "#6941c6"
+                                  ],
+                                  "text": "B2B",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 12,
+                                    "weight": 500,
+                                    "lineHeight": 18,
+                                    "letterSpacing": 0,
+                                    "align": "CENTER"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Badge",
+                          "type": "INSTANCE",
+                          "id": "43762:142743",
+                          "box": {
+                            "x": 864,
+                            "y": 900,
+                            "w": 40,
+                            "h": 22
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "_Badge base",
+                              "type": "INSTANCE",
+                              "id": "I43762:142743;1046:3816",
+                              "box": {
+                                "x": 864,
+                                "y": 900,
+                                "w": 40,
+                                "h": 22
+                              },
+                              "fills": [
+                                "#f9f5ff"
+                              ],
+                              "radius": 16,
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "padding": [
+                                  2,
+                                  8,
+                                  2,
+                                  8
+                                ],
+                                "justify": "CENTER",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Text",
+                                  "type": "TEXT",
+                                  "id": "I43762:142743;1046:3816;1046:26",
+                                  "box": {
+                                    "x": 872,
+                                    "y": 902,
+                                    "w": 24,
+                                    "h": 18
+                                  },
+                                  "fills": [
+                                    "#6941c6"
+                                  ],
+                                  "text": "B2C",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 12,
+                                    "weight": 500,
+                                    "lineHeight": 18,
+                                    "letterSpacing": 0,
+                                    "align": "CENTER"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 1707481636",
+          "type": "FRAME",
+          "id": "43762:142744",
+          "box": {
+            "x": 98,
+            "y": 996,
+            "w": 940,
+            "h": 201
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "radius": 16,
+          "layout": {
+            "direction": "column",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 8,
+              "offset": {
+                "x": 0,
+                "y": 0
+              },
+              "color": "#00000014"
+            }
+          ],
+          "children": [
+            {
+              "name": "Frame 1707481628",
+              "type": "FRAME",
+              "id": "43762:142745",
+              "box": {
+                "x": 98,
+                "y": 996,
+                "w": 940,
+                "h": 56
+              },
+              "fills": [
+                "#eef4ff"
+              ],
+              "border": {
+                "colors": [
+                  "#6172f366"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                16,
+                0,
+                0
+              ],
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  12,
+                  16,
+                  12,
+                  16
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "UsersThree",
+                  "type": "FRAME",
+                  "id": "43762:142746",
+                  "box": {
+                    "x": 114,
+                    "y": 1012,
+                    "w": 24,
+                    "h": 24
+                  },
+                  "fills": [
+                    "#6172f3"
+                  ],
+                  "radius": 4,
+                  "children": [
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43762:142747",
+                      "box": {
+                        "x": 115.51000000000022,
+                        "y": 1016.3800000000001,
+                        "w": 21,
+                        "h": 15
+                      },
+                      "fills": [
+                        "#ffffff"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Team Details",
+                  "type": "TEXT",
+                  "id": "43762:142748",
+                  "box": {
+                    "x": 150,
+                    "y": 1013,
+                    "w": 109,
+                    "h": 22
+                  },
+                  "fills": [
+                    "#3538cd"
+                  ],
+                  "text": "Team Details",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 18,
+                    "weight": 500,
+                    "lineHeight": 21.96,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707481622",
+              "type": "FRAME",
+              "id": "43762:142749",
+              "box": {
+                "x": 98,
+                "y": 1052,
+                "w": 940,
+                "h": 145
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "layout": {
+                "direction": "row",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "children": [
+                {
+                  "name": "Frame 1707481630",
+                  "type": "FRAME",
+                  "id": "43762:142750",
+                  "box": {
+                    "x": 118,
+                    "y": 1072,
+                    "w": 684,
+                    "h": 105
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "About the Founders",
+                      "type": "TEXT",
+                      "id": "43762:142751",
+                      "box": {
+                        "x": 118,
+                        "y": 1072,
+                        "w": 132,
+                        "h": 17
+                      },
+                      "fills": [
+                        "#475467"
+                      ],
+                      "text": "About the Founders",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 600,
+                        "lineHeight": 17.08,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    },
+                    {
+                      "name": "Founder 1: 26 YO, a tech innovator with expertise in computer science, pioneering vegetable classification based on shape, size, and color. College Dropout  Founder 2: 23 YO, a serial student entrepreneur with a history of leading impactful community projects and youth initiatives. High school dropout",
+                      "type": "TEXT",
+                      "id": "43762:142752",
+                      "box": {
+                        "x": 118,
+                        "y": 1097,
+                        "w": 684,
+                        "h": 80
+                      },
+                      "fills": [
+                        "#101828"
+                      ],
+                      "text": "Founder 1: 26 YO, a tech innovator with expertise in computer science, pioneering vegetable classification based on shape, size, and color. College Dropout  Founder 2: 23 YO, a serial student entrepreneur with a history of leading impactful community projects and youth initiatives. High school dropout",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 400,
+                        "lineHeight": 19.6,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 1707481632",
+                  "type": "FRAME",
+                  "id": "43762:142753",
+                  "box": {
+                    "x": 818,
+                    "y": 1072,
+                    "w": 200,
+                    "h": 45
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Team Size",
+                      "type": "TEXT",
+                      "id": "43762:142754",
+                      "box": {
+                        "x": 818,
+                        "y": 1072,
+                        "w": 67,
+                        "h": 17
+                      },
+                      "fills": [
+                        "#475467"
+                      ],
+                      "text": "Team Size",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 600,
+                        "lineHeight": 17.08,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    },
+                    {
+                      "name": "100",
+                      "type": "TEXT",
+                      "id": "43762:142755",
+                      "box": {
+                        "x": 818,
+                        "y": 1097,
+                        "w": 29,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#1d2939"
+                      ],
+                      "text": "100",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 16,
+                        "weight": 600,
+                        "lineHeight": 19.52,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Success toast message",
+      "type": "INSTANCE",
+      "id": "43762:142756",
+      "box": {
+        "x": 559,
+        "y": 14,
+        "w": 378,
+        "h": 64
+      },
+      "fills": [
+        "#f6fef9"
+      ],
+      "border": {
+        "colors": [
+          "#6ce9a6"
+        ],
+        "weight": 1,
+        "align": "INSIDE"
+      },
+      "radius": 8,
+      "layout": {
+        "direction": "row",
+        "gap": 12,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Content",
+          "type": "FRAME",
+          "id": "I43762:142756;3960:56565",
+          "box": {
+            "x": 575,
+            "y": 30,
+            "w": 346,
+            "h": 32
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 12,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Icon",
+              "type": "FRAME",
+              "id": "I43762:142756;3960:56588",
+              "box": {
+                "x": 575,
+                "y": 30,
+                "w": 32,
+                "h": 32
+              },
+              "children": [
+                {
+                  "name": "Featured icon",
+                  "type": "INSTANCE",
+                  "id": "I43762:142756;3960:56589",
+                  "box": {
+                    "x": 570,
+                    "y": 26,
+                    "w": 40,
+                    "h": 40
+                  },
+                  "fills": [
+                    "#d1fadf"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#ecfdf3"
+                    ],
+                    "weight": 6,
+                    "align": "CENTER"
+                  },
+                  "radius": 28,
+                  "children": [
+                    {
+                      "name": "check-circle",
+                      "type": "INSTANCE",
+                      "id": "I43762:142756;3960:56589;1102:5675",
+                      "box": {
+                        "x": 580,
+                        "y": 36,
+                        "w": 20,
+                        "h": 20
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:142756;3960:56589;1102:5675;1037:34200",
+                          "box": {
+                            "x": 581.6599999999999,
+                            "y": 37.66,
+                            "w": 16.67,
+                            "h": 16.67
+                          },
+                          "border": {
+                            "colors": [
+                              "#039855"
+                            ],
+                            "weight": 1.6666666269302368,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Actions",
+              "type": "FRAME",
+              "id": "I43762:142756;3960:56581",
+              "box": {
+                "x": 619,
+                "y": 36,
+                "w": 302,
+                "h": 20
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Content",
+                  "type": "FRAME",
+                  "id": "I43762:142756;3960:56582",
+                  "box": {
+                    "x": 619,
+                    "y": 36,
+                    "w": 302,
+                    "h": 20
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 20,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Text",
+                      "type": "TEXT",
+                      "id": "I43762:142756;3960:56585",
+                      "box": {
+                        "x": 619,
+                        "y": 36,
+                        "w": 302,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#027a46"
+                      ],
+                      "text": "Your intro call has been requested successfully",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 20,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Right bar",
+      "type": "FRAME",
+      "id": "43762:142757",
+      "box": {
+        "x": 1062,
+        "y": 40,
+        "w": 378,
+        "h": 577
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 26,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "Frame 1707481657",
+          "type": "FRAME",
+          "id": "43762:142758",
+          "box": {
+            "x": 1062,
+            "y": 40,
+            "w": 378,
+            "h": 36
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 10,
+            "padding": [
+              0,
+              24,
+              0,
+              0
+            ],
+            "justify": "MAX"
+          },
+          "children": [
+            {
+              "name": "_Button base",
+              "type": "FRAME",
+              "id": "43762:142759",
+              "box": {
+                "x": 1380,
+                "y": 40,
+                "w": 36,
+                "h": 36
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#d0d5dd"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": 8,
+              "layout": {
+                "direction": "row",
+                "gap": 4,
+                "padding": [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "radius": 2,
+                  "offset": {
+                    "x": 0,
+                    "y": 1
+                  },
+                  "color": "#1018280d"
+                }
+              ],
+              "children": [
+                {
+                  "name": "Share",
+                  "type": "FRAME",
+                  "id": "43762:142760",
+                  "box": {
+                    "x": 1388,
+                    "y": 48,
+                    "w": 20,
+                    "h": 20
+                  },
+                  "children": [
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43762:142761",
+                      "box": {
+                        "x": 1389.88,
+                        "y": 51.75,
+                        "w": 16.25,
+                        "h": 13.75
+                      },
+                      "fills": [
+                        "#344054"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 1707482034",
+          "type": "FRAME",
+          "id": "43762:142762",
+          "box": {
+            "x": 1062,
+            "y": 102,
+            "w": 378,
+            "h": 515
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 1707481622",
+              "type": "FRAME",
+              "id": "43762:142763",
+              "box": {
+                "x": 1062,
+                "y": 102,
+                "w": 378,
+                "h": 142
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                0,
+                0,
+                16
+              ],
+              "layout": {
+                "direction": "column",
+                "gap": 32,
+                "padding": [
+                  20,
+                  24,
+                  20,
+                  20
+                ]
+              },
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "radius": 8,
+                  "offset": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "color": "#00000014"
+                }
+              ],
+              "children": [
+                {
+                  "name": "Frame 1707481653",
+                  "type": "FRAME",
+                  "id": "43790:149412",
+                  "box": {
+                    "x": 1082,
+                    "y": 122,
+                    "w": 334,
+                    "h": 102
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "align": "MAX"
+                  },
+                  "children": [
+                    {
+                      "name": "_Button base",
+                      "type": "FRAME",
+                      "id": "43790:149413",
+                      "box": {
+                        "x": 1082,
+                        "y": 122,
+                        "w": 334,
+                        "h": 50
+                      },
+                      "fills": [
+                        "#0f18284d"
+                      ],
+                      "radius": 8,
+                      "layout": {
+                        "direction": "column",
+                        "gap": 4,
+                        "padding": [
+                          12,
+                          24,
+                          12,
+                          24
+                        ],
+                        "justify": "CENTER",
+                        "align": "CENTER"
+                      },
+                      "effects": [
+                        {
+                          "type": "DROP_SHADOW",
+                          "radius": 2,
+                          "offset": {
+                            "x": 0,
+                            "y": 1
+                          },
+                          "color": "#0000000d"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "Frame 1707481663",
+                          "type": "FRAME",
+                          "id": "43790:149414",
+                          "box": {
+                            "x": 1176,
+                            "y": 137,
+                            "w": 146,
+                            "h": 20
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 4,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Check",
+                              "type": "FRAME",
+                              "id": "43790:149415",
+                              "box": {
+                                "x": 1176,
+                                "y": 137,
+                                "w": 20,
+                                "h": 20
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "43790:149416",
+                                  "box": {
+                                    "x": 1178.5,
+                                    "y": 142,
+                                    "w": 15.63,
+                                    "h": 11.25
+                                  },
+                                  "fills": [
+                                    "#f9fafb"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "43790:149417",
+                              "box": {
+                                "x": 1200,
+                                "y": 138.5,
+                                "w": 122,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#ffffff"
+                              ],
+                              "text": "Expressed Interest",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 500,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707481662",
+                      "type": "FRAME",
+                      "id": "43790:149418",
+                      "box": {
+                        "x": 1082,
+                        "y": 180,
+                        "w": 334,
+                        "h": 44
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Button base",
+                          "type": "FRAME",
+                          "id": "43790:149419",
+                          "box": {
+                            "x": 1082,
+                            "y": 180,
+                            "w": 163,
+                            "h": 44
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#d0d5dd"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 8,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 4,
+                            "padding": [
+                              12,
+                              24,
+                              12,
+                              24
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "effects": [
+                            {
+                              "type": "DROP_SHADOW",
+                              "radius": 2,
+                              "offset": {
+                                "x": 0,
+                                "y": 1
+                              },
+                              "color": "#1018280d"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "Eye",
+                              "type": "FRAME",
+                              "id": "43790:149420",
+                              "box": {
+                                "x": 1101,
+                                "y": 192,
+                                "w": 20,
+                                "h": 20
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "43790:149421",
+                                  "box": {
+                                    "x": 1101.63,
+                                    "y": 195.75,
+                                    "w": 18.75,
+                                    "h": 12.5
+                                  },
+                                  "fills": [
+                                    "#344054"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "43790:149422",
+                              "box": {
+                                "x": 1125,
+                                "y": 193.5,
+                                "w": 101,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#344054"
+                              ],
+                              "text": "View Pitchdeck",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 500,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "_Button base",
+                          "type": "FRAME",
+                          "id": "43790:149427",
+                          "box": {
+                            "x": 1253,
+                            "y": 180,
+                            "w": 163,
+                            "h": 44
+                          },
+                          "fills": [
+                            "#ecfdf3"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#a6d6c0"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 8,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 4,
+                            "padding": [
+                              12,
+                              20,
+                              12,
+                              20
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "effects": [
+                            {
+                              "type": "DROP_SHADOW",
+                              "radius": 2,
+                              "offset": {
+                                "x": 0,
+                                "y": 1
+                              },
+                              "color": "#1018280d"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "FileArrowDown",
+                              "type": "FRAME",
+                              "id": "43790:149428",
+                              "box": {
+                                "x": 1274,
+                                "y": 192,
+                                "w": 20,
+                                "h": 20
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "43790:149429",
+                                  "box": {
+                                    "x": 1277.13,
+                                    "y": 193.88,
+                                    "w": 13.75,
+                                    "h": 16.25
+                                  },
+                                  "fills": [
+                                    "#027a48"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "43790:149430",
+                              "box": {
+                                "x": 1298,
+                                "y": 193.5,
+                                "w": 97,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#027a48"
+                              ],
+                              "text": "Download PDF",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 500,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707481659",
+              "type": "FRAME",
+              "id": "43790:149317",
+              "box": {
+                "x": 1062,
+                "y": 260,
+                "w": 378,
+                "h": 127
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                0,
+                0,
+                16
+              ],
+              "layout": {
+                "direction": "column",
+                "gap": 32,
+                "padding": [
+                  20,
+                  24,
+                  20,
+                  20
+                ]
+              },
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "radius": 8,
+                  "offset": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "color": "#00000014"
+                }
+              ],
+              "children": [
+                {
+                  "name": "Frame 1707481661",
+                  "type": "FRAME",
+                  "id": "43790:149318",
+                  "box": {
+                    "x": 1082,
+                    "y": 280,
+                    "w": 334,
+                    "h": 87
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707483003",
+                      "type": "FRAME",
+                      "id": "43790:149338",
+                      "box": {
+                        "x": 1082,
+                        "y": 280,
+                        "w": 334,
+                        "h": 45
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 4,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707483002",
+                          "type": "FRAME",
+                          "id": "43790:149339",
+                          "box": {
+                            "x": 1082,
+                            "y": 280,
+                            "w": 260,
+                            "h": 22
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 6,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "ChatCircleDots",
+                              "type": "FRAME",
+                              "id": "44147:47498",
+                              "box": {
+                                "x": 1082,
+                                "y": 281,
+                                "w": 20,
+                                "h": 20
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "44147:47499",
+                                  "box": {
+                                    "x": 1083.88,
+                                    "y": 282.88,
+                                    "w": 16.25,
+                                    "h": 16.25
+                                  },
+                                  "fills": [
+                                    "#9e77ed"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707480311",
+                              "type": "FRAME",
+                              "id": "43790:149342",
+                              "box": {
+                                "x": 1108,
+                                "y": 280,
+                                "w": 234,
+                                "h": 22
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "You flagged for the intro call",
+                                  "type": "TEXT",
+                                  "id": "43790:149343",
+                                  "box": {
+                                    "x": 1108,
+                                    "y": 280,
+                                    "w": 234,
+                                    "h": 22
+                                  },
+                                  "fills": [
+                                    "#344054"
+                                  ],
+                                  "text": "You flagged for the intro call",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 18,
+                                    "weight": 500,
+                                    "lineHeight": 21.96,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "_Badge base",
+                          "type": "FRAME",
+                          "id": "43790:149344",
+                          "box": {
+                            "x": 1082,
+                            "y": 306,
+                            "w": 211,
+                            "h": 19
+                          },
+                          "radius": 6,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 4,
+                            "padding": [
+                              2,
+                              0,
+                              2,
+                              0
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "43790:149345",
+                              "box": {
+                                "x": 1082,
+                                "y": 308,
+                                "w": 211,
+                                "h": 15
+                              },
+                              "fills": [
+                                "#475467"
+                              ],
+                              "text": "A reminder of what you asked to cover.",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 400,
+                                "lineHeight": 14.64,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707483017",
+                      "type": "FRAME",
+                      "id": "44147:47441",
+                      "box": {
+                        "x": 1082,
+                        "y": 341,
+                        "w": 334,
+                        "h": 26
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 9,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "_Badge base",
+                          "type": "FRAME",
+                          "id": "44147:47443",
+                          "box": {
+                            "x": 1082,
+                            "y": 341,
+                            "w": 97,
+                            "h": 26
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#c6c8cc"
+                            ],
+                            "weight": 0.5,
+                            "align": "INSIDE"
+                          },
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 6,
+                            "padding": [
+                              4,
+                              8,
+                              4,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "File",
+                              "type": "FRAME",
+                              "id": "44147:47485",
+                              "box": {
+                                "x": 1090,
+                                "y": 346,
+                                "w": 16,
+                                "h": 16
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "44147:47486",
+                                  "box": {
+                                    "x": 1092.5,
+                                    "y": 347.5,
+                                    "w": 11,
+                                    "h": 13
+                                  },
+                                  "fills": [
+                                    "#9e77ed"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "44147:47446",
+                              "box": {
+                                "x": 1112,
+                                "y": 345,
+                                "w": 59,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#414651"
+                              ],
+                              "text": "Pitch deck",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "_Badge base",
+                          "type": "FRAME",
+                          "id": "44147:47448",
+                          "box": {
+                            "x": 1188,
+                            "y": 341,
+                            "w": 60,
+                            "h": 26
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#c6c8cc"
+                            ],
+                            "weight": 0.5,
+                            "align": "INSIDE"
+                          },
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 6,
+                            "padding": [
+                              4,
+                              8,
+                              4,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "File",
+                              "type": "FRAME",
+                              "id": "44147:47489",
+                              "box": {
+                                "x": 1196,
+                                "y": 346,
+                                "w": 16,
+                                "h": 16
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "44147:47490",
+                                  "box": {
+                                    "x": 1198.5,
+                                    "y": 347.5,
+                                    "w": 11,
+                                    "h": 13
+                                  },
+                                  "fills": [
+                                    "#9e77ed"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "44147:47451",
+                              "box": {
+                                "x": 1218,
+                                "y": 345,
+                                "w": 22,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#414651"
+                              ],
+                              "text": "MIS",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "_Badge base",
+                          "type": "FRAME",
+                          "id": "44147:47453",
+                          "box": {
+                            "x": 1257,
+                            "y": 341,
+                            "w": 92,
+                            "h": 26
+                          },
+                          "fills": [
+                            "#f9f5ff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#c6c8cc"
+                            ],
+                            "weight": 0.5,
+                            "align": "INSIDE"
+                          },
+                          "radius": 16,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 6,
+                            "padding": [
+                              4,
+                              8,
+                              4,
+                              8
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "File",
+                              "type": "FRAME",
+                              "id": "44147:47492",
+                              "box": {
+                                "x": 1265,
+                                "y": 346,
+                                "w": 16,
+                                "h": 16
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "44147:47493",
+                                  "box": {
+                                    "x": 1267.5,
+                                    "y": 347.5,
+                                    "w": 11,
+                                    "h": 13
+                                  },
+                                  "fills": [
+                                    "#9e77ed"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "44147:47456",
+                              "box": {
+                                "x": 1287,
+                                "y": 345,
+                                "w": 54,
+                                "h": 18
+                              },
+                              "fills": [
+                                "#414651"
+                              ],
+                              "text": "Cap table",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 12,
+                                "weight": 500,
+                                "lineHeight": 18,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707481658",
+              "type": "FRAME",
+              "id": "43762:142780",
+              "box": {
+                "x": 1062,
+                "y": 403,
+                "w": 378,
+                "h": 214
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "border": {
+                "colors": [
+                  "#eaecf0"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "radius": [
+                16,
+                0,
+                0,
+                16
+              ],
+              "layout": {
+                "direction": "column",
+                "gap": 32,
+                "padding": [
+                  20,
+                  24,
+                  20,
+                  20
+                ]
+              },
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "radius": 8,
+                  "offset": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "color": "#00000014"
+                }
+              ],
+              "children": [
+                {
+                  "name": "Frame 1707481661",
+                  "type": "FRAME",
+                  "id": "43762:142781",
+                  "box": {
+                    "x": 1082,
+                    "y": 423,
+                    "w": 334,
+                    "h": 174
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 12,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707481628",
+                      "type": "FRAME",
+                      "id": "43762:142782",
+                      "box": {
+                        "x": 1082,
+                        "y": 423,
+                        "w": 334,
+                        "h": 24
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 12,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "ChartBar",
+                          "type": "FRAME",
+                          "id": "43762:142783",
+                          "box": {
+                            "x": 1082,
+                            "y": 423,
+                            "w": 24,
+                            "h": 24
+                          },
+                          "fills": [
+                            "#6172f3"
+                          ],
+                          "radius": 4,
+                          "children": [
+                            {
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "id": "43762:142784",
+                              "box": {
+                                "x": 1084.25,
+                                "y": 426,
+                                "w": 19.5,
+                                "h": 17.25
+                              },
+                              "fills": [
+                                "#ffffff"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Financial Details",
+                          "type": "TEXT",
+                          "id": "43762:142785",
+                          "box": {
+                            "x": 1118,
+                            "y": 424,
+                            "w": 137,
+                            "h": 22
+                          },
+                          "fills": [
+                            "#3538cd"
+                          ],
+                          "text": "Financial Details",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 18,
+                            "weight": 500,
+                            "lineHeight": 21.96,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707481655",
+                      "type": "FRAME",
+                      "id": "43762:142786",
+                      "box": {
+                        "x": 1082,
+                        "y": 459,
+                        "w": 334,
+                        "h": 138
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 20,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707481635",
+                          "type": "FRAME",
+                          "id": "43762:142787",
+                          "box": {
+                            "x": 1082,
+                            "y": 459,
+                            "w": 334,
+                            "h": 138
+                          },
+                          "border": {
+                            "colors": [
+                              "#c6c8cc"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 8,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 40,
+                            "padding": [
+                              12,
+                              16,
+                              12,
+                              16
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Frame 1707481632",
+                              "type": "FRAME",
+                              "id": "43762:142788",
+                              "box": {
+                                "x": 1116,
+                                "y": 471,
+                                "w": 113,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "TTM Revenue",
+                                  "type": "TEXT",
+                                  "id": "43762:142789",
+                                  "box": {
+                                    "x": 1116,
+                                    "y": 471,
+                                    "w": 90,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "TTM Revenue",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "₹24 cr",
+                                  "type": "TEXT",
+                                  "id": "43762:142790",
+                                  "box": {
+                                    "x": 1116,
+                                    "y": 496,
+                                    "w": 46,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#1d2939"
+                                  ],
+                                  "text": "₹24 cr",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707481633",
+                              "type": "FRAME",
+                              "id": "43762:142791",
+                              "box": {
+                                "x": 1269,
+                                "y": 471,
+                                "w": 113,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "Monthly Revenue",
+                                  "type": "TEXT",
+                                  "id": "43762:142792",
+                                  "box": {
+                                    "x": 1269,
+                                    "y": 471,
+                                    "w": 113,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "Monthly Revenue",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "₹2 cr",
+                                  "type": "TEXT",
+                                  "id": "43762:142793",
+                                  "box": {
+                                    "x": 1269,
+                                    "y": 496,
+                                    "w": 37,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#1d2939"
+                                  ],
+                                  "text": "₹2 cr",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707481635",
+                              "type": "FRAME",
+                              "id": "43762:142794",
+                              "box": {
+                                "x": 1116,
+                                "y": 540,
+                                "w": 113,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "Gross Margin",
+                                  "type": "TEXT",
+                                  "id": "43762:142795",
+                                  "box": {
+                                    "x": 1116,
+                                    "y": 540,
+                                    "w": 86,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "Gross Margin",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "10%",
+                                  "type": "TEXT",
+                                  "id": "43762:142796",
+                                  "box": {
+                                    "x": 1116,
+                                    "y": 565,
+                                    "w": 30,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#1d2939"
+                                  ],
+                                  "text": "10%",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707481634",
+                              "type": "FRAME",
+                              "id": "43762:142797",
+                              "box": {
+                                "x": 1269,
+                                "y": 540,
+                                "w": 113,
+                                "h": 45
+                              },
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "name": "EBITDA",
+                                  "type": "TEXT",
+                                  "id": "43762:142798",
+                                  "box": {
+                                    "x": 1269,
+                                    "y": 540,
+                                    "w": 51,
+                                    "h": 17
+                                  },
+                                  "fills": [
+                                    "#475467"
+                                  ],
+                                  "text": "EBITDA",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 14,
+                                    "weight": 400,
+                                    "lineHeight": 17.08,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                },
+                                {
+                                  "name": "₹2 cr",
+                                  "type": "TEXT",
+                                  "id": "43762:142799",
+                                  "box": {
+                                    "x": 1269,
+                                    "y": 565,
+                                    "w": 37,
+                                    "h": 20
+                                  },
+                                  "fills": [
+                                    "#1d2939"
+                                  ],
+                                  "text": "₹2 cr",
+                                  "font": {
+                                    "family": "Instrument Sans",
+                                    "size": 16,
+                                    "weight": 600,
+                                    "lineHeight": 19.52,
+                                    "letterSpacing": 0,
+                                    "align": "LEFT"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bottom bar",
+      "type": "FRAME",
+      "id": "43762:142800",
+      "box": {
+        "x": 98,
+        "y": 1221,
+        "w": 940,
+        "h": 82
+      },
+      "fills": [
+        "#ffffff"
+      ],
+      "border": {
+        "colors": [
+          "#d0d5dd"
+        ],
+        "weight": 1,
+        "align": "INSIDE"
+      },
+      "radius": [
+        16,
+        16,
+        0,
+        0
+      ],
+      "layout": {
+        "direction": "row",
+        "gap": 48,
+        "padding": [
+          20,
+          20,
+          20,
+          20
+        ],
+        "justify": "SPACE_BETWEEN",
+        "align": "CENTER"
+      },
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 8,
+          "offset": {
+            "x": 0,
+            "y": -1
+          },
+          "color": "#0000001f"
+        }
+      ],
+      "children": [
+        {
+          "name": "Steps",
+          "type": "FRAME",
+          "id": "43762:142801",
+          "box": {
+            "x": 118,
+            "y": 1241,
+            "w": 900,
+            "h": 42
+          },
+          "border": {
+            "colors": [
+              "#d0d5dd"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 8,
+          "layout": {
+            "direction": "row",
+            "gap": 11,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "justify": "SPACE_BETWEEN",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Button",
+              "type": "FRAME",
+              "id": "43762:142802",
+              "box": {
+                "x": 118,
+                "y": 1244,
+                "w": 113,
+                "h": 36
+              },
+              "border": {
+                "colors": [
+                  "#d0d5dd"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "_Button base",
+                  "type": "FRAME",
+                  "id": "43762:142803",
+                  "box": {
+                    "x": 118,
+                    "y": 1244,
+                    "w": 113,
+                    "h": 36
+                  },
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      8,
+                      16,
+                      8,
+                      16
+                    ],
+                    "justify": "CENTER",
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "arrow-right",
+                      "type": "INSTANCE",
+                      "id": "43762:142804",
+                      "box": {
+                        "x": 134,
+                        "y": 1254,
+                        "w": 16,
+                        "h": 16
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:142804;1037:33952",
+                          "box": {
+                            "x": 137.32999999999993,
+                            "y": 1257.33,
+                            "w": 9.33,
+                            "h": 9.33
+                          },
+                          "border": {
+                            "colors": [
+                              "#d0d5dd"
+                            ],
+                            "weight": 2,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Text",
+                      "type": "TEXT",
+                      "id": "43762:142805",
+                      "box": {
+                        "x": 158,
+                        "y": 1252,
+                        "w": 57,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#d0d5dd"
+                      ],
+                      "text": "Previous",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 20,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Details",
+              "type": "TEXT",
+              "id": "43762:142806",
+              "box": {
+                "x": 527.5,
+                "y": 1253.5,
+                "w": 106,
+                "h": 17
+              },
+              "fills": [
+                "#667085"
+              ],
+              "text": "Company 1 of 10",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 14,
+                "weight": 500,
+                "lineHeight": 17.08,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            },
+            {
+              "name": "Button",
+              "type": "FRAME",
+              "id": "43762:142807",
+              "box": {
+                "x": 930,
+                "y": 1244,
+                "w": 88,
+                "h": 36
+              },
+              "border": {
+                "colors": [
+                  "#d0d5dd"
+                ],
+                "weight": 1,
+                "align": "INSIDE"
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "_Button base",
+                  "type": "FRAME",
+                  "id": "43762:142808",
+                  "box": {
+                    "x": 930,
+                    "y": 1244,
+                    "w": 88,
+                    "h": 36
+                  },
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      8,
+                      16,
+                      8,
+                      16
+                    ],
+                    "justify": "CENTER",
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Text",
+                      "type": "TEXT",
+                      "id": "43762:142809",
+                      "box": {
+                        "x": 946,
+                        "y": 1252,
+                        "w": 32,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#101828"
+                      ],
+                      "text": "Next",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 20,
+                        "letterSpacing": 0,
+                        "align": "LEFT"
+                      }
+                    },
+                    {
+                      "name": "arrow-right",
+                      "type": "INSTANCE",
+                      "id": "43762:142810",
+                      "box": {
+                        "x": 986,
+                        "y": 1254,
+                        "w": 16,
+                        "h": 16
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:142810;1037:33952",
+                          "box": {
+                            "x": 989.3400000000001,
+                            "y": 1257.33,
+                            "w": 9.33,
+                            "h": 9.33
+                          },
+                          "border": {
+                            "colors": [
+                              "#7755bd"
+                            ],
+                            "weight": 2,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sidebar_Collapsed",
+      "type": "FRAME",
+      "id": "43762:142811",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 74,
+        "h": 812
+      },
+      "fills": [
+        "#121212"
+      ],
+      "layout": {
+        "direction": "column",
+        "gap": 320,
+        "padding": [
+          16,
+          12,
+          16,
+          12
+        ],
+        "justify": "SPACE_BETWEEN",
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Top",
+          "type": "FRAME",
+          "id": "43762:142812",
+          "box": {
+            "x": 12,
+            "y": 16,
+            "w": 50,
+            "h": 355.98
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 24,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "DD Logo",
+              "type": "FRAME",
+              "id": "43762:142813",
+              "box": {
+                "x": 12,
+                "y": 16,
+                "w": 50,
+                "h": 49.98
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 10,
+                "padding": [
+                  12,
+                  12,
+                  12,
+                  12
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Layer_1-2",
+                  "type": "GROUP",
+                  "id": "43762:142814",
+                  "box": {
+                    "x": 24,
+                    "y": 28,
+                    "w": 26,
+                    "h": 25.98
+                  },
+                  "children": [
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43762:142815",
+                      "box": {
+                        "x": 24,
+                        "y": 28,
+                        "w": 26,
+                        "h": 25.98
+                      },
+                      "fills": [
+                        "#ffffff"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upper icons",
+              "type": "FRAME",
+              "id": "43762:142816",
+              "box": {
+                "x": 12,
+                "y": 89.98000000000002,
+                "w": 50,
+                "h": 282
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Browse",
+                  "type": "FRAME",
+                  "id": "43762:142817",
+                  "box": {
+                    "x": 12,
+                    "y": 89.98000000000002,
+                    "w": 50,
+                    "h": 50
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "GlobeSimple",
+                      "type": "FRAME",
+                      "id": "43762:142818",
+                      "box": {
+                        "x": 24,
+                        "y": 101.98000000000002,
+                        "w": 26,
+                        "h": 26
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:142819",
+                          "box": {
+                            "x": 26.4399999999996,
+                            "y": 104.42000000000002,
+                            "w": 21.13,
+                            "h": 21.13
+                          },
+                          "fills": [
+                            "#eaecf0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Top picks",
+                  "type": "FRAME",
+                  "id": "43762:142820",
+                  "box": {
+                    "x": 12,
+                    "y": 147.98000000000002,
+                    "w": 50,
+                    "h": 50
+                  },
+                  "fills": [
+                    "#282828"
+                  ],
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "ThumbsUp",
+                      "type": "FRAME",
+                      "id": "43762:142821",
+                      "box": {
+                        "x": 24,
+                        "y": 159.98000000000002,
+                        "w": 26,
+                        "h": 26
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:142822",
+                          "box": {
+                            "x": 25.63000000000011,
+                            "y": 161.61,
+                            "w": 22.75,
+                            "h": 20.31
+                          },
+                          "fills": [
+                            "#eaecf0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Tracked",
+                  "type": "FRAME",
+                  "id": "43762:142823",
+                  "box": {
+                    "x": 12,
+                    "y": 205.98000000000002,
+                    "w": 50,
+                    "h": 50
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "BookmarkSimple",
+                      "type": "FRAME",
+                      "id": "43762:142824",
+                      "box": {
+                        "x": 24,
+                        "y": 217.98000000000002,
+                        "w": 26,
+                        "h": 26
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:142825",
+                          "box": {
+                            "x": 29.6899999999996,
+                            "y": 221.23000000000002,
+                            "w": 14.63,
+                            "h": 20.31
+                          },
+                          "fills": [
+                            "#eaecf0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Deals",
+                  "type": "FRAME",
+                  "id": "43762:142826",
+                  "box": {
+                    "x": 12,
+                    "y": 263.98,
+                    "w": 50,
+                    "h": 50
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Suitcase",
+                      "type": "FRAME",
+                      "id": "43762:142827",
+                      "box": {
+                        "x": 24,
+                        "y": 275.98,
+                        "w": 26,
+                        "h": 26
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:142828",
+                          "box": {
+                            "x": 26.4399999999996,
+                            "y": 278.42,
+                            "w": 21.13,
+                            "h": 19.5
+                          },
+                          "fills": [
+                            "#eaecf0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Mandates",
+                  "type": "FRAME",
+                  "id": "43762:142829",
+                  "box": {
+                    "x": 12,
+                    "y": 321.98,
+                    "w": 50,
+                    "h": 50
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "FileMagnifyingGlass",
+                      "type": "FRAME",
+                      "id": "43762:142830",
+                      "box": {
+                        "x": 24,
+                        "y": 333.98,
+                        "w": 26,
+                        "h": 26
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:142831",
+                          "box": {
+                            "x": 28.0600000000004,
+                            "y": 336.41999999999996,
+                            "w": 17.88,
+                            "h": 21.13
+                          },
+                          "fills": [
+                            "#eaecf0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bottom",
+          "type": "FRAME",
+          "id": "43762:142832",
+          "box": {
+            "x": 12,
+            "y": 631,
+            "w": 50,
+            "h": 165
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 32,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Divider",
+              "type": "VECTOR",
+              "id": "43762:142833",
+              "box": {
+                "x": 12,
+                "y": 631,
+                "w": 50,
+                "h": 1
+              },
+              "fills": [
+                "#475467"
+              ]
+            },
+            {
+              "name": "Progress circle",
+              "type": "FRAME",
+              "id": "43762:142834",
+              "box": {
+                "x": 12,
+                "y": 664,
+                "w": 50,
+                "h": 50
+              },
+              "children": [
+                {
+                  "name": "Ring",
+                  "type": "FRAME",
+                  "id": "43762:142835",
+                  "box": {
+                    "x": 12,
+                    "y": 664.19,
+                    "w": 50,
+                    "h": 50
+                  },
+                  "children": [
+                    {
+                      "name": "Background",
+                      "type": "ELLIPSE",
+                      "id": "43762:142836",
+                      "box": {
+                        "x": 14.340000000000146,
+                        "y": 666.53,
+                        "w": 45.31,
+                        "h": 45.31
+                      },
+                      "border": {
+                        "colors": [
+                          "#3538cd"
+                        ],
+                        "weight": 4.6875,
+                        "align": "CENTER"
+                      }
+                    },
+                    {
+                      "name": "Line",
+                      "type": "ELLIPSE",
+                      "id": "43762:142837",
+                      "box": {
+                        "x": 14.340000000000146,
+                        "y": 666.53,
+                        "w": 45.31,
+                        "h": 45.31
+                      },
+                      "border": {
+                        "colors": [
+                          "#c0c7fa"
+                        ],
+                        "weight": 4.6875,
+                        "align": "CENTER"
+                      }
+                    },
+                    {
+                      "name": "Text",
+                      "type": "TEXT",
+                      "id": "43762:142838",
+                      "box": {
+                        "x": 26,
+                        "y": 681,
+                        "w": 22,
+                        "h": 16
+                      },
+                      "fills": [
+                        "#eaecf0"
+                      ],
+                      "text": "2/5",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 15.63,
+                        "letterSpacing": 0,
+                        "align": "CENTER"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Mandates",
+              "type": "FRAME",
+              "id": "43762:142840",
+              "box": {
+                "x": 12,
+                "y": 746,
+                "w": 50,
+                "h": 50
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 8,
+                "padding": [
+                  12,
+                  12,
+                  12,
+                  12
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "User",
+                  "type": "FRAME",
+                  "id": "43762:142841",
+                  "box": {
+                    "x": 24,
+                    "y": 758,
+                    "w": 26,
+                    "h": 26
+                  },
+                  "children": [
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43762:142842",
+                      "box": {
+                        "x": 26.43000000000029,
+                        "y": 760.43,
+                        "w": 21.15,
+                        "h": 20.33
+                      },
+                      "fills": [
+                        "#eaecf0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 """Multi-step buyer flows reused by fixtures and module-scoped setups."""
 from dataclasses import dataclass, field
 
-from pages.buyer_cue_card_page import BuyerCueCardPage
-from pages.interest_shared_modal import InterestSharedModal
+from pages.buyer_module.buyer_cue_card_page import BuyerCueCardPage
+from pages.buyer_module.interest_shared_modal import InterestSharedModal
 from utils.network import mock_json, success_body
 from utils.sessions import cue_card_company_id
 

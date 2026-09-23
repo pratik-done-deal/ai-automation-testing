@@ -1,0 +1,59 @@
+# Feature registry entry: a PRD feature, i.e. a change to one or more modules.
+# Read by utils/registry.py, impact/ and the pending_feature / superseded_by markers.
+#
+#   req_prefix  requirement ids in the analysis and in test docstrings, e.g. DR-06
+#   status      in_development | shipped. Default for every environment; DD_SHIPPED / DD_UNSHIPPED
+#               override it per run. Tests marked pending_feature("<slug>") are expected to fail
+#               until shipped; tests marked superseded_by("<slug>") are skipped once it is.
+#   modules     the module slugs this feature changes (specs/modules/<slug>/)
+#   footprint   what the feature touches in the app; impact.find matches later features against it
+#   changes     written when a later feature changes this one (see that feature's impact.md)
+#
+# When it ships, /ship-feature folds these requirements into the module specs listed below and
+# this folder stays as history.
+
+name: Data Room Document Request
+slug: data-room-document-request
+req_prefix: DR
+status: shipped
+
+modules: []   # filled once the buyer cue card / seller deals modules are mapped
+
+docs:
+  prd: prd/data-room-document-request.md
+  analysis: prd/data-room-document-request.analysis.md
+  test_plan: prd/data-room-document-request.test-plan.md
+  flow: features/data-room-document-request/flow.yaml
+
+footprint:
+  routes:
+    - /buyer/browse
+    - /deals/:companyId?
+    - /dataroom/:uid?
+    - /admin/deals
+    - /admin/deal-notes/:uid
+  src:
+    - src/Component/NewCueCard/SlotSchedulerModal/
+    - src/Component/NewCueCard/CuecardDefaultSection/
+    - src/Container/SellerDealsAndInvestors/
+    - src/Container/DealNotesContainer/DealDataRoom/
+    - src/Container/DataRoom/dataRoomModel.js
+    - src/constants/keyVariableConstants.js
+  endpoints:
+    - deal/capture/interest
+    - deal/capture/interest/update
+    - company/cue/card/fetch
+    - deal/query
+    - deal/seller
+    - document/query
+    - document/user/upload
+    - document/deal/share
+  screens:
+    - Buyer cue card (detailed)
+    - Express Interest modal (slot picker)
+    - Express Interest confirmation step (document request)
+    - Seller deals, Interest Received
+    - Seller Accept investor interest modal
+    - Admin deal page, Data Room tab
+
+changes: []

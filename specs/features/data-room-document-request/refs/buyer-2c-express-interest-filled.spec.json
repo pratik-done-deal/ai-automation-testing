@@ -1,0 +1,1022 @@
+{
+  "figmaNode": "43762:146825",
+  "name": "Modal - Required Note",
+  "type": "FRAME",
+  "id": "43762:146825",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 457,
+    "h": 529
+  },
+  "fills": [
+    "#ffffff"
+  ],
+  "radius": 12,
+  "layout": {
+    "direction": "column",
+    "gap": 24,
+    "padding": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "justify": "CENTER"
+  },
+  "effects": [
+    {
+      "type": "DROP_SHADOW",
+      "radius": 8,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 8
+      },
+      "color": "#10182808"
+    },
+    {
+      "type": "DROP_SHADOW",
+      "radius": 24,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 20
+      },
+      "color": "#10182814"
+    }
+  ],
+  "children": [
+    {
+      "name": "Content",
+      "type": "FRAME",
+      "id": "43762:146826",
+      "box": {
+        "x": 24,
+        "y": 24,
+        "w": 409,
+        "h": 413
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "Text and supporting text",
+          "type": "FRAME",
+          "id": "43762:146827",
+          "box": {
+            "x": 24,
+            "y": 24,
+            "w": 409,
+            "h": 48
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 987431",
+              "type": "FRAME",
+              "id": "43762:146828",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "w": 409,
+                "h": 48
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 20,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Featured icon",
+                  "type": "INSTANCE",
+                  "id": "43762:146829",
+                  "box": {
+                    "x": 24,
+                    "y": 24,
+                    "w": 48,
+                    "h": 48
+                  },
+                  "fills": [
+                    "#d1fadf"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#ecfdf3"
+                    ],
+                    "weight": 8,
+                    "align": "CENTER"
+                  },
+                  "radius": 28,
+                  "children": [
+                    {
+                      "name": "check-circle",
+                      "type": "INSTANCE",
+                      "id": "I43762:146829;1102:5691",
+                      "box": {
+                        "x": 36,
+                        "y": 36,
+                        "w": 24,
+                        "h": 24
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:146829;1102:5691;1037:34200",
+                          "box": {
+                            "x": 38,
+                            "y": 38,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "border": {
+                            "colors": [
+                              "#039855"
+                            ],
+                            "weight": 2,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Text",
+                  "type": "TEXT",
+                  "id": "43762:146830",
+                  "box": {
+                    "x": 92,
+                    "y": 34,
+                    "w": 341,
+                    "h": 28
+                  },
+                  "fills": [
+                    "#101828"
+                  ],
+                  "text": "Express Interest in this company",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 18,
+                    "weight": 500,
+                    "lineHeight": 28,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Express your interest by proposing a few time slots for an introductory discussion. The final meeting time will be mutually confirmed.",
+          "type": "TEXT",
+          "id": "43762:146831",
+          "box": {
+            "x": 24,
+            "y": 88,
+            "w": 409,
+            "h": 60
+          },
+          "fills": [
+            "#667085"
+          ],
+          "text": "Express your interest by proposing a few time slots for an introductory discussion. The final meeting time will be mutually confirmed.",
+          "font": {
+            "family": "Instrument Sans",
+            "size": 14,
+            "weight": 400,
+            "lineHeight": 20,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Frame 1707478514",
+          "type": "FRAME",
+          "id": "43762:146832",
+          "box": {
+            "x": 24,
+            "y": 164,
+            "w": 409,
+            "h": 114
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "justify": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Frame 1707481730",
+              "type": "FRAME",
+              "id": "43762:146833",
+              "box": {
+                "x": 24,
+                "y": 164,
+                "w": 409,
+                "h": 114
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Label",
+                  "type": "TEXT",
+                  "id": "43762:146834",
+                  "box": {
+                    "x": 24,
+                    "y": 164,
+                    "w": 409,
+                    "h": 20
+                  },
+                  "fills": [
+                    "#344054"
+                  ],
+                  "text": "Add preferred slots for meet (IST) * ",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 14,
+                    "weight": 500,
+                    "lineHeight": 20,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                },
+                {
+                  "name": "_Button base",
+                  "type": "FRAME",
+                  "id": "43762:146835",
+                  "box": {
+                    "x": 24,
+                    "y": 190,
+                    "w": 409,
+                    "h": 41
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#d0d5dd"
+                    ],
+                    "weight": 1,
+                    "align": "INSIDE"
+                  },
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 24,
+                    "padding": [
+                      10,
+                      16,
+                      10,
+                      16
+                    ],
+                    "justify": "SPACE_BETWEEN",
+                    "align": "CENTER"
+                  },
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "radius": 2,
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "color": "#1018280d"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Frame 1707482080",
+                      "type": "FRAME",
+                      "id": "43762:146836",
+                      "box": {
+                        "x": 40,
+                        "y": 200.5,
+                        "w": 228,
+                        "h": 20
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 20,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "04/03/2026",
+                          "type": "TEXT",
+                          "id": "43762:146837",
+                          "box": {
+                            "x": 40,
+                            "y": 200.5,
+                            "w": 79,
+                            "h": 20
+                          },
+                          "fills": [
+                            "#344054"
+                          ],
+                          "text": "04/03/2026",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 500,
+                            "lineHeight": 20,
+                            "letterSpacing": 0,
+                            "align": "RIGHT"
+                          }
+                        },
+                        {
+                          "name": "11:00 AM - 11:30 AM",
+                          "type": "TEXT",
+                          "id": "43762:146838",
+                          "box": {
+                            "x": 139,
+                            "y": 200.5,
+                            "w": 129,
+                            "h": 20
+                          },
+                          "fills": [
+                            "#344054"
+                          ],
+                          "text": "11:00 AM - 11:30 AM",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 500,
+                            "lineHeight": 20,
+                            "letterSpacing": 0,
+                            "align": "RIGHT"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "calendar",
+                      "type": "INSTANCE",
+                      "id": "43762:146839",
+                      "box": {
+                        "x": 397,
+                        "y": 200.5,
+                        "w": 20,
+                        "h": 20
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:146839;1037:33980",
+                          "box": {
+                            "x": 399.5,
+                            "y": 202.17000000000002,
+                            "w": 15,
+                            "h": 16.67
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.6699999570846558,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "_Button base",
+                  "type": "FRAME",
+                  "id": "43762:146840",
+                  "box": {
+                    "x": 24,
+                    "y": 237,
+                    "w": 409,
+                    "h": 41
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 6,
+                    "padding": [
+                      10,
+                      16,
+                      10,
+                      16
+                    ],
+                    "justify": "CENTER",
+                    "align": "CENTER"
+                  },
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "radius": 2,
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "color": "#1018280d"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Add Second Slot",
+                      "type": "TEXT",
+                      "id": "43762:146841",
+                      "box": {
+                        "x": 161,
+                        "y": 247.5,
+                        "w": 109,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#344054"
+                      ],
+                      "text": "Add Second Slot",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 20,
+                        "letterSpacing": 0,
+                        "align": "RIGHT"
+                      }
+                    },
+                    {
+                      "name": "PlusCircle",
+                      "type": "FRAME",
+                      "id": "43762:146842",
+                      "box": {
+                        "x": 276,
+                        "y": 247.5,
+                        "w": 20,
+                        "h": 20
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:146843",
+                          "box": {
+                            "x": 276,
+                            "y": 247.5,
+                            "w": 20,
+                            "h": 20
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:146844",
+                          "box": {
+                            "x": 278.5,
+                            "y": 250,
+                            "w": 15,
+                            "h": 15
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:146845",
+                          "box": {
+                            "x": 282.8800000000001,
+                            "y": 257.5,
+                            "w": 6.25,
+                            "h": 0
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:146846",
+                          "box": {
+                            "x": 286,
+                            "y": 254.38,
+                            "w": 0,
+                            "h": 6.25
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 987327",
+          "type": "FRAME",
+          "id": "43762:146847",
+          "box": {
+            "x": 24,
+            "y": 294,
+            "w": 409,
+            "h": 143
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 1707478818",
+              "type": "FRAME",
+              "id": "43762:146848",
+              "box": {
+                "x": 24,
+                "y": 294,
+                "w": 409,
+                "h": 43
+              },
+              "fills": [
+                "#fffaeb"
+              ],
+              "radius": 4,
+              "layout": {
+                "direction": "row",
+                "gap": 8,
+                "padding": [
+                  6,
+                  8,
+                  6,
+                  8
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "lightbulb-02",
+                  "type": "INSTANCE",
+                  "id": "43762:146849",
+                  "box": {
+                    "x": 32,
+                    "y": 305.5,
+                    "w": 20,
+                    "h": 20
+                  },
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "VECTOR",
+                      "id": "I43762:146849;251:9902",
+                      "box": {
+                        "x": 33.659999999999854,
+                        "y": 307.16999999999996,
+                        "w": 16.67,
+                        "h": 16.67
+                      },
+                      "border": {
+                        "colors": [
+                          "#dc6803"
+                        ],
+                        "weight": 1.6666666269302368,
+                        "align": "CENTER"
+                      },
+                      "radius": [
+                        0,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "You are expressing interest in a company outside your preferences; please add a note to continue.",
+                  "type": "TEXT",
+                  "id": "43762:146850",
+                  "box": {
+                    "x": 60,
+                    "y": 300,
+                    "w": 365,
+                    "h": 31
+                  },
+                  "fills": [
+                    "#b54708"
+                  ],
+                  "text": "You are expressing interest in a company outside your preferences; please add a note to continue.",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 12,
+                    "weight": 400,
+                    "lineHeight": 16,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "id": "43762:146851",
+              "box": {
+                "x": 24,
+                "y": 345,
+                "w": 352,
+                "h": 20
+              },
+              "fills": [
+                "#344054"
+              ],
+              "text": "Add a note to send to the founder *",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 14,
+                "weight": 500,
+                "lineHeight": 20,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            },
+            {
+              "name": "Textarea input field",
+              "type": "INSTANCE",
+              "id": "43762:146852",
+              "box": {
+                "x": 24,
+                "y": 373,
+                "w": 409,
+                "h": 64
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "_Textarea input field base",
+                  "type": "INSTANCE",
+                  "id": "I43762:146852;1238:440",
+                  "box": {
+                    "x": 24,
+                    "y": 373,
+                    "w": 409,
+                    "h": 64
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 6,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Input with label",
+                      "type": "FRAME",
+                      "id": "I43762:146852;1238:440;1238:82",
+                      "box": {
+                        "x": 24,
+                        "y": 373,
+                        "w": 409,
+                        "h": 64
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 6,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Input",
+                          "type": "FRAME",
+                          "id": "I43762:146852;1238:440;1238:84",
+                          "box": {
+                            "x": 24,
+                            "y": 373,
+                            "w": 409,
+                            "h": 64
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#d0d5dd"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 8,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 8,
+                            "padding": [
+                              10,
+                              14,
+                              10,
+                              14
+                            ],
+                            "align": "CENTER"
+                          },
+                          "effects": [
+                            {
+                              "type": "DROP_SHADOW",
+                              "radius": 2,
+                              "offset": {
+                                "x": 0,
+                                "y": 1
+                              },
+                              "color": "#1018280d"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:146852;1238:440;1238:87",
+                              "box": {
+                                "x": 38,
+                                "y": 383,
+                                "w": 381,
+                                "h": 44
+                              },
+                              "fills": [
+                                "#344054"
+                              ],
+                              "text": "Exploring minority growth investments. Would like to discuss ARR growth and expansion strategy.",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 400,
+                                "lineHeight": 22,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "_Modal actions",
+      "type": "FRAME",
+      "id": "43762:146853",
+      "box": {
+        "x": 24,
+        "y": 461,
+        "w": 409,
+        "h": 44
+      },
+      "layout": {
+        "direction": "row",
+        "gap": 12,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "_Button base",
+          "type": "INSTANCE",
+          "id": "43762:146854",
+          "box": {
+            "x": 24,
+            "y": 461,
+            "w": 198.5,
+            "h": 44
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "border": {
+            "colors": [
+              "#d0d5dd"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 8,
+          "layout": {
+            "direction": "row",
+            "gap": 8,
+            "padding": [
+              10,
+              18,
+              10,
+              18
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 2,
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "color": "#1018280d"
+            }
+          ],
+          "children": [
+            {
+              "name": "Text",
+              "type": "TEXT",
+              "id": "I43762:146854;1054:6972",
+              "box": {
+                "x": 97.25,
+                "y": 471,
+                "w": 52,
+                "h": 24
+              },
+              "fills": [
+                "#344054"
+              ],
+              "text": "Cancel",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 16,
+                "weight": 500,
+                "lineHeight": 24,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Btn/large",
+          "type": "FRAME",
+          "id": "43762:146855",
+          "box": {
+            "x": 234.5,
+            "y": 461,
+            "w": 198.5,
+            "h": 44
+          },
+          "fills": [
+            "#101828"
+          ],
+          "radius": 8,
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "padding": [
+              14,
+              154,
+              14,
+              154
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Frame 1",
+              "type": "FRAME",
+              "id": "43762:146869",
+              "box": {
+                "x": 286.75,
+                "y": 471,
+                "w": 94,
+                "h": 24
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Request Call",
+                  "type": "TEXT",
+                  "id": "43762:146870",
+                  "box": {
+                    "x": 286.75,
+                    "y": 471,
+                    "w": 94,
+                    "h": 24
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "text": "Request Call",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 16,
+                    "weight": 500,
+                    "lineHeight": 24,
+                    "letterSpacing": 0,
+                    "align": "CENTER"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

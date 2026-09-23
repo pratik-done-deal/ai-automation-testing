@@ -5,7 +5,7 @@
     python -m designcheck.sync_refs data-room-document-request --only buyer-3a-success-no-docs --force
     python -m designcheck.sync_refs data-room-document-request --spec-only
 
-Existing files are kept unless --force. Commit docs/features/<slug>/refs/ afterwards: test runs read
+Existing files are kept unless --force. Commit specs/features/<slug>/refs/ afterwards: test runs read
 only these files, so they never call Figma (personal tokens are heavily rate-limited).
 """
 import argparse

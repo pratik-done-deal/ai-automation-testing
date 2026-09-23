@@ -61,7 +61,7 @@ With several sellers, repeat for each one: save that seller's session, then run 
 
 ## Buyer journey (one cue card, no reloads)
 
-`tests/buyer/test_buyer_journey.py` opens **one** company from /buyer/browse and runs every buyer
+`test_cases/buyer_test_cases/test_buyer_journey.py` opens **one** company from /buyer/browse and runs every buyer
 check on that tab, in order: slot modal → **Request Call (real)** → document step → **Send request
 (real)** → after-submit checks. Each test continues from where the previous one left the page. If a
 step fails, the rest are skipped. It uses up one company per run and records it in
@@ -73,7 +73,7 @@ step fails, the rest are skipped. It uses up one company per run and records it 
 pytest -m smoke                          # quick check after a deploy
 pytest -m "not destructive"              # read-only: creates no deals
 pytest -m "not not_implemented_yet"      # skip PRD items that aren't built yet
-pytest tests/buyer/test_buyer_journey.py --headed   # buyer journey: one cue card, tests in order, no reloads
+pytest test_cases/buyer_test_cases/test_buyer_journey.py --headed   # buyer journey: one cue card, tests in order, no reloads
 pytest -m phase1 --headed --slowmo 300   # watch it in a visible browser
 ```
 
@@ -96,7 +96,7 @@ A test that is missing data **skips** rather than fails.
 ## Coverage map
 
 The requirement-by-requirement mapping (DR-01 to DR-53 → test functions) is in
-[`docs/prd/data-room-document-request.test-plan.md`](../docs/prd/data-room-document-request.test-plan.md),
+[`specs/prd/data-room-document-request.test-plan.md`](specs/prd/data-room-document-request.test-plan.md),
 generated from the `DR-xx` ids referenced in each test.
 
 ### Marked `not_implemented_yet` (strict xfail: they fail until the feature is built)
@@ -122,15 +122,58 @@ Once one of these starts passing, strict xfail reports it as `XPASS(strict)`. Re
 2. Figma modal title reads "Express Interest in this company"; the app shows "Express Interest". The label reads "slots for meet" in Figma and "slots for meeting" in the app. Tests match either.
 3. The seller accept modal always pins a mandatory Pitch Deck row, even when the buyer didn't request one.
 
-## Structure
+## How the suite is organised
 
 ```
 automation/
-├── conftest.py          role contexts, API clients, test data pools
-├── config.py            .env settings
+├── conftest.py          role contexts, API clients, browse-picked companies, lifecycle, design hook
+├── config.py            .env settings          paths.py   suite paths + DD_APP_ROOT
 ├── constants.py         doc keys/labels and UI copy mirrored from src/
-├── pages/               page objects (buyer cue card, slot modal, success modal, seller deals, accept modal, admin deal)
-├── utils/               API client, response rewriting, shared flows, phase 1 → 2 hand-off
+├── locators/            selectors per screen: buyer/ seller/ admin/ biz_user/ shared/
+├── pages/               page objects: buyer_module/ seller_module/ admin_module/ biz_user_module/ shared/
+├── test_cases/          buyer_test_cases/ seller_test_cases/ admin_test_cases/ biz_user_test_cases/ e2e/ api/
+├── utils/               API client, response rewriting, shared flows, phase 1 → 2 hand-off, registry
+├── impact/              suite index, impact finder, coverage, route inventory
+├── designcheck/         Figma reference checks
 ├── scripts/             save_auth_state.py
-└── tests/{buyer,seller,admin,api,e2e}
+└── specs/               modules/ (living specs) · features/ (PRD features) · prd/
 ```
+
+The role marker comes from the folder a test sits in, so no module sets `pytestmark` just for that.
+
+## Coverage, modules and features
+
+Two ways a test gets written:
+
+- **A new feature** has a PRD and Figma: `/new-feature-tests` → analysis → impact on existing tests
+  (you approve) → design refs → tests. When it goes live, `/ship-feature <slug>` folds its
+  requirements into the module specs it changed.
+- **An existing module** has neither: `/map-module <slug>` derives a spec from the code, from walking
+  the module on QA and from Figma where it's current; you review it; `/module-tests <slug>` writes the
+  tests. `specs/modules/README.md` is the backlog.
+
+```bash
+python -m impact.coverage                # requirement -> tests -> state, per module and feature
+python -m impact.coverage --gaps         # what is still uncovered
+python -m impact.app_map --uncovered     # routes no module spec claims yet
+python -m impact.index --req BUY-CUE-04  # which tests cover a requirement
+python -m impact.find --src <file> --copy "old text"   # which tests a change can affect
+```
+
+## When a feature changes an existing test
+
+Approved impact rows keep the old behaviour and add the new one:
+
+| marker | before the feature ships | after it ships |
+|---|---|---|
+| `@pytest.mark.superseded_by("<slug>")` (old behaviour) | runs | skipped, kept for history |
+| `@pytest.mark.pending_feature("<slug>")` (new behaviour) | strict xfail; an XPASS fails and tells you to mark it shipped | runs |
+
+```bash
+DD_SHIPPED=<slug> pytest ...      # QA has it, feature.yml doesn't say so yet
+DD_UNSHIPPED=<slug> pytest ...    # an environment that doesn't have it yet
+pytest -m "pending_feature or superseded_by" --collect-only -q   # what is waiting on a ship
+```
+
+Design steps in an older `flow.yaml` can carry `superseded_by: <slug>` too; `--design` skips them once
+that feature ships.

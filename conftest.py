@@ -7,12 +7,16 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent))
 
 import os  # noqa: E402
+from collections import Counter  # noqa: E402
+
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError  # noqa: E402
 
 from config import settings  # noqa: E402
 from designcheck.checker import DesignRun  # noqa: E402
-from pages.buyer_browse_page import BuyerBrowsePage  # noqa: E402
+from pages.buyer_module.buyer_browse_page import BuyerBrowsePage  # noqa: E402
 from utils.api_client import DoneDealApi  # noqa: E402
 from utils.flows import express_interest_on  # noqa: E402
+from utils.registry import is_shipped, load_registry  # noqa: E402
 from utils.run_state import load_all  # noqa: E402
 from utils.sessions import OPEN_CONTEXTS, STATE_BY_ROLE, new_role_page, require_state  # noqa: E402
 
@@ -128,10 +132,63 @@ def seller_company_id():
     return settings.seller_company_id
 
 
-def pytest_collection_modifyitems(items):
+ROLE_FOLDERS = {"buyer_test_cases": "buyer", "seller_test_cases": "seller",
+                "admin_test_cases": "admin", "biz_user_test_cases": "biz_user",
+                "api": "api", "e2e": "e2e"}
+
+
+def pytest_collection_modifyitems(config, items):
+    _apply_role_markers(items)
+    _apply_lifecycle(config, items)
     # Phase 2's journey accepts the deal, which removes it from Interest Received. Run the
     # read-only seller accept-modal tests before it, while that row is still there.
     items.sort(key=lambda item: "test_phase2_" in item.nodeid)
+
+
+def _apply_role_markers(items):
+    """test_cases/<role>_test_cases/... gets its role marker automatically, so no module needs
+    pytestmark just for that. A module can still add buyer/api/destructive markers itself."""
+    for item in items:
+        for folder in Path(item.fspath).parts:
+            role = ROLE_FOLDERS.get(folder)
+            if role:
+                item.add_marker(getattr(pytest.mark, role))
+
+
+# ---------------------------------------------------------------- feature lifecycle
+# When a new feature changes behaviour an existing test checks, the old test is kept and the new
+# version is added next to it:
+#   @pytest.mark.superseded_by("<slug>")   old behaviour: runs until <slug> ships, then is skipped
+#   @pytest.mark.pending_feature("<slug>") new behaviour: strict xfail until <slug> ships, then runs
+# "Shipped" is specs/features/<slug>/feature.yml `status`, or DD_SHIPPED / DD_UNSHIPPED for one run.
+# An XPASS on a pending test means the feature is live here: mark it shipped.
+
+def _lifecycle_slug(item, mark):
+    slug = mark.args[0] if mark.args else None
+    if slug not in load_registry():
+        raise pytest.UsageError(f"{item.nodeid}: @pytest.mark.{mark.name}({slug!r}) names no "
+                                f"specs/features/<slug>/feature.yml")
+    return slug
+
+
+def _apply_lifecycle(config, items):
+    pending, superseded = [], []
+    for item in items:
+        for mark in item.iter_markers("pending_feature"):
+            slug = _lifecycle_slug(item, mark)
+            if not is_shipped(slug):
+                pending.append(slug)
+                item.add_marker(pytest.mark.xfail(
+                    strict=True, raises=(AssertionError, PlaywrightTimeoutError),
+                    reason=f"pending_feature: {slug} isn't shipped here. If this passes, set status: shipped "
+                           f"in specs/features/{slug}/feature.yml (or run with DD_SHIPPED={slug})"))
+        for mark in item.iter_markers("superseded_by"):
+            slug = _lifecycle_slug(item, mark)
+            if is_shipped(slug):
+                superseded.append(slug)
+                item.add_marker(pytest.mark.skip(reason=f"superseded_by: {slug} has shipped and replaced "
+                                                        f"this behaviour (kept for history)"))
+    config._lifecycle = (Counter(pending), Counter(superseded))
 
 
 SCREENSHOT_DIR = Path(__file__).parent / "reports" / "screenshots"
@@ -164,7 +221,7 @@ def pytest_runtest_makereport(item, call):
 
 
 # ---------------------------------------------------------------- design checks (no AI, no Figma calls)
-# design.check("<flow step id>") compares the page with docs/features/<slug>/refs/<step>.spec.json (+ .png).
+# design.check("<flow step id>") compares the page with specs/features/<slug>/refs/<step>.spec.json (+ .png).
 # Off unless --design / DD_DESIGN_CHECK=1. Differences never fail a test; DD_DESIGN_STRICT=1 fails the run
 # at the end when any feature has high-severity design issues.
 
@@ -193,7 +250,7 @@ class _DesignFixture:
 
 @pytest.fixture(scope="module")
 def design(request):
-    """Bound to the module's DESIGN_FEATURE (a folder name under docs/features/)."""
+    """Bound to the module's DESIGN_FEATURE (a folder name under specs/features/)."""
     return _DesignFixture(request.config._design_run, getattr(request.module, "DESIGN_FEATURE", None))
 
 
@@ -205,6 +262,13 @@ def pytest_sessionfinish(session):
 
 
 def pytest_terminal_summary(terminalreporter, config):
+    pending, superseded = getattr(config, "_lifecycle", (Counter(), Counter()))
+    if pending or superseded:
+        terminalreporter.section("feature lifecycle")
+        for slug, count in sorted(pending.items()):
+            terminalreporter.write_line(f"{slug}: not shipped here, {count} pending_feature test(s) run as xfail")
+        for slug, count in sorted(superseded.items()):
+            terminalreporter.write_line(f"{slug}: shipped, {count} superseded test(s) skipped")
     reports = getattr(config, "_design_reports", [])
     if not reports:
         return

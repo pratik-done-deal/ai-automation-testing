@@ -1,12 +1,14 @@
-"""Loads a feature's design flow: docs/features/<slug>/{flow.yaml, refs/, known_differences.yml}."""
+"""Loads a feature's design flow: specs/features/<slug>/{flow.yaml, refs/, known_differences.yml}."""
 import re
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import yaml
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-FEATURES_DIR = REPO_ROOT / "docs" / "features"
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from paths import FEATURES_DIR  # noqa: E402
 
 
 @dataclass
@@ -20,6 +22,7 @@ class Step:
     skip_text: list = field(default_factory=list)
     only_text: list = field(default_factory=list)
     when: str = ""  # where in the journey to call design.check (read by test-case-writer, not the checker)
+    superseded_by: str = ""  # feature slug that replaces this screen; skipped once that feature ships
 
 
 @dataclass

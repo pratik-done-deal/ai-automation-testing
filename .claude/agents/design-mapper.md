@@ -1,6 +1,6 @@
 ---
 name: design-mapper
-description: Maps a feature's Figma frames to automated design checkpoints for donedeal-web. Writes docs/features/<slug>/flow.yaml, saves the Figma references (spec.json + png) with a script, and drafts known_differences.yml. Runs once per feature (or when design changes), after prd-analyzer and before test-case-writer. After it, design checks run in pytest with no AI and no Figma calls.
+description: Maps a feature's Figma frames to automated design checkpoints for donedeal-web. Writes automation/specs/features/<slug>/flow.yaml, saves the Figma references (spec.json + png) with a script, and drafts known_differences.yml. Runs once per feature (or when design changes), after prd-analyzer and before test-case-writer. After it, design checks run in pytest with no AI and no Figma calls.
 model: inherit
 ---
 
@@ -13,18 +13,18 @@ so the fields you write mean what the checker does with them.
 
 ## Inputs
 - The feature slug (kebab-case, e.g. `data-room-document-request`).
-- The analysis document from prd-analyzer (`docs/prd/<slug>.analysis.md`). Its screen map lists the
+- The analysis document from prd-analyzer (`automation/specs/prd/<slug>.analysis.md`). Its screen map lists the
   Figma frames, their states, exact copy and the rendering component.
 - The Figma URL of the feature's section (`?node-id=a-b` → `a:b`).
 
 If the analysis is missing, work from Figma and the code, and say so in the report.
 
-## Output (all under docs/features/<slug>/)
+## Output (all under automation/specs/features/<slug>/)
 1. `flow.yaml`: one step per Figma frame that the app should match.
 2. `refs/<step-id>.spec.json` and `refs/<step-id>.png`, saved by script.
 3. `known_differences.yml`: design vs app differences already known from the analysis gaps.
 
-Use `docs/features/data-room-document-request/` as the reference example for format and level of detail.
+Use `automation/specs/features/data-room-document-request/` as the reference example for format and level of detail.
 
 ## Workflow
 
@@ -83,6 +83,13 @@ From the analysis gaps where design and code disagree on copy or presence:
 - `status: open` by default. Use `accepted` only if the analysis records a product decision.
 - `expected` is the Figma text (use `^` to make it a regex), and `note` explains it with `file:line`.
 
+### 5b. Supersede redesigned steps of older flows (when impact.md is APPROVED)
+For each approved row in the impact.md "Design refs" table, add `superseded_by: <slug>` to that step
+in the **older** feature's `flow.yaml`. Change nothing else there: its refs stay as history. The
+checker skips a superseded step once `<slug>` ships, and until then the old design is what the app
+shows. Make sure the redesigned screen is a step in the new feature's own flow.yaml. Don't touch
+older flows for rows that aren't approved.
+
 ### 6. Validate
 ```bash
 python -c "import sys; sys.path.insert(0,'.'); from designcheck.flow import Flow; f=Flow('<slug>'); print(len(f.steps), 'steps'); [print(s.id, f.spec_path(s.id).exists(), f.png_path(s.id).exists()) for s in f.steps.values()]"
@@ -94,4 +101,5 @@ Every step must load. Report the steps that have no spec.json or no png.
 - Steps skipped from Figma and why.
 - Commands the user still has to run (sync_refs if the token or rate limit blocked you).
 - known_differences drafted (count, and which are `open`).
+- Older flow steps marked `superseded_by` (feature: step id), from impact.md.
 - What test-case-writer needs: set `DESIGN_FEATURE = "<slug>"` and call `design.check("<id>", page)` at each step's `when`.

@@ -1,0 +1,2684 @@
+{
+  "figmaNode": "43762:147112",
+  "name": "Modal - Required Note",
+  "type": "FRAME",
+  "id": "43762:147112",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 457,
+    "h": 793.63
+  },
+  "fills": [
+    "#ffffff"
+  ],
+  "radius": 12,
+  "layout": {
+    "direction": "column",
+    "gap": 24,
+    "padding": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "justify": "CENTER"
+  },
+  "effects": [
+    {
+      "type": "DROP_SHADOW",
+      "radius": 8,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 8
+      },
+      "color": "#10182808"
+    },
+    {
+      "type": "DROP_SHADOW",
+      "radius": 24,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 20
+      },
+      "color": "#10182814"
+    }
+  ],
+  "children": [
+    {
+      "name": "Content",
+      "type": "FRAME",
+      "id": "43762:147113",
+      "box": {
+        "x": 24,
+        "y": 24,
+        "w": 409,
+        "h": 677.63
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "Text and supporting text",
+          "type": "FRAME",
+          "id": "43762:147114",
+          "box": {
+            "x": 24,
+            "y": 24,
+            "w": 409,
+            "h": 48
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 987431",
+              "type": "FRAME",
+              "id": "43762:147115",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "w": 409,
+                "h": 48
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 20,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Featured icon",
+                  "type": "INSTANCE",
+                  "id": "43762:147116",
+                  "box": {
+                    "x": 24,
+                    "y": 24,
+                    "w": 48,
+                    "h": 48
+                  },
+                  "fills": [
+                    "#d1fadf"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#ecfdf3"
+                    ],
+                    "weight": 8,
+                    "align": "CENTER"
+                  },
+                  "radius": 28,
+                  "children": [
+                    {
+                      "name": "check-circle",
+                      "type": "INSTANCE",
+                      "id": "I43762:147116;1102:5691",
+                      "box": {
+                        "x": 36,
+                        "y": 36,
+                        "w": 24,
+                        "h": 24
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:147116;1102:5691;1037:34200",
+                          "box": {
+                            "x": 38,
+                            "y": 38,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "border": {
+                            "colors": [
+                              "#039855"
+                            ],
+                            "weight": 2,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Text",
+                  "type": "TEXT",
+                  "id": "43762:147117",
+                  "box": {
+                    "x": 92,
+                    "y": 34,
+                    "w": 341,
+                    "h": 28
+                  },
+                  "fills": [
+                    "#101828"
+                  ],
+                  "text": "Express Interest in this company",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 18,
+                    "weight": 500,
+                    "lineHeight": 28,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Express your interest by proposing a few time slots for an introductory discussion. The final meeting time will be mutually confirmed.",
+          "type": "TEXT",
+          "id": "43762:147118",
+          "box": {
+            "x": 24,
+            "y": 88,
+            "w": 409,
+            "h": 60
+          },
+          "fills": [
+            "#667085"
+          ],
+          "text": "Express your interest by proposing a few time slots for an introductory discussion. The final meeting time will be mutually confirmed.",
+          "font": {
+            "family": "Instrument Sans",
+            "size": 14,
+            "weight": 400,
+            "lineHeight": 20,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Frame 1707478514",
+          "type": "FRAME",
+          "id": "43762:147119",
+          "box": {
+            "x": 24,
+            "y": 164,
+            "w": 409,
+            "h": 378.63
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "justify": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Frame 1707481730",
+              "type": "FRAME",
+              "id": "43762:147120",
+              "box": {
+                "x": 24,
+                "y": 164,
+                "w": 409,
+                "h": 378.63
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Label",
+                  "type": "TEXT",
+                  "id": "43762:147121",
+                  "box": {
+                    "x": 24,
+                    "y": 164,
+                    "w": 409,
+                    "h": 20
+                  },
+                  "fills": [
+                    "#344054"
+                  ],
+                  "text": "Add preferred slots for meet (IST) * ",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 14,
+                    "weight": 500,
+                    "lineHeight": 20,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                },
+                {
+                  "name": "Date Picker",
+                  "type": "FRAME",
+                  "id": "43762:147122",
+                  "box": {
+                    "x": 24,
+                    "y": 190,
+                    "w": 409,
+                    "h": 305.63
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#d0d5dd"
+                    ],
+                    "weight": 1,
+                    "align": "INSIDE"
+                  },
+                  "radius": 12.27231216430664,
+                  "layout": {
+                    "direction": "column",
+                    "gap": 16.549999237060547,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Month",
+                      "type": "FRAME",
+                      "id": "43762:147123",
+                      "box": {
+                        "x": 36,
+                        "y": 202,
+                        "w": 385,
+                        "h": 34
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 46.63478469848633,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "justify": "SPACE_BETWEEN",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Button",
+                          "type": "FRAME",
+                          "id": "43762:147124",
+                          "box": {
+                            "x": 36,
+                            "y": 207,
+                            "w": 24,
+                            "h": 24
+                          },
+                          "radius": 6.545232772827148,
+                          "opacity": 0.3,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "CaretLeft",
+                              "type": "FRAME",
+                              "id": "43762:147125",
+                              "box": {
+                                "x": 36,
+                                "y": 207,
+                                "w": 24,
+                                "h": 24
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "43762:147126",
+                                  "box": {
+                                    "x": 42.75,
+                                    "y": 210.75,
+                                    "w": 9,
+                                    "h": 16.5
+                                  },
+                                  "fills": [
+                                    "#000000"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "43762:147127",
+                          "box": {
+                            "x": 184.5,
+                            "y": 209,
+                            "w": 88,
+                            "h": 20
+                          },
+                          "fills": [
+                            "#344054"
+                          ],
+                          "text": "January 2026",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 500,
+                            "lineHeight": 19.64,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Button",
+                          "type": "FRAME",
+                          "id": "43762:147128",
+                          "box": {
+                            "x": 397,
+                            "y": 207,
+                            "w": 24,
+                            "h": 24
+                          },
+                          "radius": 6.545232772827148,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "CaretLeft",
+                              "type": "FRAME",
+                              "id": "43762:147129",
+                              "box": {
+                                "x": 397,
+                                "y": 207,
+                                "w": 24,
+                                "h": 24
+                              },
+                              "children": [
+                                {
+                                  "name": "Vector",
+                                  "type": "VECTOR",
+                                  "id": "43762:147130",
+                                  "box": {
+                                    "x": 405.25,
+                                    "y": 210.75,
+                                    "w": 9,
+                                    "h": 16.5
+                                  },
+                                  "fills": [
+                                    "#000000"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707478554",
+                      "type": "FRAME",
+                      "id": "43762:147131",
+                      "box": {
+                        "x": 36,
+                        "y": 252.55,
+                        "w": 385,
+                        "h": 231.08
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 6.545232772827148,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 26654",
+                          "type": "FRAME",
+                          "id": "43762:147132",
+                          "box": {
+                            "x": 36,
+                            "y": 252.55,
+                            "w": 385,
+                            "h": 231.08
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "justify": "SPACE_BETWEEN",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "_Calendar-dayRow",
+                              "type": "FRAME",
+                              "id": "43762:147133",
+                              "box": {
+                                "x": 36,
+                                "y": 252.55,
+                                "w": 385,
+                                "h": 14.73
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 9.817849159240723,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147134",
+                                  "box": {
+                                    "x": 36,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147135",
+                                      "box": {
+                                        "x": 37.6400000000001,
+                                        "y": 252.55,
+                                        "w": 25,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "SUN",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147136",
+                                  "box": {
+                                    "x": 95.79999999999995,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147137",
+                                      "box": {
+                                        "x": 96.21000000000004,
+                                        "y": 252.55,
+                                        "w": 30,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "MON",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "LEFT"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147138",
+                                  "box": {
+                                    "x": 155.61000000000013,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147139",
+                                      "box": {
+                                        "x": 156.25,
+                                        "y": 252.55,
+                                        "w": 24,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "TUE",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147140",
+                                  "box": {
+                                    "x": 215.40999999999985,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147141",
+                                      "box": {
+                                        "x": 213.17999999999984,
+                                        "y": 252.55,
+                                        "w": 30,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "WED",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147142",
+                                  "box": {
+                                    "x": 275.21000000000004,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147143",
+                                      "box": {
+                                        "x": 275.0300000000002,
+                                        "y": 252.55,
+                                        "w": 26,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "THU",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147144",
+                                  "box": {
+                                    "x": 335.02,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147145",
+                                      "box": {
+                                        "x": 339.52,
+                                        "y": 252.55,
+                                        "w": 18,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "FRI",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Day",
+                                  "type": "FRAME",
+                                  "id": "43762:147146",
+                                  "box": {
+                                    "x": 394.82000000000016,
+                                    "y": 252.55,
+                                    "w": 26.18,
+                                    "h": 14.73
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147147",
+                                      "box": {
+                                        "x": 397.27,
+                                        "y": 252.55,
+                                        "w": 23,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#98a2b3"
+                                      ],
+                                      "text": "SAT",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 26647",
+                              "type": "FRAME",
+                              "id": "43762:147148",
+                              "box": {
+                                "x": 36,
+                                "y": 271.28,
+                                "w": 385,
+                                "h": 39.27
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 9.817849159240723,
+                                "padding": [
+                                  6.545232772827148,
+                                  0,
+                                  6.545232772827148,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147149",
+                                  "box": {
+                                    "x": 36,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147150",
+                                      "box": {
+                                        "x": 45.58999999999992,
+                                        "y": 283.91,
+                                        "w": 6,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "1",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147151",
+                                  "box": {
+                                    "x": 95.79999999999995,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147152",
+                                      "box": {
+                                        "x": 104.40000000000009,
+                                        "y": 283.91,
+                                        "w": 8,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "2",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147153",
+                                  "box": {
+                                    "x": 155.61000000000013,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147154",
+                                      "box": {
+                                        "x": 164.19999999999982,
+                                        "y": 283.91,
+                                        "w": 9,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "3",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147155",
+                                  "box": {
+                                    "x": 215.40999999999985,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147156",
+                                      "box": {
+                                        "x": 224,
+                                        "y": 283.91,
+                                        "w": 9,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "4",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147157",
+                                  "box": {
+                                    "x": 275.21000000000004,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147158",
+                                      "box": {
+                                        "x": 283.8000000000002,
+                                        "y": 283.91,
+                                        "w": 9,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "5",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147159",
+                                  "box": {
+                                    "x": 335.02,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147160",
+                                      "box": {
+                                        "x": 343.6100000000001,
+                                        "y": 283.91,
+                                        "w": 9,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "6",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147161",
+                                  "box": {
+                                    "x": 394.82000000000016,
+                                    "y": 277.82,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147162",
+                                      "box": {
+                                        "x": 403.40999999999985,
+                                        "y": 283.91,
+                                        "w": 8,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "7",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 26652",
+                              "type": "FRAME",
+                              "id": "43762:147163",
+                              "box": {
+                                "x": 36,
+                                "y": 314.54999999999995,
+                                "w": 385,
+                                "h": 39.27
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 9.817849159240723,
+                                "padding": [
+                                  6.545232772827148,
+                                  0,
+                                  6.545232772827148,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147164",
+                                  "box": {
+                                    "x": 36,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147165",
+                                      "box": {
+                                        "x": 44.58999999999992,
+                                        "y": 327.19000000000005,
+                                        "w": 9,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "8",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147166",
+                                  "box": {
+                                    "x": 95.79999999999995,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147167",
+                                      "box": {
+                                        "x": 104.40000000000009,
+                                        "y": 327.19000000000005,
+                                        "w": 9,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "9",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147168",
+                                  "box": {
+                                    "x": 155.61000000000013,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147169",
+                                      "box": {
+                                        "x": 161.19999999999982,
+                                        "y": 327.19000000000005,
+                                        "w": 15,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#d0d5dd"
+                                      ],
+                                      "text": "10",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147170",
+                                  "box": {
+                                    "x": 215.40999999999985,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "border": {
+                                    "colors": [
+                                      "#475467"
+                                    ],
+                                    "weight": 1,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 70,
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147171",
+                                      "box": {
+                                        "x": 223,
+                                        "y": 327.19000000000005,
+                                        "w": 11,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "11",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147172",
+                                  "box": {
+                                    "x": 275.21000000000004,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "fills": [
+                                    "#bccad999"
+                                  ],
+                                  "radius": 20,
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147173",
+                                      "box": {
+                                        "x": 280.8000000000002,
+                                        "y": 327.19000000000005,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "12",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147174",
+                                  "box": {
+                                    "x": 335.02,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147175",
+                                      "box": {
+                                        "x": 340.6100000000001,
+                                        "y": 327.19000000000005,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "13",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147176",
+                                  "box": {
+                                    "x": 394.82000000000016,
+                                    "y": 321.1,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147177",
+                                      "box": {
+                                        "x": 400.40999999999985,
+                                        "y": 327.19000000000005,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "14",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 26653",
+                              "type": "FRAME",
+                              "id": "43762:147178",
+                              "box": {
+                                "x": 36,
+                                "y": 357.82000000000005,
+                                "w": 385,
+                                "h": 39.27
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 9.817849159240723,
+                                "padding": [
+                                  6.545232772827148,
+                                  0,
+                                  6.545232772827148,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147179",
+                                  "box": {
+                                    "x": 36,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147180",
+                                      "box": {
+                                        "x": 41.58999999999992,
+                                        "y": 370.46000000000004,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "15",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147181",
+                                  "box": {
+                                    "x": 95.79999999999995,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147182",
+                                      "box": {
+                                        "x": 101.40000000000009,
+                                        "y": 370.46000000000004,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "16",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147183",
+                                  "box": {
+                                    "x": 155.61000000000013,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147184",
+                                      "box": {
+                                        "x": 162.19999999999982,
+                                        "y": 370.46000000000004,
+                                        "w": 13,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "17",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147185",
+                                  "box": {
+                                    "x": 215.40999999999985,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147186",
+                                      "box": {
+                                        "x": 221,
+                                        "y": 370.46000000000004,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "18",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147187",
+                                  "box": {
+                                    "x": 275.21000000000004,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147188",
+                                      "box": {
+                                        "x": 280.8000000000002,
+                                        "y": 370.46000000000004,
+                                        "w": 15,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "19",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147189",
+                                  "box": {
+                                    "x": 335.02,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147190",
+                                      "box": {
+                                        "x": 338.6100000000001,
+                                        "y": 370.46000000000004,
+                                        "w": 18,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "20",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147191",
+                                  "box": {
+                                    "x": 394.82000000000016,
+                                    "y": 364.37,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147192",
+                                      "box": {
+                                        "x": 400.40999999999985,
+                                        "y": 370.46000000000004,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "21",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 26654",
+                              "type": "FRAME",
+                              "id": "43762:147193",
+                              "box": {
+                                "x": 36,
+                                "y": 401.09000000000003,
+                                "w": 385,
+                                "h": 39.27
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 9.817849159240723,
+                                "padding": [
+                                  6.545232772827148,
+                                  0,
+                                  6.545232772827148,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147194",
+                                  "box": {
+                                    "x": 36,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147195",
+                                      "box": {
+                                        "x": 40.58999999999992,
+                                        "y": 413.73,
+                                        "w": 16,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "22",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147196",
+                                  "box": {
+                                    "x": 95.79999999999995,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147197",
+                                      "box": {
+                                        "x": 100.40000000000009,
+                                        "y": 413.73,
+                                        "w": 16,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "23",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147198",
+                                  "box": {
+                                    "x": 155.61000000000013,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147199",
+                                      "box": {
+                                        "x": 160.19999999999982,
+                                        "y": 413.73,
+                                        "w": 16,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "24",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147200",
+                                  "box": {
+                                    "x": 215.40999999999985,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147201",
+                                      "box": {
+                                        "x": 220,
+                                        "y": 413.73,
+                                        "w": 16,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "25",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147202",
+                                  "box": {
+                                    "x": 275.21000000000004,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147203",
+                                      "box": {
+                                        "x": 279.8000000000002,
+                                        "y": 413.73,
+                                        "w": 17,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "26",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147204",
+                                  "box": {
+                                    "x": 335.02,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147205",
+                                      "box": {
+                                        "x": 339.6100000000001,
+                                        "y": 413.73,
+                                        "w": 16,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "27",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147206",
+                                  "box": {
+                                    "x": 394.82000000000016,
+                                    "y": 407.64,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147207",
+                                      "box": {
+                                        "x": 399.40999999999985,
+                                        "y": 413.73,
+                                        "w": 17,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "28",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 26651",
+                              "type": "FRAME",
+                              "id": "43762:147208",
+                              "box": {
+                                "x": 36,
+                                "y": 444.36,
+                                "w": 385,
+                                "h": 39.27
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 9.817849159240723,
+                                "padding": [
+                                  6.545232772827148,
+                                  0,
+                                  6.545232772827148,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147209",
+                                  "box": {
+                                    "x": 36,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147210",
+                                      "box": {
+                                        "x": 40.58999999999992,
+                                        "y": 457,
+                                        "w": 17,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "29",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147211",
+                                  "box": {
+                                    "x": 95.79999999999995,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "radius": 80.99725341796875,
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147212",
+                                      "box": {
+                                        "x": 99.40000000000009,
+                                        "y": 457,
+                                        "w": 18,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "30",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147213",
+                                  "box": {
+                                    "x": 155.61000000000013,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147214",
+                                      "box": {
+                                        "x": 161.19999999999982,
+                                        "y": 457,
+                                        "w": 14,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "31",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 14,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147215",
+                                  "box": {
+                                    "x": 215.40999999999985,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  }
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147216",
+                                  "box": {
+                                    "x": 275.21000000000004,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  }
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147217",
+                                  "box": {
+                                    "x": 335.02,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  }
+                                },
+                                {
+                                  "name": "Calendar Digit",
+                                  "type": "FRAME",
+                                  "id": "43762:147218",
+                                  "box": {
+                                    "x": 394.82000000000016,
+                                    "y": 450.90999999999997,
+                                    "w": 26.18,
+                                    "h": 26.18
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "_Button base",
+                  "type": "FRAME",
+                  "id": "43762:147219",
+                  "box": {
+                    "x": 24,
+                    "y": 501.63,
+                    "w": 409,
+                    "h": 41
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 6,
+                    "padding": [
+                      10,
+                      16,
+                      10,
+                      16
+                    ],
+                    "justify": "CENTER",
+                    "align": "CENTER"
+                  },
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "radius": 2,
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "color": "#1018280d"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Add Second Slot",
+                      "type": "TEXT",
+                      "id": "43762:147220",
+                      "box": {
+                        "x": 161,
+                        "y": 512.13,
+                        "w": 109,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#344054"
+                      ],
+                      "text": "Add Second Slot",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 20,
+                        "letterSpacing": 0,
+                        "align": "RIGHT"
+                      }
+                    },
+                    {
+                      "name": "PlusCircle",
+                      "type": "FRAME",
+                      "id": "43762:147221",
+                      "box": {
+                        "x": 276,
+                        "y": 512.13,
+                        "w": 20,
+                        "h": 20
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147222",
+                          "box": {
+                            "x": 276,
+                            "y": 512.13,
+                            "w": 20,
+                            "h": 20
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147223",
+                          "box": {
+                            "x": 278.5,
+                            "y": 514.63,
+                            "w": 15,
+                            "h": 15
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147224",
+                          "box": {
+                            "x": 282.8800000000001,
+                            "y": 522.13,
+                            "w": 6.25,
+                            "h": 0
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147225",
+                          "box": {
+                            "x": 286,
+                            "y": 519.01,
+                            "w": 0,
+                            "h": 6.25
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 987327",
+          "type": "FRAME",
+          "id": "43762:147226",
+          "box": {
+            "x": 24,
+            "y": 558.63,
+            "w": 409,
+            "h": 143
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 1707478818",
+              "type": "FRAME",
+              "id": "43762:147227",
+              "box": {
+                "x": 24,
+                "y": 558.63,
+                "w": 409,
+                "h": 43
+              },
+              "fills": [
+                "#fffaeb"
+              ],
+              "radius": 4,
+              "layout": {
+                "direction": "row",
+                "gap": 8,
+                "padding": [
+                  6,
+                  8,
+                  6,
+                  8
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "lightbulb-02",
+                  "type": "INSTANCE",
+                  "id": "43762:147228",
+                  "box": {
+                    "x": 32,
+                    "y": 570.13,
+                    "w": 20,
+                    "h": 20
+                  },
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "VECTOR",
+                      "id": "I43762:147228;251:9902",
+                      "box": {
+                        "x": 33.66000000000008,
+                        "y": 571.8,
+                        "w": 16.67,
+                        "h": 16.67
+                      },
+                      "border": {
+                        "colors": [
+                          "#dc6803"
+                        ],
+                        "weight": 1.6666666269302368,
+                        "align": "CENTER"
+                      },
+                      "radius": [
+                        0,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "You are expressing interest in a company outside your preferences; please add a note to continue.",
+                  "type": "TEXT",
+                  "id": "43762:147229",
+                  "box": {
+                    "x": 60,
+                    "y": 564.63,
+                    "w": 365,
+                    "h": 31
+                  },
+                  "fills": [
+                    "#b54708"
+                  ],
+                  "text": "You are expressing interest in a company outside your preferences; please add a note to continue.",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 12,
+                    "weight": 400,
+                    "lineHeight": 16,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "id": "43762:147230",
+              "box": {
+                "x": 24,
+                "y": 609.63,
+                "w": 352,
+                "h": 20
+              },
+              "fills": [
+                "#344054"
+              ],
+              "text": "Add a note to send to the founder *",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 14,
+                "weight": 500,
+                "lineHeight": 20,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            },
+            {
+              "name": "Textarea input field",
+              "type": "INSTANCE",
+              "id": "43762:147231",
+              "box": {
+                "x": 24,
+                "y": 637.63,
+                "w": 409,
+                "h": 64
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "_Textarea input field base",
+                  "type": "INSTANCE",
+                  "id": "I43762:147231;1238:440",
+                  "box": {
+                    "x": 24,
+                    "y": 637.63,
+                    "w": 409,
+                    "h": 64
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 6,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Input with label",
+                      "type": "FRAME",
+                      "id": "I43762:147231;1238:440;1238:82",
+                      "box": {
+                        "x": 24,
+                        "y": 637.63,
+                        "w": 409,
+                        "h": 64
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 6,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Input",
+                          "type": "FRAME",
+                          "id": "I43762:147231;1238:440;1238:84",
+                          "box": {
+                            "x": 24,
+                            "y": 637.63,
+                            "w": 409,
+                            "h": 64
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#d0d5dd"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 8,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 8,
+                            "padding": [
+                              10,
+                              14,
+                              10,
+                              14
+                            ],
+                            "align": "CENTER"
+                          },
+                          "effects": [
+                            {
+                              "type": "DROP_SHADOW",
+                              "radius": 2,
+                              "offset": {
+                                "x": 0,
+                                "y": 1
+                              },
+                              "color": "#1018280d"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:147231;1238:440;1238:87",
+                              "box": {
+                                "x": 38,
+                                "y": 647.63,
+                                "w": 381,
+                                "h": 44
+                              },
+                              "fills": [
+                                "#667085"
+                              ],
+                              "text": "Share your investment focus or key topics to help the founder prepare.",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 400,
+                                "lineHeight": 22,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "_Modal actions",
+      "type": "FRAME",
+      "id": "43762:147232",
+      "box": {
+        "x": 24,
+        "y": 725.63,
+        "w": 409,
+        "h": 44
+      },
+      "layout": {
+        "direction": "row",
+        "gap": 12,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "_Button base",
+          "type": "INSTANCE",
+          "id": "43762:147233",
+          "box": {
+            "x": 24,
+            "y": 725.63,
+            "w": 198.5,
+            "h": 44
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "border": {
+            "colors": [
+              "#d0d5dd"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 8,
+          "layout": {
+            "direction": "row",
+            "gap": 8,
+            "padding": [
+              10,
+              18,
+              10,
+              18
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 2,
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "color": "#1018280d"
+            }
+          ],
+          "children": [
+            {
+              "name": "Text",
+              "type": "TEXT",
+              "id": "I43762:147233;1054:6972",
+              "box": {
+                "x": 97.25,
+                "y": 735.63,
+                "w": 52,
+                "h": 24
+              },
+              "fills": [
+                "#344054"
+              ],
+              "text": "Cancel",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 16,
+                "weight": 500,
+                "lineHeight": 24,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Btn/large",
+          "type": "FRAME",
+          "id": "43762:147234",
+          "box": {
+            "x": 234.5,
+            "y": 725.63,
+            "w": 198.5,
+            "h": 44
+          },
+          "fills": [
+            "#101828"
+          ],
+          "radius": 8,
+          "opacity": 0.4,
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "padding": [
+              14,
+              154,
+              14,
+              154
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Frame 1",
+              "type": "FRAME",
+              "id": "43762:147248",
+              "box": {
+                "x": 286.75,
+                "y": 735.63,
+                "w": 94,
+                "h": 24
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Request Call",
+                  "type": "TEXT",
+                  "id": "43762:147249",
+                  "box": {
+                    "x": 286.75,
+                    "y": 735.63,
+                    "w": 94,
+                    "h": 24
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "text": "Request Call",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 16,
+                    "weight": 500,
+                    "lineHeight": 24,
+                    "letterSpacing": 0,
+                    "align": "CENTER"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

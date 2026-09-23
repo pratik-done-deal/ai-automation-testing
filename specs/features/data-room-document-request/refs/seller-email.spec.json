@@ -1,0 +1,822 @@
+{
+  "figmaNode": "43766:148083",
+  "name": "Web_Seller_Welcome email",
+  "type": "FRAME",
+  "id": "43766:148083",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 600,
+    "h": 826
+  },
+  "fills": [
+    "#ffffff"
+  ],
+  "layout": {
+    "direction": "column",
+    "gap": 0,
+    "padding": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "align": "CENTER"
+  },
+  "children": [
+    {
+      "name": "Frame 1707481936",
+      "type": "FRAME",
+      "id": "43766:148084",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 600,
+        "h": 108
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          32,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Congratulations! An Investor Has Shown  Interest in {{CompanyName}}",
+          "type": "TEXT",
+          "id": "43766:148085",
+          "box": {
+            "x": 16,
+            "y": 32,
+            "w": 513,
+            "h": 60
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "Congratulations! An Investor Has Shown  Interest in {{CompanyName}}",
+          "font": {
+            "family": "Helvetica",
+            "size": 26,
+            "weight": 700,
+            "lineHeight": 29.9,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481923",
+      "type": "FRAME",
+      "id": "43766:148086",
+      "box": {
+        "x": 0,
+        "y": 108,
+        "w": 600,
+        "h": 102
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Dear <seller name from Linkedin>,",
+          "type": "TEXT",
+          "id": "43766:148087",
+          "box": {
+            "x": 16,
+            "y": 124,
+            "w": 246,
+            "h": 18
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "Dear <seller name from Linkedin>,",
+          "font": {
+            "family": "Helvetica",
+            "size": 16,
+            "weight": 400,
+            "lineHeight": 18.4,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Good news! An investor on Done Deal has shown interest in your company, {CompanyName} and we wanted to share this update with you right away.",
+          "type": "TEXT",
+          "id": "43766:148088",
+          "box": {
+            "x": 16,
+            "y": 158,
+            "w": 568,
+            "h": 36
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "Good news! An investor on Done Deal has shown interest in your company, {CompanyName} and we wanted to share this update with you right away.",
+          "font": {
+            "family": "Helvetica",
+            "size": 16,
+            "weight": 400,
+            "lineHeight": 18.4,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481924",
+      "type": "FRAME",
+      "id": "43766:148089",
+      "box": {
+        "x": 0,
+        "y": 210,
+        "w": 600,
+        "h": 182
+      },
+      "fills": [
+        "#ffffff"
+      ],
+      "radius": 8,
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER",
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Please sign in with your registered email ID [insert email here] to proceed.  After you accept the investor’s request, your identity will be shared with the investor and a meeting will be scheduled based on the slots they have shared.",
+          "type": "TEXT",
+          "id": "43766:148090",
+          "box": {
+            "x": 16,
+            "y": 226,
+            "w": 568,
+            "h": 72
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "Please sign in with your registered email ID [insert email here] to proceed.  After you accept the investor’s request, your identity will be shared with the investor and a meeting will be scheduled based on the slots they have shared.",
+          "font": {
+            "family": "Helvetica",
+            "size": 16,
+            "weight": 400,
+            "lineHeight": 18.4,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Frame 1707481928",
+          "type": "FRAME",
+          "id": "43766:148091",
+          "box": {
+            "x": 16,
+            "y": 314,
+            "w": 568,
+            "h": 62
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Available meeting slot(s):",
+              "type": "TEXT",
+              "id": "43766:148092",
+              "box": {
+                "x": 16,
+                "y": 314,
+                "w": 568,
+                "h": 18
+              },
+              "fills": [
+                "#1d2939"
+              ],
+              "text": "Available meeting slot(s):",
+              "font": {
+                "family": "Helvetica",
+                "size": 16,
+                "weight": 700,
+                "lineHeight": 18.4,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            },
+            {
+              "name": "24th Feb 3:30pm to 4:30pm  24th Feb 3:30pm to 4:30pm",
+              "type": "TEXT",
+              "id": "43766:148093",
+              "box": {
+                "x": 16,
+                "y": 340,
+                "w": 568,
+                "h": 36
+              },
+              "fills": [
+                "#1d2939"
+              ],
+              "text": "24th Feb 3:30pm to 4:30pm  24th Feb 3:30pm to 4:30pm",
+              "font": {
+                "family": "Helvetica",
+                "size": 16,
+                "weight": 400,
+                "lineHeight": 18.4,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481938",
+      "type": "FRAME",
+      "id": "43766:148094",
+      "box": {
+        "x": 0,
+        "y": 392,
+        "w": 600,
+        "h": 112
+      },
+      "fills": [
+        "#ffffff"
+      ],
+      "radius": 8,
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER",
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "The buyer would like to discuss: Pitch Deck, MIS, Cap Table",
+          "type": "TEXT",
+          "id": "43766:148095",
+          "box": {
+            "x": 16,
+            "y": 408,
+            "w": 568,
+            "h": 18
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "The buyer would like to discuss: Pitch Deck, MIS, Cap Table",
+          "font": {
+            "family": "Helvetica",
+            "size": 16,
+            "weight": 700,
+            "lineHeight": 18.4,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Pitch Deck — already uploaded MIS — needs upload Cap Table — already uploaded",
+          "type": "TEXT",
+          "id": "43766:148125",
+          "box": {
+            "x": 16,
+            "y": 434,
+            "w": 568,
+            "h": 54
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "Pitch Deck — already uploaded\nMIS — needs upload\nCap Table — already uploaded",
+          "font": {
+            "family": "Helvetica",
+            "size": 16,
+            "weight": 400,
+            "lineHeight": 18.4,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481939",
+      "type": "FRAME",
+      "id": "43766:148123",
+      "box": {
+        "x": 0,
+        "y": 504,
+        "w": 600,
+        "h": 86
+      },
+      "fills": [
+        "#ffffff"
+      ],
+      "radius": 8,
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER",
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Pro tip: If you have a pitch deck or any supporting documents, you can share them while accepting the interest or upload them to your Data Room.  This often helps set up a more productive conversation.",
+          "type": "TEXT",
+          "id": "43766:148124",
+          "box": {
+            "x": 16,
+            "y": 520,
+            "w": 568,
+            "h": 54
+          },
+          "fills": [
+            "#1d2939"
+          ],
+          "text": "Pro tip: If you have a pitch deck or any supporting documents, you can share them while accepting the interest or upload them to your Data Room.  This often helps set up a more productive conversation.",
+          "font": {
+            "family": "Helvetica",
+            "size": 16,
+            "weight": 400,
+            "lineHeight": 18.4,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481921",
+      "type": "FRAME",
+      "id": "43766:148096",
+      "box": {
+        "x": 0,
+        "y": 590,
+        "w": 600,
+        "h": 68
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER",
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Frame 1707481925",
+          "type": "FRAME",
+          "id": "43766:148097",
+          "box": {
+            "x": 16,
+            "y": 606,
+            "w": 568,
+            "h": 36
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Best, Done Deal Team",
+              "type": "TEXT",
+              "id": "43766:148098",
+              "box": {
+                "x": 16,
+                "y": 606,
+                "w": 568,
+                "h": 36
+              },
+              "fills": [
+                "#1d2939"
+              ],
+              "text": "Best, Done Deal Team",
+              "font": {
+                "family": "Helvetica",
+                "size": 16,
+                "weight": 400,
+                "lineHeight": 18.4,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707481937",
+      "type": "FRAME",
+      "id": "43766:148099",
+      "box": {
+        "x": 0,
+        "y": 658,
+        "w": 600,
+        "h": 168
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 12,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "justify": "CENTER"
+      },
+      "children": [
+        {
+          "name": "Frame 1707481939",
+          "type": "FRAME",
+          "id": "43766:148100",
+          "box": {
+            "x": 16,
+            "y": 674,
+            "w": 224,
+            "h": 54
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 4,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "DD Logo",
+              "type": "FRAME",
+              "id": "43766:148101",
+              "box": {
+                "x": 16,
+                "y": 674,
+                "w": 142.66,
+                "h": 32
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 8.105820655822754,
+                "padding": [
+                  3.24232816696167,
+                  3.24232816696167,
+                  3.24232816696167,
+                  3.24232816696167
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Layer_1-2",
+                  "type": "GROUP",
+                  "id": "43766:148102",
+                  "box": {
+                    "x": 19.23999999999978,
+                    "y": 677.24,
+                    "w": 136.18,
+                    "h": 25.52
+                  },
+                  "children": [
+                    {
+                      "name": "Group",
+                      "type": "GROUP",
+                      "id": "43766:148103",
+                      "box": {
+                        "x": 49.79999999999927,
+                        "y": 680.79,
+                        "w": 105.62,
+                        "h": 18.79
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148104",
+                          "box": {
+                            "x": 49.79999999999927,
+                            "y": 681.81,
+                            "w": 14.19,
+                            "h": 17.47
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148105",
+                          "box": {
+                            "x": 65.29000000000087,
+                            "y": 685.43,
+                            "w": 12.54,
+                            "h": 14.16
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148106",
+                          "box": {
+                            "x": 79.65999999999985,
+                            "y": 685.5,
+                            "w": 12.05,
+                            "h": 13.92
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148107",
+                          "box": {
+                            "x": 93.45000000000073,
+                            "y": 685.41,
+                            "w": 12.01,
+                            "h": 14.16
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148108",
+                          "box": {
+                            "x": 109.6299999999992,
+                            "y": 681.81,
+                            "w": 14.19,
+                            "h": 17.47
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148109",
+                          "box": {
+                            "x": 125.15999999999985,
+                            "y": 685.41,
+                            "w": 12.01,
+                            "h": 14.16
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148110",
+                          "box": {
+                            "x": 138.21999999999935,
+                            "y": 685.49,
+                            "w": 11.53,
+                            "h": 13.97
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43766:148111",
+                          "box": {
+                            "x": 152.04000000000087,
+                            "y": 680.79,
+                            "w": 3.38,
+                            "h": 18.62
+                          },
+                          "fills": [
+                            "#121212"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Vector",
+                      "type": "VECTOR",
+                      "id": "43766:148112",
+                      "box": {
+                        "x": 19.23999999999978,
+                        "y": 677.24,
+                        "w": 25.53,
+                        "h": 25.52
+                      },
+                      "fills": [
+                        "#121212"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Simplifying Capital for Startups!",
+              "type": "TEXT",
+              "id": "43766:148113",
+              "box": {
+                "x": 16,
+                "y": 710,
+                "w": 224,
+                "h": 18
+              },
+              "fills": [
+                "#1d2939"
+              ],
+              "text": "Simplifying Capital for Startups!",
+              "font": {
+                "family": "Helvetica",
+                "size": 16,
+                "weight": 400,
+                "lineHeight": 18.4,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Frame 1707481938",
+          "type": "FRAME",
+          "id": "43766:148114",
+          "box": {
+            "x": 16,
+            "y": 740,
+            "w": 128,
+            "h": 16
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Linkedin",
+              "type": "TEXT",
+              "id": "43766:148115",
+              "box": {
+                "x": 16,
+                "y": 740,
+                "w": 58,
+                "h": 16
+              },
+              "fills": [
+                "#2e90fa"
+              ],
+              "text": "Linkedin",
+              "font": {
+                "family": "Helvetica",
+                "size": 14,
+                "weight": 700,
+                "lineHeight": 16.1,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            },
+            {
+              "name": "Line 559",
+              "type": "LINE",
+              "id": "43766:148116",
+              "box": {
+                "x": 82,
+                "y": 741,
+                "w": 0,
+                "h": 14
+              },
+              "border": {
+                "colors": [
+                  "#696969"
+                ],
+                "weight": 1,
+                "align": "CENTER"
+              }
+            },
+            {
+              "name": "Website",
+              "type": "TEXT",
+              "id": "43766:148117",
+              "box": {
+                "x": 90,
+                "y": 740,
+                "w": 54,
+                "h": 16
+              },
+              "fills": [
+                "#2e90fa"
+              ],
+              "text": "Website",
+              "font": {
+                "family": "Helvetica",
+                "size": 14,
+                "weight": 700,
+                "lineHeight": 16.1,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Confidentiality Alert:  This email and its attachments are intended for <email address>. If this doesn't seem right, please contact us at hello@done.deals and delete the email. Unauthorized actions with this email are prohibited.",
+          "type": "TEXT",
+          "id": "43766:148118",
+          "box": {
+            "x": 16,
+            "y": 768,
+            "w": 568,
+            "h": 42
+          },
+          "fills": [
+            "#475467"
+          ],
+          "text": "Confidentiality Alert:  This email and its attachments are intended for <email address>. If this doesn't seem right, please contact us at hello@done.deals and delete the email. Unauthorized actions with this email are prohibited.",
+          "font": {
+            "family": "Helvetica",
+            "size": 12,
+            "weight": 400,
+            "lineHeight": 13.8,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        }
+      ]
+    }
+  ]
+}

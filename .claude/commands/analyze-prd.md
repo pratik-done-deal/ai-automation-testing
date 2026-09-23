@@ -7,7 +7,7 @@ Use the **prd-analyzer** subagent on:
 
 $ARGUMENTS
 
-- If the PRD was pasted in this conversation, save it to `docs/prd/<feature-slug>.md` first and
+- If the PRD was pasted in this conversation, save it to `automation/specs/prd/<feature-slug>.md` first and
   pass that path. The subagent can't see this conversation.
 - If the PRD is only a Google Docs link, ask the user to paste the text. Those links are private.
 

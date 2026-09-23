@@ -1,0 +1,97 @@
+# Design flow for the Data Room Document Request feature.
+#
+# Links each Figma frame to a moment in the automated tests. Tests call
+#   design.check("<step id>")
+# at that moment; the checker compares the app against refs/<step id>.spec.json (+ .png).
+#
+# Refs are saved once (python -m designcheck.sync_refs data-room-document-request) and committed,
+# so test runs never call Figma or an AI.
+#
+# Step fields:
+#   id          matches refs/<id>.spec.json / refs/<id>.png and the design.check() call
+#   role        buyer | seller | admin  (documentation; tests decide who is logged in)
+#   figma_node  frame id in figma_file (used only by sync_refs)
+#   scope       modal = only the open modal card; page = the full page
+#   when        the moment in the journey where tests call design.check (read by test-case-writer)
+#   sample_text regexes for Figma sample data that the app shows differently (company names, amounts)
+#   skip_text   regexes for Figma text that isn't meant to match (placeholders of other states etc.)
+#   only_text   compare ONLY these texts (for pages whose content depends on the company, e.g. cue cards)
+
+feature: Data Room Document Request
+slug: data-room-document-request
+figma_file: https://www.figma.com/design/RWMCvpU1gf3ydyJxTyQwsA/Sprint-Work
+viewport: 1440x900
+
+steps:
+  - id: buyer-1-cue-card-before
+    title: Buyer cue card, before expressing interest
+    role: buyer
+    figma_node: "43762:141751"
+    scope: page
+    when: "cue card opened via View Listing, before Express Interest is clicked"
+    only_text: ["About the company", "Company Highlights", "Customer Details", "Customer Profile", "Business Model", "Team Details", "About the Founders", "Team Size", "Financial Details", "TTM Revenue", "Monthly Revenue", "Gross Margin", "EBITDA", "Express Interest", "Track", "Not Interested"]
+
+  - id: buyer-2a-express-interest-calendar
+    title: Express Interest modal, date picker
+    role: buyer
+    figma_node: "43762:147112"
+    scope: modal
+    when: "Express Interest clicked, calendar showing, nothing picked yet"
+    sample_text: ['^(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}$']
+
+  - id: buyer-2b-express-interest-timeslots
+    title: Express Interest modal, time slots
+    role: buyer
+    figma_node: "43762:146883"
+    scope: modal
+    when: "a date picked, the time slots for it showing"
+
+  - id: buyer-2c-express-interest-filled
+    title: Express Interest modal, slot (and note) filled
+    role: buyer
+    figma_node: "43762:146825"
+    scope: modal
+    when: "first slot confirmed (and the note typed, when the modal asks for one)"
+
+  - id: buyer-3a-success-no-docs
+    title: Interest shared, document request (nothing selected)
+    role: buyer
+    figma_node: "43762:147640"
+    scope: modal
+    when: "Request Call succeeded, confirmation step showing, no chip selected"
+
+  - id: buyer-3b-success-docs-selected
+    title: Interest shared, 3 documents selected
+    role: buyer
+    figma_node: "43762:147749"
+    scope: modal
+    when: "3 chips selected, just before Send request"
+
+  - id: buyer-4-cue-card-after
+    title: Buyer cue card, after the request
+    role: buyer
+    figma_node: "43762:142649"
+    scope: page
+    when: "cue card reloaded after Send request, flagged card visible"
+    only_text: ["About the company", "Company Highlights", "Customer Details", "Customer Profile", "Business Model", "Team Details", "About the Founders", "Team Size", "Financial Details", "TTM Revenue", "Monthly Revenue", "Gross Margin", "EBITDA", "Expressed Interest", "You flagged for the intro call", "A reminder of what you asked to cover.", "Pitch deck", "MIS", "Cap table"]
+
+  - id: seller-1-interest-received
+    title: Seller deals, Interest Received tab
+    role: seller
+    figma_node: "43767:148744"
+    scope: page
+    when: "seller My Deals, Interest Received tab loaded with the request row"
+
+  - id: seller-2-accept-modal
+    title: Accept investor interest, requested documents
+    role: seller
+    figma_node: "44585:103166"
+    scope: modal
+    when: "Accept clicked on the request row, modal fully loaded"
+
+  - id: admin-1-data-room
+    title: Admin deal, Data Room tab with requested topics
+    role: admin
+    figma_node: "43790:150554"
+    scope: page
+    when: "admin deal page, Data Room tab open for a deal with a request"

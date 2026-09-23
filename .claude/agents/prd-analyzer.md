@@ -21,7 +21,7 @@ Two adjustments, because you run as a subagent:
   continue with what you have. Never invent requirements to fill a gap.
 
 ## Inputs
-- PRD: a file path (e.g. `docs/prd/<slug>.md`) or pasted text.
+- PRD: a file path (e.g. `automation/specs/prd/<slug>.md`) or pasted text.
 - Figma URLs (`?node-id=a-b` → node `a:b`), screenshots, Jira keys, or other references.
 - Optional: the feature name, and what the analysis is for (tests, implementation, or both).
 
@@ -33,7 +33,7 @@ Two adjustments, because you run as a subagent:
 - Cross-check Figma against the PRD and flag conflicts, as the skill says. Don't quietly pick one.
 
 ## Output: one document
-Write to `docs/prd/<feature-slug>.analysis.md`, next to the PRD if it's a file. It has two parts.
+Write to `automation/specs/prd/<feature-slug>.analysis.md`, next to the PRD if it's a file. It has two parts.
 
 ### Part A: the skill's required output
 Everything `SKILL.md` lists under "Required Output" (or the condensed form when that applies):

@@ -1,0 +1,1785 @@
+{
+  "figmaNode": "44585:103166",
+  "name": "Modal",
+  "type": "FRAME",
+  "id": "44585:103166",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 500,
+    "h": 628
+  },
+  "fills": [
+    "#151515"
+  ],
+  "radius": 12,
+  "layout": {
+    "direction": "column",
+    "gap": 32,
+    "padding": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "align": "CENTER"
+  },
+  "effects": [
+    {
+      "type": "DROP_SHADOW",
+      "radius": 8,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 8
+      },
+      "color": "#10182808"
+    },
+    {
+      "type": "DROP_SHADOW",
+      "radius": 24,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 20
+      },
+      "color": "#10182814"
+    }
+  ],
+  "children": [
+    {
+      "name": "Content",
+      "type": "FRAME",
+      "id": "44585:103167",
+      "box": {
+        "x": 24,
+        "y": 24,
+        "w": 452,
+        "h": 504
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "Frame 987412",
+          "type": "FRAME",
+          "id": "44585:103168",
+          "box": {
+            "x": 24,
+            "y": 24,
+            "w": 452,
+            "h": 48
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 20,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Featured icon",
+              "type": "INSTANCE",
+              "id": "44585:103169",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "w": 48,
+                "h": 48
+              },
+              "fills": [
+                "#5c6fff"
+              ],
+              "border": {
+                "colors": [
+                  "#3247ff"
+                ],
+                "weight": 8,
+                "align": "CENTER"
+              },
+              "radius": 28,
+              "children": [
+                {
+                  "name": "check-circle",
+                  "type": "INSTANCE",
+                  "id": "I44585:103169;1102:5691",
+                  "box": {
+                    "x": 36,
+                    "y": 36,
+                    "w": 24,
+                    "h": 24
+                  },
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "VECTOR",
+                      "id": "I44585:103169;1102:5691;1037:34200",
+                      "box": {
+                        "x": 38,
+                        "y": 38,
+                        "w": 20,
+                        "h": 20
+                      },
+                      "border": {
+                        "colors": [
+                          "#eaecf0"
+                        ],
+                        "weight": 2,
+                        "align": "CENTER"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Accept investor interest?",
+              "type": "TEXT",
+              "id": "44585:103170",
+              "box": {
+                "x": 92,
+                "y": 33.5,
+                "w": 384,
+                "h": 29
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "text": "Accept investor interest?",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 24,
+                "weight": 700,
+                "lineHeight": 29.28,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Your identity will be revealed to this buyer over email.",
+          "type": "TEXT",
+          "id": "44585:103171",
+          "box": {
+            "x": 24,
+            "y": 88,
+            "w": 452,
+            "h": 24
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "text": "Your identity will be revealed to this buyer over email.",
+          "font": {
+            "family": "Instrument Sans",
+            "size": 16,
+            "weight": 400,
+            "lineHeight": 24,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Frame 1171276051",
+          "type": "FRAME",
+          "id": "44585:103172",
+          "box": {
+            "x": 24,
+            "y": 128,
+            "w": 452,
+            "h": 63
+          },
+          "border": {
+            "colors": [
+              "#667085"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 8,
+          "layout": {
+            "direction": "column",
+            "gap": 4,
+            "padding": [
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 987431",
+              "type": "FRAME",
+              "id": "44585:103173",
+              "box": {
+                "x": 34,
+                "y": 138,
+                "w": 432,
+                "h": 18
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Investor’s message:",
+                  "type": "TEXT",
+                  "id": "44585:103174",
+                  "box": {
+                    "x": 34,
+                    "y": 138,
+                    "w": 432,
+                    "h": 18
+                  },
+                  "fills": [
+                    "#d0d5dd"
+                  ],
+                  "text": "Investor’s message:",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 12,
+                    "weight": 600,
+                    "lineHeight": 18,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Frame 987432",
+              "type": "FRAME",
+              "id": "44585:103175",
+              "box": {
+                "x": 34,
+                "y": 160,
+                "w": 432,
+                "h": 21
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Please have your financials ready before the call",
+                  "type": "TEXT",
+                  "id": "44585:103176",
+                  "box": {
+                    "x": 34,
+                    "y": 160,
+                    "w": 432,
+                    "h": 21
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "text": "Please have your financials ready before the call",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 14,
+                    "weight": 400,
+                    "lineHeight": 21,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "_Button base",
+          "type": "FRAME",
+          "id": "44585:103177",
+          "box": {
+            "x": 24,
+            "y": 207,
+            "w": 452,
+            "h": 166
+          },
+          "fills": [
+            "#201f2b"
+          ],
+          "border": {
+            "colors": [
+              "#57447d"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 8,
+          "layout": {
+            "direction": "column",
+            "gap": 12,
+            "padding": [
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 2,
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "color": "#1018280d"
+            }
+          ],
+          "children": [
+            {
+              "name": "Frame 1707483006",
+              "type": "FRAME",
+              "id": "44585:103178",
+              "box": {
+                "x": 34,
+                "y": 217,
+                "w": 432,
+                "h": 22
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Frame 1707483003",
+                  "type": "FRAME",
+                  "id": "44585:103179",
+                  "box": {
+                    "x": 34,
+                    "y": 217,
+                    "w": 432,
+                    "h": 22
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 35,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "justify": "SPACE_BETWEEN"
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707483002",
+                      "type": "FRAME",
+                      "id": "44585:103180",
+                      "box": {
+                        "x": 34,
+                        "y": 217,
+                        "w": 275,
+                        "h": 21
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 6,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "File",
+                          "type": "FRAME",
+                          "id": "44585:103181",
+                          "box": {
+                            "x": 34,
+                            "y": 217.5,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "children": [
+                            {
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "id": "44585:103182",
+                              "box": {
+                                "x": 37.13000000000011,
+                                "y": 219.38,
+                                "w": 13.75,
+                                "h": 16.25
+                              },
+                              "fills": [
+                                "#a87cf7"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Frame 1707480311",
+                          "type": "FRAME",
+                          "id": "44585:103183",
+                          "box": {
+                            "x": 60,
+                            "y": 217,
+                            "w": 249,
+                            "h": 21
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 4,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Request documents from the investor",
+                              "type": "TEXT",
+                              "id": "44585:103184",
+                              "box": {
+                                "x": 60,
+                                "y": 217,
+                                "w": 249,
+                                "h": 21
+                              },
+                              "fills": [
+                                "#ffffff"
+                              ],
+                              "text": "Request documents from the investor",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 600,
+                                "lineHeight": 21,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "_Badge base",
+                      "type": "FRAME",
+                      "id": "44585:103185",
+                      "box": {
+                        "x": 447,
+                        "y": 217,
+                        "w": 19,
+                        "h": 22
+                      },
+                      "radius": 6,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 4,
+                        "padding": [
+                          2,
+                          0,
+                          2,
+                          0
+                        ],
+                        "justify": "CENTER",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "44585:103186",
+                          "box": {
+                            "x": 447,
+                            "y": 219,
+                            "w": 19,
+                            "h": 18
+                          },
+                          "fills": [
+                            "#b794f6"
+                          ],
+                          "text": "3/3",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 12,
+                            "weight": 500,
+                            "lineHeight": 18,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Frame 1707483010",
+              "type": "FRAME",
+              "id": "44585:103187",
+              "box": {
+                "x": 34,
+                "y": 251,
+                "w": 432,
+                "h": 112
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Frame 1707482701",
+                  "type": "FRAME",
+                  "id": "44585:103188",
+                  "box": {
+                    "x": 34,
+                    "y": 251,
+                    "w": 432,
+                    "h": 32
+                  },
+                  "border": {
+                    "colors": [
+                      "#f31414"
+                    ],
+                    "weight": 0,
+                    "align": "INSIDE"
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      8
+                    ],
+                    "justify": "SPACE_BETWEEN",
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707482703",
+                      "type": "FRAME",
+                      "id": "44585:103189",
+                      "box": {
+                        "x": 42,
+                        "y": 251,
+                        "w": 129,
+                        "h": 32
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707482700",
+                          "type": "FRAME",
+                          "id": "44585:103190",
+                          "box": {
+                            "x": 42,
+                            "y": 251,
+                            "w": 129,
+                            "h": 32
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 2,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "Pitch deck *",
+                              "type": "TEXT",
+                              "id": "44585:103191",
+                              "box": {
+                                "x": 42,
+                                "y": 251,
+                                "w": 78,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#e0e0e0"
+                              ],
+                              "text": "Pitch deck *",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 500,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            },
+                            {
+                              "name": "240304 Company EL.pdf",
+                              "type": "TEXT",
+                              "id": "44585:103192",
+                              "box": {
+                                "x": 42,
+                                "y": 270,
+                                "w": 129,
+                                "h": 13
+                              },
+                              "fills": [
+                                "#7fd8a3"
+                              ],
+                              "text": "240304 Company EL.pdf",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 11,
+                                "weight": 500,
+                                "lineHeight": 13.42,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "_Badge base",
+                      "type": "FRAME",
+                      "id": "44585:103193",
+                      "box": {
+                        "x": 369,
+                        "y": 254,
+                        "w": 97,
+                        "h": 26
+                      },
+                      "fills": [
+                        "#24263b"
+                      ],
+                      "border": {
+                        "colors": [
+                          "#3a3c4e"
+                        ],
+                        "weight": 1,
+                        "align": "INSIDE"
+                      },
+                      "radius": 6,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 6,
+                        "padding": [
+                          4,
+                          12,
+                          4,
+                          12
+                        ],
+                        "justify": "CENTER",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "44585:103194",
+                          "box": {
+                            "x": 381,
+                            "y": 258,
+                            "w": 53,
+                            "h": 18
+                          },
+                          "fills": [
+                            "#7fd8a3"
+                          ],
+                          "text": "Attached",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 12,
+                            "weight": 600,
+                            "lineHeight": 18,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "X",
+                          "type": "FRAME",
+                          "id": "44585:103195",
+                          "box": {
+                            "x": 440,
+                            "y": 260,
+                            "w": 14,
+                            "h": 14
+                          },
+                          "children": [
+                            {
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "id": "44585:103196",
+                              "box": {
+                                "x": 442.6299999999992,
+                                "y": 262.63,
+                                "w": 8.75,
+                                "h": 8.75
+                              },
+                              "fills": [
+                                "#898ea2"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 1707483008",
+                  "type": "FRAME",
+                  "id": "44585:103197",
+                  "box": {
+                    "x": 34,
+                    "y": 291,
+                    "w": 432,
+                    "h": 32
+                  },
+                  "border": {
+                    "colors": [
+                      "#a855f7"
+                    ],
+                    "weight": 0,
+                    "align": "INSIDE"
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      8
+                    ],
+                    "justify": "SPACE_BETWEEN",
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707482703",
+                      "type": "FRAME",
+                      "id": "44585:103198",
+                      "box": {
+                        "x": 42,
+                        "y": 291,
+                        "w": 117,
+                        "h": 32
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707482700",
+                          "type": "FRAME",
+                          "id": "44585:103199",
+                          "box": {
+                            "x": 42,
+                            "y": 291,
+                            "w": 117,
+                            "h": 32
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 2,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "Audited financials",
+                              "type": "TEXT",
+                              "id": "44585:103200",
+                              "box": {
+                                "x": 42,
+                                "y": 291,
+                                "w": 117,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#e0e0e0"
+                              ],
+                              "text": "Audited financials",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 500,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            },
+                            {
+                              "name": "Not uploaded yet",
+                              "type": "TEXT",
+                              "id": "44585:103201",
+                              "box": {
+                                "x": 42,
+                                "y": 310,
+                                "w": 88,
+                                "h": 13
+                              },
+                              "fills": [
+                                "#888888"
+                              ],
+                              "text": "Not uploaded yet",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 11,
+                                "weight": 500,
+                                "lineHeight": 13.42,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "_Badge base",
+                      "type": "FRAME",
+                      "id": "44585:103202",
+                      "box": {
+                        "x": 369,
+                        "y": 294,
+                        "w": 97,
+                        "h": 26
+                      },
+                      "fills": [
+                        "#202126"
+                      ],
+                      "border": {
+                        "colors": [
+                          "#4d4d50"
+                        ],
+                        "weight": 1,
+                        "align": "INSIDE"
+                      },
+                      "radius": 6,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 6,
+                        "padding": [
+                          4,
+                          12,
+                          4,
+                          12
+                        ],
+                        "justify": "SPACE_BETWEEN",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "44585:103203",
+                          "box": {
+                            "x": 381,
+                            "y": 298,
+                            "w": 39,
+                            "h": 18
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "text": "Attach",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 12,
+                            "weight": 600,
+                            "lineHeight": 18,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "CaretDown",
+                          "type": "FRAME",
+                          "id": "44585:103204",
+                          "box": {
+                            "x": 440,
+                            "y": 300,
+                            "w": 14,
+                            "h": 14
+                          },
+                          "children": [
+                            {
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "id": "44585:103205",
+                              "box": {
+                                "x": 442.1900000000005,
+                                "y": 304.80999999999995,
+                                "w": 9.63,
+                                "h": 5.25
+                              },
+                              "fills": [
+                                "#ffffff"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Frame 1707483009",
+                  "type": "FRAME",
+                  "id": "44585:103206",
+                  "box": {
+                    "x": 34,
+                    "y": 331,
+                    "w": 432,
+                    "h": 32
+                  },
+                  "border": {
+                    "colors": [
+                      "#a855f7"
+                    ],
+                    "weight": 0,
+                    "align": "INSIDE"
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      8
+                    ],
+                    "justify": "SPACE_BETWEEN",
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Frame 1707482703",
+                      "type": "FRAME",
+                      "id": "44585:103207",
+                      "box": {
+                        "x": 42,
+                        "y": 331,
+                        "w": 121,
+                        "h": 32
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707482700",
+                          "type": "FRAME",
+                          "id": "44585:103208",
+                          "box": {
+                            "x": 42,
+                            "y": 331,
+                            "w": 121,
+                            "h": 32
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 2,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ]
+                          },
+                          "children": [
+                            {
+                              "name": "Cap table",
+                              "type": "TEXT",
+                              "id": "44585:103209",
+                              "box": {
+                                "x": 42,
+                                "y": 331,
+                                "w": 63,
+                                "h": 17
+                              },
+                              "fills": [
+                                "#e0e0e0"
+                              ],
+                              "text": "Cap table",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 500,
+                                "lineHeight": 17.08,
+                                "letterSpacing": 0,
+                                "align": "CENTER"
+                              }
+                            },
+                            {
+                              "name": "2 files in your data room",
+                              "type": "TEXT",
+                              "id": "44585:103210",
+                              "box": {
+                                "x": 42,
+                                "y": 350,
+                                "w": 121,
+                                "h": 13
+                              },
+                              "fills": [
+                                "#888888"
+                              ],
+                              "text": "2 files in your data room",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 11,
+                                "weight": 500,
+                                "lineHeight": 13.42,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "_Badge base",
+                      "type": "FRAME",
+                      "id": "44585:103211",
+                      "box": {
+                        "x": 369,
+                        "y": 334,
+                        "w": 97,
+                        "h": 26
+                      },
+                      "fills": [
+                        "#202126"
+                      ],
+                      "border": {
+                        "colors": [
+                          "#4d4d50"
+                        ],
+                        "weight": 1,
+                        "align": "INSIDE"
+                      },
+                      "radius": 6,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 6,
+                        "padding": [
+                          4,
+                          12,
+                          4,
+                          12
+                        ],
+                        "justify": "SPACE_BETWEEN",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "44585:103212",
+                          "box": {
+                            "x": 381,
+                            "y": 338,
+                            "w": 41,
+                            "h": 18
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "text": "Upload",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 12,
+                            "weight": 600,
+                            "lineHeight": 18,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "UploadSimple",
+                          "type": "FRAME",
+                          "id": "44585:103213",
+                          "box": {
+                            "x": 440,
+                            "y": 340,
+                            "w": 14,
+                            "h": 14
+                          },
+                          "children": [
+                            {
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "id": "44585:103214",
+                              "box": {
+                                "x": 441.75,
+                                "y": 341.30999999999995,
+                                "w": 10.5,
+                                "h": 10.5
+                              },
+                              "fills": [
+                                "#ffffff"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 1171276049",
+          "type": "FRAME",
+          "id": "44585:103215",
+          "box": {
+            "x": 24,
+            "y": 389,
+            "w": 452,
+            "h": 139
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 987431",
+              "type": "FRAME",
+              "id": "44585:103216",
+              "box": {
+                "x": 24,
+                "y": 389,
+                "w": 452,
+                "h": 21
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Choose a timeslot for the introductory call *",
+                  "type": "TEXT",
+                  "id": "44585:103217",
+                  "box": {
+                    "x": 24,
+                    "y": 389,
+                    "w": 452,
+                    "h": 21
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "text": "Choose a timeslot for the introductory call *",
+                  "font": {
+                    "family": "SF Compact Rounded",
+                    "size": 14,
+                    "weight": 300,
+                    "lineHeight": 21,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Upload file",
+              "type": "FRAME",
+              "id": "44585:103218",
+              "box": {
+                "x": 24,
+                "y": 418,
+                "w": 452,
+                "h": 51
+              },
+              "fills": [
+                "#282828"
+              ],
+              "radius": 8.512242317199707,
+              "layout": {
+                "direction": "row",
+                "gap": 35,
+                "padding": [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "id": "44585:103219",
+                  "box": {
+                    "x": 34,
+                    "y": 431.5,
+                    "w": 344,
+                    "h": 24
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 12,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Input",
+                      "type": "FRAME",
+                      "id": "I44585:103219;1100:1425",
+                      "box": {
+                        "x": 34,
+                        "y": 431.5,
+                        "w": 20,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          2,
+                          0,
+                          0,
+                          0
+                        ],
+                        "justify": "CENTER",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Checkbox",
+                          "type": "INSTANCE",
+                          "id": "I44585:103219;1100:1426",
+                          "box": {
+                            "x": 34,
+                            "y": 433.5,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "_Checkbox base",
+                              "type": "INSTANCE",
+                              "id": "I44585:103219;1100:1426;1100:881",
+                              "box": {
+                                "x": 34,
+                                "y": 433.5,
+                                "w": 20,
+                                "h": 20
+                              },
+                              "fills": [
+                                "#f9f5ff00"
+                              ],
+                              "border": {
+                                "colors": [
+                                  "#3247ff"
+                                ],
+                                "weight": 1,
+                                "align": "INSIDE"
+                              },
+                              "radius": 10,
+                              "children": [
+                                {
+                                  "name": "Check",
+                                  "type": "ELLIPSE",
+                                  "id": "I44585:103219;1100:1426;1100:881;1100:584",
+                                  "box": {
+                                    "x": 40,
+                                    "y": 439.5,
+                                    "w": 8,
+                                    "h": 8
+                                  },
+                                  "fills": [
+                                    "#3247ff"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Text and supporting text",
+                      "type": "FRAME",
+                      "id": "I44585:103219;1100:1427",
+                      "box": {
+                        "x": 66,
+                        "y": 431.5,
+                        "w": 312,
+                        "h": 24
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 2,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "I44585:103219;1100:1428",
+                          "box": {
+                            "x": 66,
+                            "y": 431.5,
+                            "w": 312,
+                            "h": 24
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "text": "13-11-2024 at 11:00 AM - 11:30 AM",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 500,
+                            "lineHeight": 24,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upload file",
+              "type": "FRAME",
+              "id": "44585:103220",
+              "box": {
+                "x": 24,
+                "y": 477,
+                "w": 452,
+                "h": 51
+              },
+              "fills": [
+                "#282828"
+              ],
+              "radius": 8.512242317199707,
+              "layout": {
+                "direction": "row",
+                "gap": 35,
+                "padding": [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "id": "44585:103221",
+                  "box": {
+                    "x": 34,
+                    "y": 490.5,
+                    "w": 344,
+                    "h": 24
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 12,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Input",
+                      "type": "FRAME",
+                      "id": "I44585:103221;1100:1425",
+                      "box": {
+                        "x": 34,
+                        "y": 490.5,
+                        "w": 20,
+                        "h": 22
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "padding": [
+                          2,
+                          0,
+                          0,
+                          0
+                        ],
+                        "justify": "CENTER",
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Checkbox",
+                          "type": "INSTANCE",
+                          "id": "I44585:103221;1100:1426",
+                          "box": {
+                            "x": 34,
+                            "y": 492.5,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "justify": "CENTER",
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "_Checkbox base",
+                              "type": "INSTANCE",
+                              "id": "I44585:103221;1100:1426;1100:881",
+                              "box": {
+                                "x": 34,
+                                "y": 492.5,
+                                "w": 20,
+                                "h": 20
+                              },
+                              "fills": [
+                                "#282828"
+                              ],
+                              "border": {
+                                "colors": [
+                                  "#b5b5b5"
+                                ],
+                                "weight": 1,
+                                "align": "INSIDE"
+                              },
+                              "radius": 10
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Text and supporting text",
+                      "type": "FRAME",
+                      "id": "I44585:103221;1100:1427",
+                      "box": {
+                        "x": 66,
+                        "y": 490.5,
+                        "w": 312,
+                        "h": 24
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 2,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "I44585:103221;1100:1428",
+                          "box": {
+                            "x": 66,
+                            "y": 490.5,
+                            "w": 312,
+                            "h": 24
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "text": "Neither, schedule over email",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 500,
+                            "lineHeight": 24,
+                            "letterSpacing": 0,
+                            "align": "LEFT"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frame 1707482765",
+      "type": "FRAME",
+      "id": "44585:103222",
+      "box": {
+        "x": 24,
+        "y": 560,
+        "w": 452,
+        "h": 44
+      },
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "justify": "CENTER",
+        "align": "CENTER"
+      },
+      "children": [
+        {
+          "name": "back button",
+          "type": "FRAME",
+          "id": "44585:103223",
+          "box": {
+            "x": 24,
+            "y": 560,
+            "w": 222,
+            "h": 44
+          },
+          "fills": [
+            "#181a30"
+          ],
+          "border": {
+            "colors": [
+              "#606edc"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 13,
+          "layout": {
+            "direction": "row",
+            "gap": 6,
+            "padding": [
+              14,
+              22,
+              14,
+              22
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 4,
+              "offset": {
+                "x": 0,
+                "y": 4
+              },
+              "color": "#00000040"
+            }
+          ],
+          "children": [
+            {
+              "name": "Cancel",
+              "type": "TEXT",
+              "id": "44585:103224",
+              "box": {
+                "x": 113,
+                "y": 573.5,
+                "w": 44,
+                "h": 17
+              },
+              "fills": [
+                "#e0e0e0"
+              ],
+              "text": "Cancel",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 14,
+                "weight": 500,
+                "lineHeight": 17.08,
+                "letterSpacing": -0.35,
+                "align": "CENTER"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Continue button",
+          "type": "FRAME",
+          "id": "44585:103225",
+          "box": {
+            "x": 254,
+            "y": 560,
+            "w": 222,
+            "h": 44
+          },
+          "fills": [
+            "#5c6fff"
+          ],
+          "radius": 13,
+          "layout": {
+            "direction": "row",
+            "gap": 6,
+            "padding": [
+              14,
+              24.5,
+              14,
+              24.5
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Accept",
+              "type": "TEXT",
+              "id": "44585:103226",
+              "box": {
+                "x": 341.5,
+                "y": 573.5,
+                "w": 47,
+                "h": 17
+              },
+              "fills": [
+                "#ffffff"
+              ],
+              "text": "Accept",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 14,
+                "weight": 700,
+                "lineHeight": 17.08,
+                "letterSpacing": -0.35,
+                "align": "CENTER"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

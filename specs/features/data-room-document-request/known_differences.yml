@@ -1,0 +1,22 @@
+# Design differences product has seen and decided about. Matching issues are left out of the
+# issue counts (and of DD_DESIGN_STRICT) and listed in the report's step notes instead.
+#
+#   step:     flow step id, or "*" for every step
+#   expected: text (or regex, when it starts with ^) matched against the issue's "expected" value
+#   status:   accepted = design will be updated / not a bug; open = still to fix (kept as an issue)
+#   note:     why
+
+- step: "*"
+  expected: "^Express Interest in this company$"
+  status: accepted
+  note: App title is "Express Interest" (SlotSchedulerModal/index.js:645).
+
+- step: "*"
+  expected: "^Add preferred slots for meet \\(IST\\)"
+  status: accepted
+  note: App says "meeting" instead of Figma's "meet".
+
+- step: "*"
+  expected: "^You are expressing interest in a company outside your preferences"
+  status: open
+  note: Outside-preference banner is not built (no such copy in src/). Tracked as not_implemented_yet.

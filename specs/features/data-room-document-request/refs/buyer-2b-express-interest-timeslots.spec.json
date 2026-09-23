@@ -1,0 +1,4217 @@
+{
+  "figmaNode": "43762:146883",
+  "name": "Modal - Required Note",
+  "type": "FRAME",
+  "id": "43762:146883",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 457,
+    "h": 793
+  },
+  "fills": [
+    "#ffffff"
+  ],
+  "radius": 12,
+  "layout": {
+    "direction": "column",
+    "gap": 24,
+    "padding": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "justify": "CENTER"
+  },
+  "effects": [
+    {
+      "type": "DROP_SHADOW",
+      "radius": 8,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 8
+      },
+      "color": "#10182808"
+    },
+    {
+      "type": "DROP_SHADOW",
+      "radius": 24,
+      "spread": -4,
+      "offset": {
+        "x": 0,
+        "y": 20
+      },
+      "color": "#10182814"
+    }
+  ],
+  "children": [
+    {
+      "name": "Content",
+      "type": "FRAME",
+      "id": "43762:146884",
+      "box": {
+        "x": 24,
+        "y": 24,
+        "w": 409,
+        "h": 677
+      },
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "Text and supporting text",
+          "type": "FRAME",
+          "id": "43762:146885",
+          "box": {
+            "x": 24,
+            "y": 24,
+            "w": 409,
+            "h": 48
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 987431",
+              "type": "FRAME",
+              "id": "43762:146886",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "w": 409,
+                "h": 48
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 20,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "justify": "CENTER",
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "Featured icon",
+                  "type": "INSTANCE",
+                  "id": "43762:146887",
+                  "box": {
+                    "x": 24,
+                    "y": 24,
+                    "w": 48,
+                    "h": 48
+                  },
+                  "fills": [
+                    "#d1fadf"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#ecfdf3"
+                    ],
+                    "weight": 8,
+                    "align": "CENTER"
+                  },
+                  "radius": 28,
+                  "children": [
+                    {
+                      "name": "check-circle",
+                      "type": "INSTANCE",
+                      "id": "I43762:146887;1102:5691",
+                      "box": {
+                        "x": 36,
+                        "y": 36,
+                        "w": 24,
+                        "h": 24
+                      },
+                      "children": [
+                        {
+                          "name": "Icon",
+                          "type": "VECTOR",
+                          "id": "I43762:146887;1102:5691;1037:34200",
+                          "box": {
+                            "x": 38,
+                            "y": 38,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "border": {
+                            "colors": [
+                              "#039855"
+                            ],
+                            "weight": 2,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Text",
+                  "type": "TEXT",
+                  "id": "43762:146888",
+                  "box": {
+                    "x": 92,
+                    "y": 34,
+                    "w": 341,
+                    "h": 28
+                  },
+                  "fills": [
+                    "#101828"
+                  ],
+                  "text": "Express Interest in this company",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 18,
+                    "weight": 500,
+                    "lineHeight": 28,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Express your interest by proposing a few time slots for an introductory discussion. The final meeting time will be mutually confirmed.",
+          "type": "TEXT",
+          "id": "43762:146889",
+          "box": {
+            "x": 24,
+            "y": 88,
+            "w": 409,
+            "h": 60
+          },
+          "fills": [
+            "#667085"
+          ],
+          "text": "Express your interest by proposing a few time slots for an introductory discussion. The final meeting time will be mutually confirmed.",
+          "font": {
+            "family": "Instrument Sans",
+            "size": 14,
+            "weight": 400,
+            "lineHeight": 20,
+            "letterSpacing": 0,
+            "align": "LEFT"
+          }
+        },
+        {
+          "name": "Frame 1707478514",
+          "type": "FRAME",
+          "id": "43762:146890",
+          "box": {
+            "x": 24,
+            "y": 164,
+            "w": 409,
+            "h": 378
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "justify": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Frame 1707481730",
+              "type": "FRAME",
+              "id": "43762:146891",
+              "box": {
+                "x": 24,
+                "y": 164,
+                "w": 409,
+                "h": 378
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Label",
+                  "type": "TEXT",
+                  "id": "43762:146892",
+                  "box": {
+                    "x": 24,
+                    "y": 164,
+                    "w": 409,
+                    "h": 20
+                  },
+                  "fills": [
+                    "#344054"
+                  ],
+                  "text": "Add preferred slots for meet (IST) * ",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 14,
+                    "weight": 500,
+                    "lineHeight": 20,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                },
+                {
+                  "name": "Time Picker",
+                  "type": "FRAME",
+                  "id": "43762:146893",
+                  "box": {
+                    "x": 24,
+                    "y": 190,
+                    "w": 409,
+                    "h": 305
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "border": {
+                    "colors": [
+                      "#d0d5dd"
+                    ],
+                    "weight": 0.8181540966033936,
+                    "align": "INSIDE"
+                  },
+                  "radius": 12.27231216430664,
+                  "layout": {
+                    "direction": "column",
+                    "gap": 11.550000190734863,
+                    "padding": [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "align": "CENTER"
+                  },
+                  "children": [
+                    {
+                      "name": "Month",
+                      "type": "FRAME",
+                      "id": "43762:146894",
+                      "box": {
+                        "x": 36,
+                        "y": 202,
+                        "w": 385,
+                        "h": 34
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 8,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "align": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "ArrowLeft",
+                          "type": "FRAME",
+                          "id": "43762:146895",
+                          "box": {
+                            "x": 36,
+                            "y": 209,
+                            "w": 20,
+                            "h": 20
+                          },
+                          "children": [
+                            {
+                              "name": "Vector",
+                              "type": "VECTOR",
+                              "id": "43762:146896",
+                              "box": {
+                                "x": 38.5,
+                                "y": 212.75,
+                                "w": 15,
+                                "h": 12.5
+                              },
+                              "fills": [
+                                "#344054"
+                              ],
+                              "border": {
+                                "colors": [
+                                  "#344054"
+                                ],
+                                "weight": 0.5,
+                                "align": "CENTER"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Text",
+                          "type": "TEXT",
+                          "id": "43762:146897",
+                          "box": {
+                            "x": 64,
+                            "y": 210.5,
+                            "w": 33,
+                            "h": 17
+                          },
+                          "fills": [
+                            "#344054"
+                          ],
+                          "text": "Back",
+                          "font": {
+                            "family": "Instrument Sans",
+                            "size": 14,
+                            "weight": 600,
+                            "lineHeight": 17.08,
+                            "letterSpacing": 0,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Rectangle 9",
+                      "type": "RECTANGLE",
+                      "id": "43762:146898",
+                      "box": {
+                        "x": 36,
+                        "y": 247.55,
+                        "w": 385,
+                        "h": 0.82
+                      },
+                      "fills": [
+                        "#d0d5dd"
+                      ]
+                    },
+                    {
+                      "name": "Frame 1707482054",
+                      "type": "FRAME",
+                      "id": "43762:146899",
+                      "box": {
+                        "x": 36,
+                        "y": 259.92,
+                        "w": 385,
+                        "h": 223.08
+                      },
+                      "layout": {
+                        "direction": "row",
+                        "gap": 18,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "justify": "CENTER"
+                      },
+                      "children": [
+                        {
+                          "name": "Frame 1707482053",
+                          "type": "FRAME",
+                          "id": "43762:146900",
+                          "box": {
+                            "x": 57.5,
+                            "y": 259.92,
+                            "w": 320,
+                            "h": 223.08
+                          },
+                          "layout": {
+                            "direction": "column",
+                            "gap": 15,
+                            "padding": [
+                              0,
+                              0,
+                              0,
+                              0
+                            ],
+                            "align": "CENTER"
+                          },
+                          "children": [
+                            {
+                              "name": "Frame 1707482003",
+                              "type": "FRAME",
+                              "id": "43762:146901",
+                              "box": {
+                                "x": 57.5,
+                                "y": 259.92,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146902",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 259.92,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146903",
+                                      "box": {
+                                        "x": 65.09000000000015,
+                                        "y": 269.6,
+                                        "w": 54,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "10:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146904",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 259.92,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146905",
+                                      "box": {
+                                        "x": 149.20000000000027,
+                                        "y": 269.6,
+                                        "w": 53,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "10:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146906",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 259.92,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146907",
+                                      "box": {
+                                        "x": 233.80000000000018,
+                                        "y": 269.6,
+                                        "w": 51,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "11:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146908",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 259.92,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146909",
+                                      "box": {
+                                        "x": 318.4100000000003,
+                                        "y": 269.6,
+                                        "w": 49,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "11:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482004",
+                              "type": "FRAME",
+                              "id": "43762:146910",
+                              "box": {
+                                "x": 57.5,
+                                "y": 308.28,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146911",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 308.28,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146912",
+                                      "box": {
+                                        "x": 66.09000000000015,
+                                        "y": 317.96000000000004,
+                                        "w": 52,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "12:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146913",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 308.28,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146914",
+                                      "box": {
+                                        "x": 150.20000000000027,
+                                        "y": 317.96000000000004,
+                                        "w": 51,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "12:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146915",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 308.28,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146916",
+                                      "box": {
+                                        "x": 236.80000000000018,
+                                        "y": 317.96000000000004,
+                                        "w": 45,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "1:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146917",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 308.28,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146918",
+                                      "box": {
+                                        "x": 320.9100000000003,
+                                        "y": 317.96000000000004,
+                                        "w": 44,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "1:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482005",
+                              "type": "FRAME",
+                              "id": "43762:146919",
+                              "box": {
+                                "x": 57.5,
+                                "y": 356.64,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146920",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 356.64,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146921",
+                                      "box": {
+                                        "x": 68.59000000000015,
+                                        "y": 366.32000000000005,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "2:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146922",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 356.64,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146923",
+                                      "box": {
+                                        "x": 152.70000000000027,
+                                        "y": 366.32000000000005,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "2:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146924",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 356.64,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146925",
+                                      "box": {
+                                        "x": 235.30000000000018,
+                                        "y": 366.32000000000005,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "3:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146926",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 356.64,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146927",
+                                      "box": {
+                                        "x": 319.9100000000003,
+                                        "y": 366.32000000000005,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "3:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482006",
+                              "type": "FRAME",
+                              "id": "43762:146928",
+                              "box": {
+                                "x": 57.5,
+                                "y": 405.01,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146929",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 405.01,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146930",
+                                      "box": {
+                                        "x": 68.09000000000015,
+                                        "y": 414.69000000000005,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "4:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146931",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 405.01,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146932",
+                                      "box": {
+                                        "x": 152.70000000000027,
+                                        "y": 414.69000000000005,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "4:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146933",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 405.01,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146934",
+                                      "box": {
+                                        "x": 235.80000000000018,
+                                        "y": 414.69000000000005,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "5:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146935",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 405.01,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146936",
+                                      "box": {
+                                        "x": 319.9100000000003,
+                                        "y": 414.69000000000005,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "5:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482007",
+                              "type": "FRAME",
+                              "id": "43762:146937",
+                              "box": {
+                                "x": 57.5,
+                                "y": 453.37,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146938",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 453.37,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146939",
+                                      "box": {
+                                        "x": 68.09000000000015,
+                                        "y": 463.04999999999995,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "6:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146940",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 453.37,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146941",
+                                      "box": {
+                                        "x": 152.20000000000027,
+                                        "y": 463.04999999999995,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "6:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146942",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 453.37,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146943",
+                                      "box": {
+                                        "x": 235.80000000000018,
+                                        "y": 463.04999999999995,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "7:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146944",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 453.37,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146945",
+                                      "box": {
+                                        "x": 320.4100000000003,
+                                        "y": 463.04999999999995,
+                                        "w": 45,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "7:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482008",
+                              "type": "FRAME",
+                              "id": "43762:146946",
+                              "box": {
+                                "x": 57.5,
+                                "y": 501.73,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146947",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 501.73,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146948",
+                                      "box": {
+                                        "x": 68.09000000000015,
+                                        "y": 511.40999999999997,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "8:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146949",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 501.73,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#d0d5dd99"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146950",
+                                      "box": {
+                                        "x": 152.70000000000027,
+                                        "y": 511.40999999999997,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "8:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146951",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 501.73,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146952",
+                                      "box": {
+                                        "x": 235.30000000000018,
+                                        "y": 511.40999999999997,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "9:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146953",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 501.73,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146954",
+                                      "box": {
+                                        "x": 319.4100000000003,
+                                        "y": 511.40999999999997,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "9:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482009",
+                              "type": "FRAME",
+                              "id": "43762:146955",
+                              "box": {
+                                "x": 57.5,
+                                "y": 550.1,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146956",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 550.1,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146957",
+                                      "box": {
+                                        "x": 65.59000000000015,
+                                        "y": 559.78,
+                                        "w": 53,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "10:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146958",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 550.1,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146959",
+                                      "box": {
+                                        "x": 149.70000000000027,
+                                        "y": 559.78,
+                                        "w": 52,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "10:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146960",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 550.1,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146961",
+                                      "box": {
+                                        "x": 234.30000000000018,
+                                        "y": 559.78,
+                                        "w": 50,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "11:00 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146962",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 550.1,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146963",
+                                      "box": {
+                                        "x": 318.4100000000003,
+                                        "y": 559.78,
+                                        "w": 49,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "11:30 PM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707478553",
+                              "type": "FRAME",
+                              "id": "43762:146964",
+                              "box": {
+                                "x": 57.5,
+                                "y": 598.46,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146965",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 598.46,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146966",
+                                      "box": {
+                                        "x": 65.59000000000015,
+                                        "y": 608.14,
+                                        "w": 53,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "12:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146967",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 598.46,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146968",
+                                      "box": {
+                                        "x": 149.70000000000027,
+                                        "y": 608.14,
+                                        "w": 52,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "12:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146969",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 598.46,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146970",
+                                      "box": {
+                                        "x": 236.30000000000018,
+                                        "y": 608.14,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "1:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146971",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 598.46,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146972",
+                                      "box": {
+                                        "x": 320.4100000000003,
+                                        "y": 608.14,
+                                        "w": 45,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "1:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707481999",
+                              "type": "FRAME",
+                              "id": "43762:146973",
+                              "box": {
+                                "x": 57.5,
+                                "y": 646.82,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146974",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 646.82,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146975",
+                                      "box": {
+                                        "x": 68.09000000000015,
+                                        "y": 656.5,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "2:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146976",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 646.82,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146977",
+                                      "box": {
+                                        "x": 152.20000000000027,
+                                        "y": 656.5,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "2:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146978",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 646.82,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146979",
+                                      "box": {
+                                        "x": 235.30000000000018,
+                                        "y": 656.5,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "3:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146980",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 646.82,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146981",
+                                      "box": {
+                                        "x": 319.4100000000003,
+                                        "y": 656.5,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "3:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482000",
+                              "type": "FRAME",
+                              "id": "43762:146982",
+                              "box": {
+                                "x": 57.5,
+                                "y": 695.19,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146983",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 695.19,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146984",
+                                      "box": {
+                                        "x": 67.59000000000015,
+                                        "y": 704.87,
+                                        "w": 49,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "4:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146985",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 695.19,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146986",
+                                      "box": {
+                                        "x": 152.20000000000027,
+                                        "y": 704.87,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "4:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146987",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 695.19,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146988",
+                                      "box": {
+                                        "x": 235.30000000000018,
+                                        "y": 704.87,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "5:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146989",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 695.19,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146990",
+                                      "box": {
+                                        "x": 319.4100000000003,
+                                        "y": 704.87,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "5:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482001",
+                              "type": "FRAME",
+                              "id": "43762:146991",
+                              "box": {
+                                "x": 57.5,
+                                "y": 743.55,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146992",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 743.55,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146993",
+                                      "box": {
+                                        "x": 67.59000000000015,
+                                        "y": 753.23,
+                                        "w": 49,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "6:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146994",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 743.55,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146995",
+                                      "box": {
+                                        "x": 152.20000000000027,
+                                        "y": 753.23,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "6:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146996",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 743.55,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146997",
+                                      "box": {
+                                        "x": 235.80000000000018,
+                                        "y": 753.23,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "7:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:146998",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 743.55,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:146999",
+                                      "box": {
+                                        "x": 319.9100000000003,
+                                        "y": 753.23,
+                                        "w": 46,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "7:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Frame 1707482002",
+                              "type": "FRAME",
+                              "id": "43762:147000",
+                              "box": {
+                                "x": 57.5,
+                                "y": 791.91,
+                                "w": 320,
+                                "h": 33.36
+                              },
+                              "layout": {
+                                "direction": "row",
+                                "gap": 4.908924579620361,
+                                "padding": [
+                                  0,
+                                  0,
+                                  0,
+                                  0
+                                ],
+                                "justify": "SPACE_BETWEEN",
+                                "align": "CENTER"
+                              },
+                              "children": [
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:147001",
+                                  "box": {
+                                    "x": 57.5,
+                                    "y": 791.91,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147002",
+                                      "box": {
+                                        "x": 68.09000000000015,
+                                        "y": 801.59,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "8:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:147003",
+                                  "box": {
+                                    "x": 141.11000000000013,
+                                    "y": 791.91,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147004",
+                                      "box": {
+                                        "x": 152.20000000000027,
+                                        "y": 801.59,
+                                        "w": 47,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "8:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:147005",
+                                  "box": {
+                                    "x": 224.71000000000004,
+                                    "y": 791.91,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147006",
+                                      "box": {
+                                        "x": 234.80000000000018,
+                                        "y": 801.59,
+                                        "w": 49,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "9:00 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "_Date picker list item",
+                                  "type": "FRAME",
+                                  "id": "43762:147007",
+                                  "box": {
+                                    "x": 308.32000000000016,
+                                    "y": 791.91,
+                                    "w": 69.18,
+                                    "h": 33.36
+                                  },
+                                  "fills": [
+                                    "#ffffff"
+                                  ],
+                                  "border": {
+                                    "colors": [
+                                      "#0f4082"
+                                    ],
+                                    "weight": 0.6545233130455017,
+                                    "align": "INSIDE"
+                                  },
+                                  "radius": 4,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "padding": [
+                                      8.181541442871094,
+                                      13.090465545654297,
+                                      8.181541442871094,
+                                      13.090465545654297
+                                    ],
+                                    "justify": "CENTER",
+                                    "align": "CENTER"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "Day",
+                                      "type": "TEXT",
+                                      "id": "43762:147008",
+                                      "box": {
+                                        "x": 318.9100000000003,
+                                        "y": 801.59,
+                                        "w": 48,
+                                        "h": 14
+                                      },
+                                      "fills": [
+                                        "#475467"
+                                      ],
+                                      "text": "9:30 AM",
+                                      "font": {
+                                        "family": "Instrument Sans",
+                                        "size": 12,
+                                        "weight": 500,
+                                        "lineHeight": 13.09,
+                                        "letterSpacing": 0,
+                                        "align": "CENTER"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Scrollbar — Custom",
+                          "type": "FRAME",
+                          "id": "43762:147009",
+                          "box": {
+                            "x": 395.5,
+                            "y": 259.92,
+                            "w": 4,
+                            "h": 223.08
+                          },
+                          "fills": [
+                            "#e7e7e7"
+                          ],
+                          "radius": 81.8154067993164,
+                          "children": [
+                            {
+                              "name": "Bar",
+                              "type": "RECTANGLE",
+                              "id": "43762:147010",
+                              "box": {
+                                "x": 395.53999999999996,
+                                "y": 259.92,
+                                "w": 3.94,
+                                "h": 83.99
+                              },
+                              "fills": [
+                                "#6d6d6d"
+                              ],
+                              "radius": 81.8154067993164
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "_Button base",
+                  "type": "FRAME",
+                  "id": "43762:147011",
+                  "box": {
+                    "x": 24,
+                    "y": 501,
+                    "w": 409,
+                    "h": 41
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "radius": 8,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 6,
+                    "padding": [
+                      10,
+                      16,
+                      10,
+                      16
+                    ],
+                    "justify": "CENTER",
+                    "align": "CENTER"
+                  },
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "radius": 2,
+                      "offset": {
+                        "x": 0,
+                        "y": 1
+                      },
+                      "color": "#1018280d"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Add Second Slot",
+                      "type": "TEXT",
+                      "id": "43762:147012",
+                      "box": {
+                        "x": 161,
+                        "y": 511.5,
+                        "w": 109,
+                        "h": 20
+                      },
+                      "fills": [
+                        "#344054"
+                      ],
+                      "text": "Add Second Slot",
+                      "font": {
+                        "family": "Instrument Sans",
+                        "size": 14,
+                        "weight": 500,
+                        "lineHeight": 20,
+                        "letterSpacing": 0,
+                        "align": "RIGHT"
+                      }
+                    },
+                    {
+                      "name": "PlusCircle",
+                      "type": "FRAME",
+                      "id": "43762:147013",
+                      "box": {
+                        "x": 276,
+                        "y": 511.5,
+                        "w": 20,
+                        "h": 20
+                      },
+                      "children": [
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147014",
+                          "box": {
+                            "x": 276,
+                            "y": 511.5,
+                            "w": 20,
+                            "h": 20
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147015",
+                          "box": {
+                            "x": 278.5,
+                            "y": 514,
+                            "w": 15,
+                            "h": 15
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147016",
+                          "box": {
+                            "x": 282.87000000000035,
+                            "y": 521.5,
+                            "w": 6.25,
+                            "h": 0
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        },
+                        {
+                          "name": "Vector",
+                          "type": "VECTOR",
+                          "id": "43762:147017",
+                          "box": {
+                            "x": 286,
+                            "y": 518.38,
+                            "w": 0,
+                            "h": 6.25
+                          },
+                          "border": {
+                            "colors": [
+                              "#344054"
+                            ],
+                            "weight": 1.75,
+                            "align": "CENTER"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frame 987327",
+          "type": "FRAME",
+          "id": "43762:147018",
+          "box": {
+            "x": 24,
+            "y": 558,
+            "w": 409,
+            "h": 143
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "children": [
+            {
+              "name": "Frame 1707478818",
+              "type": "FRAME",
+              "id": "43762:147019",
+              "box": {
+                "x": 24,
+                "y": 558,
+                "w": 409,
+                "h": 43
+              },
+              "fills": [
+                "#fffaeb"
+              ],
+              "radius": 4,
+              "layout": {
+                "direction": "row",
+                "gap": 8,
+                "padding": [
+                  6,
+                  8,
+                  6,
+                  8
+                ],
+                "align": "CENTER"
+              },
+              "children": [
+                {
+                  "name": "lightbulb-02",
+                  "type": "INSTANCE",
+                  "id": "43762:147020",
+                  "box": {
+                    "x": 32,
+                    "y": 569.5,
+                    "w": 20,
+                    "h": 20
+                  },
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "VECTOR",
+                      "id": "I43762:147020;251:9902",
+                      "box": {
+                        "x": 33.66000000000031,
+                        "y": 571.17,
+                        "w": 16.67,
+                        "h": 16.67
+                      },
+                      "border": {
+                        "colors": [
+                          "#dc6803"
+                        ],
+                        "weight": 1.6666666269302368,
+                        "align": "CENTER"
+                      },
+                      "radius": [
+                        0,
+                        0,
+                        0,
+                        0
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "You are expressing interest in a company outside your preferences; please add a note to continue.",
+                  "type": "TEXT",
+                  "id": "43762:147021",
+                  "box": {
+                    "x": 60,
+                    "y": 564,
+                    "w": 365,
+                    "h": 31
+                  },
+                  "fills": [
+                    "#b54708"
+                  ],
+                  "text": "You are expressing interest in a company outside your preferences; please add a note to continue.",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 12,
+                    "weight": 400,
+                    "lineHeight": 16,
+                    "letterSpacing": 0,
+                    "align": "LEFT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "id": "43762:147022",
+              "box": {
+                "x": 24,
+                "y": 609,
+                "w": 352,
+                "h": 20
+              },
+              "fills": [
+                "#344054"
+              ],
+              "text": "Add a note to send to the founder *",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 14,
+                "weight": 500,
+                "lineHeight": 20,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            },
+            {
+              "name": "Textarea input field",
+              "type": "INSTANCE",
+              "id": "43762:147023",
+              "box": {
+                "x": 24,
+                "y": 637,
+                "w": 409,
+                "h": 64
+              },
+              "layout": {
+                "direction": "column",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "_Textarea input field base",
+                  "type": "INSTANCE",
+                  "id": "I43762:147023;1238:440",
+                  "box": {
+                    "x": 24,
+                    "y": 637,
+                    "w": 409,
+                    "h": 64
+                  },
+                  "layout": {
+                    "direction": "column",
+                    "gap": 6,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "children": [
+                    {
+                      "name": "Input with label",
+                      "type": "FRAME",
+                      "id": "I43762:147023;1238:440;1238:82",
+                      "box": {
+                        "x": 24,
+                        "y": 637,
+                        "w": 409,
+                        "h": 64
+                      },
+                      "layout": {
+                        "direction": "column",
+                        "gap": 6,
+                        "padding": [
+                          0,
+                          0,
+                          0,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "name": "Input",
+                          "type": "FRAME",
+                          "id": "I43762:147023;1238:440;1238:84",
+                          "box": {
+                            "x": 24,
+                            "y": 637,
+                            "w": 409,
+                            "h": 64
+                          },
+                          "fills": [
+                            "#ffffff"
+                          ],
+                          "border": {
+                            "colors": [
+                              "#d0d5dd"
+                            ],
+                            "weight": 1,
+                            "align": "INSIDE"
+                          },
+                          "radius": 8,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 8,
+                            "padding": [
+                              10,
+                              14,
+                              10,
+                              14
+                            ],
+                            "align": "CENTER"
+                          },
+                          "effects": [
+                            {
+                              "type": "DROP_SHADOW",
+                              "radius": 2,
+                              "offset": {
+                                "x": 0,
+                                "y": 1
+                              },
+                              "color": "#1018280d"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "Text",
+                              "type": "TEXT",
+                              "id": "I43762:147023;1238:440;1238:87",
+                              "box": {
+                                "x": 38,
+                                "y": 647,
+                                "w": 381,
+                                "h": 44
+                              },
+                              "fills": [
+                                "#667085"
+                              ],
+                              "text": "Share your investment focus or key topics to help the founder prepare.",
+                              "font": {
+                                "family": "Instrument Sans",
+                                "size": 14,
+                                "weight": 400,
+                                "lineHeight": 22,
+                                "letterSpacing": 0,
+                                "align": "LEFT"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "_Modal actions",
+      "type": "FRAME",
+      "id": "43762:147024",
+      "box": {
+        "x": 24,
+        "y": 725,
+        "w": 409,
+        "h": 44
+      },
+      "layout": {
+        "direction": "row",
+        "gap": 12,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "children": [
+        {
+          "name": "_Button base",
+          "type": "INSTANCE",
+          "id": "43762:147025",
+          "box": {
+            "x": 24,
+            "y": 725,
+            "w": 198.5,
+            "h": 44
+          },
+          "fills": [
+            "#ffffff"
+          ],
+          "border": {
+            "colors": [
+              "#d0d5dd"
+            ],
+            "weight": 1,
+            "align": "INSIDE"
+          },
+          "radius": 8,
+          "layout": {
+            "direction": "row",
+            "gap": 8,
+            "padding": [
+              10,
+              18,
+              10,
+              18
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "radius": 2,
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "color": "#1018280d"
+            }
+          ],
+          "children": [
+            {
+              "name": "Text",
+              "type": "TEXT",
+              "id": "I43762:147025;1054:6972",
+              "box": {
+                "x": 97.25,
+                "y": 735,
+                "w": 52,
+                "h": 24
+              },
+              "fills": [
+                "#344054"
+              ],
+              "text": "Cancel",
+              "font": {
+                "family": "Instrument Sans",
+                "size": 16,
+                "weight": 500,
+                "lineHeight": 24,
+                "letterSpacing": 0,
+                "align": "LEFT"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Btn/large",
+          "type": "FRAME",
+          "id": "43762:147026",
+          "box": {
+            "x": 234.5,
+            "y": 725,
+            "w": 198.5,
+            "h": 44
+          },
+          "fills": [
+            "#101828"
+          ],
+          "radius": 8,
+          "opacity": 0.4,
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "padding": [
+              14,
+              154,
+              14,
+              154
+            ],
+            "justify": "CENTER",
+            "align": "CENTER"
+          },
+          "children": [
+            {
+              "name": "Frame 1",
+              "type": "FRAME",
+              "id": "43762:147040",
+              "box": {
+                "x": 286.75,
+                "y": 735,
+                "w": 94,
+                "h": 24
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "name": "Request Call",
+                  "type": "TEXT",
+                  "id": "43762:147041",
+                  "box": {
+                    "x": 286.75,
+                    "y": 735,
+                    "w": 94,
+                    "h": 24
+                  },
+                  "fills": [
+                    "#ffffff"
+                  ],
+                  "text": "Request Call",
+                  "font": {
+                    "family": "Instrument Sans",
+                    "size": 16,
+                    "weight": 500,
+                    "lineHeight": 24,
+                    "letterSpacing": 0,
+                    "align": "CENTER"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
