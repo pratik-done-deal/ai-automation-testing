@@ -11,14 +11,21 @@ from collections import Counter  # noqa: E402
 
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError  # noqa: E402
 
+try:                       # the suite runs with or without it; --alluredir needs the plugin
+    import allure          # noqa: E402
+except ImportError:
+    allure = None
+
 from config import settings  # noqa: E402
 from designcheck.checker import DesignRun  # noqa: E402
 from pages.buyer_module.buyer_browse_page import BuyerBrowsePage  # noqa: E402
 from utils.api_client import DoneDealApi  # noqa: E402
 from utils.flows import express_interest_on  # noqa: E402
-from utils.registry import is_shipped, load_registry  # noqa: E402
+from utils.registry import entry_for_requirement, is_shipped, load_registry, requirement_pattern  # noqa: E402
 from utils.run_state import load_all  # noqa: E402
-from utils.sessions import OPEN_CONTEXTS, STATE_BY_ROLE, new_role_page, require_state  # noqa: E402
+from utils.sessions import (  # noqa: E402
+    OPEN_CONTEXTS, STATE_BY_ROLE, new_anonymous_page, new_role_page, require_state, reset_page,
+)
 
 
 # ---------------------------------------------------------------- browser contexts per role
@@ -42,6 +49,24 @@ def seller_page(browser):
 @pytest.fixture
 def admin_page(browser):
     yield from _role_page(browser, "admin")
+
+
+@pytest.fixture(scope="module")
+def _logged_out_context(browser):
+    """ONE logged-out context per test file. Opening a context per test is the slowest thing a
+    suite can do, and with --headed it opens a window per test."""
+    ctx, page = new_anonymous_page(browser)
+    yield ctx, page
+    ctx.close()
+
+
+@pytest.fixture
+def logged_out_page(_logged_out_context):
+    """The file's logged-out page, reset before each test: no routes, cookies, storage or watchers
+    from the test before it. Tests navigate themselves (there is no screen-load request to await)."""
+    ctx, page = _logged_out_context
+    reset_page(ctx, page)
+    return page
 
 
 # ---------------------------------------------------------------- API clients
@@ -191,6 +216,30 @@ def _apply_lifecycle(config, items):
     config._lifecycle = (Counter(pending), Counter(superseded))
 
 
+# ---------------------------------------------------------------- Allure labels
+# Tests are labelled from the requirement ids in their docstring, so no test needs decorators and
+# the report groups by the same modules and features the coverage report uses.
+#   feature = the module / feature that owns the requirement   (Buyer Login (email + OTP))
+#   story   = the test file                                     (buyer login)
+#   tags    = every requirement id the test names               (BUY-LGN-07, BUY-LGN-08)
+
+REQUIREMENT_RE = requirement_pattern()
+
+
+@pytest.fixture(autouse=True)
+def _allure_labels(request):
+    if allure is None:
+        return
+    function = getattr(request.node, "function", None)
+    ids = sorted(set(REQUIREMENT_RE.findall(function.__doc__ or ""))) if function else []
+    entry = next((e for e in map(entry_for_requirement, ids) if e), None)
+    role = next((m.name for m in request.node.iter_markers() if m.name in ROLE_FOLDERS.values()), None)
+    allure.dynamic.feature(entry.name if entry else (role or "suite"))
+    allure.dynamic.story(request.node.module.__name__.split(".")[-1].removeprefix("test_").replace("_", " "))
+    for req in ids:
+        allure.dynamic.tag(req)
+
+
 SCREENSHOT_DIR = Path(__file__).parent / "reports" / "screenshots"
 
 
@@ -211,6 +260,8 @@ def pytest_runtest_makereport(item, call):
             try:
                 page.screenshot(path=str(path), full_page=True)
                 report.sections.append(("screenshot", f"{page.url} -> {path}"))
+                if allure is not None:
+                    allure.attach.file(str(path), name=f"{page.url}", attachment_type=allure.attachment_type.PNG)
             except Exception:
                 pass
     if item.config.getoption("--pause-on-failure") and item.config.getoption("headed"):

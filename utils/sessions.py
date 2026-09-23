@@ -21,14 +21,56 @@ def require_state(path: Path, role: str) -> Path:
 OPEN_CONTEXTS = []
 
 
-def new_role_page(browser, role):
-    """Open a context logged in as `role`. Caller closes the returned context."""
-    ctx = browser.new_context(storage_state=str(require_state(STATE_BY_ROLE[role], role)), viewport=VIEWPORT)
+def _new_context(browser, **kwargs):
+    ctx = browser.new_context(viewport=VIEWPORT, **kwargs)
     OPEN_CONTEXTS.append(ctx)
     ctx.on("close", lambda c: OPEN_CONTEXTS.remove(c) if c in OPEN_CONTEXTS else None)
     return ctx, ctx.new_page()
 
 
+def new_role_page(browser, role):
+    """Open a context logged in as `role`. Caller closes the returned context."""
+    return _new_context(browser, storage_state=str(require_state(STATE_BY_ROLE[role], role)))
+
+
+def new_anonymous_page(browser):
+    """Open a context with no saved session, for the logged-out screens (login, signup).
+
+    Never loads or writes auth/<role>.json: a login test must not disturb the saved sessions.
+    """
+    return _new_context(browser)
+
+
 def cue_card_company_id(payload):
     data = payload.get("data") if isinstance(payload, dict) else None
     return (data or {}).get("id") or find_key(payload, "companyId")
+
+
+# Listeners registered on a shared page (page.on(...)), so reset_page can take them off again.
+_TRACKED_LISTENERS = {}
+
+
+def track_listener(page, event, handler):
+    """page.on(event, handler), remembered so the next reset removes it.
+
+    A module-scoped page outlives the test that attached a watcher; without this the watchers of
+    every earlier test keep firing for the rest of the file.
+    """
+    page.on(event, handler)
+    _TRACKED_LISTENERS.setdefault(page, []).append((event, handler))
+
+
+def reset_page(context, page):
+    """Give a shared context back the clean slate a fresh one would have.
+
+    Routes, cookies, localStorage, sessionStorage and tracked listeners: everything a previous test
+    could have left behind. The page keeps its URL; tests navigate themselves.
+    """
+    for event, handler in _TRACKED_LISTENERS.pop(page, []):
+        page.remove_listener(event, handler)
+    page.unroute_all(behavior="ignoreErrors")
+    try:
+        page.evaluate("() => { localStorage.clear(); sessionStorage.clear(); }")
+    except Exception:
+        pass  # about:blank, or a page that never reached an origin: nothing to clear
+    context.clear_cookies()

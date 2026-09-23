@@ -1,0 +1,55 @@
+# Module registry entry: a part of the platform that was built before this pipeline.
+# Read by utils/registry.py and impact/. module.md next to it is the living spec.
+#
+#   req_prefix  requirement ids in module.md and in test docstrings, e.g. BUY-LGN-07
+#   footprint   what this module owns in the app; impact.find matches later features against it,
+#               so keep it to the files this module actually renders, not their parents.
+#   changes     written when a shipped feature folds new requirements into this module.
+
+name: Buyer Login (email + OTP)
+slug: buyer-login
+req_prefix: BUY-LGN
+status: shipped
+
+roles:
+  - buyer
+
+data_cost: >
+  Read-only apart from two side effects: each step-1 submit of a registered email sends a real passcode
+  (email, plus SMS when the account has a mobile), and a successful login creates a device/session for
+  that buyer, which can evict a previously saved auth/buyer.json. No companies, deals or uploads are
+  consumed. One deliberate wrong-OTP attempt per run at most; prefer rewriting the POST user response.
+
+docs:
+  spec: modules/buyer-login/module.md
+
+footprint:
+  routes:
+    - /buyer/login
+  src:
+    - src/Container/NewLoginContainer/
+    - src/Container/BuyersContainer/BuyerLogin/
+    - src/Component/LoginFormField/
+    - src/Component/NewAuthOtpFlow/
+    - src/Routes/NonProtectedRoutes/index.js
+    - src/Redux/saga/Login/index.js
+    - src/Redux/slice/LoginSlice.js
+    - src/Redux/saga/BuyerVerification/index.js
+    - src/Redux/slice/BuyerVerificationStore.js
+    - src/Services/index.js
+    - src/CommonComponent/NewTextField/
+    # handleLoggedInNavigation / reRouteUser / setupSessionDataForUser / emailIsValid
+    - src/helper/commonHelper.js
+    - src/constants/RouteConstants.js
+  endpoints:
+    - user/send/passcode
+    - user
+    - user/emailCheck
+    - buyer/status
+    - buyer/linkInfo
+  screens:
+    - Buyer login, email step
+    - Buyer login, passcode step (Check Your Device)
+    - Buyer login, already-authenticated redirect
+
+changes: []

@@ -5,6 +5,17 @@ narrower ones such as `rewrite_seller_documents`.
 """
 import json
 import re
+from urllib.parse import urlsplit
+
+
+def api_route(*paths):
+    """page.route predicate for API calls whose path ends in one of `paths`, query string ignored.
+
+    `api_route("user")` matches `<base>/user` but not `<base>/user/send/passcode`, which a `**/user`
+    glob would be read as a prefix of.
+    """
+    wanted = tuple("/" + path.strip("/") for path in paths)
+    return lambda url: urlsplit(url).path.endswith(wanted)
 
 
 def rewrite_json(page, pattern, mutate):
@@ -36,11 +47,65 @@ def mock_json(page, pattern, body, sent=None):
     page.route(pattern, handler)
 
 
+def mock_json_sequence(page, pattern, bodies, sent=None):
+    """Like `mock_json`, but the nth call is answered with `bodies[n]`; the last body then repeats.
+
+    For flows that call one endpoint twice with different outcomes (send passcode, then resend).
+    """
+    calls = []
+
+    def handler(route):
+        if sent is not None:
+            sent.append(route.request.post_data_json)
+        body = bodies[min(len(calls), len(bodies) - 1)]
+        calls.append(body)
+        route.fulfill(status=200, content_type="application/json", body=json.dumps(body))
+
+    page.route(pattern, handler)
+
+
 def success_body(data=None, message=None):
     body = {"status": "200", "data": data if data is not None else {}}
     if message:
         body["message"] = message
     return body
+
+
+def failure_body(data=None, status="400", message="Failure"):
+    """A body the app reads as a failure: every branch tests the *body* `status`, never the HTTP code
+    (apiService.js:181 hands the body back for a failed request too)."""
+    return {"status": status, "message": message, "data": data if data is not None else {}}
+
+
+# ------------------------------------------------------------------ buyer / admin login (BUY-LGN)
+# Bodies as observed on QA, so step 2, the error matrix and the post-login redirects can be reached
+# without an account: no real passcode is sent and no device session is created.
+
+def passcode_success(mobile=None):
+    # user/send/passcode, HTTP 200
+    return success_body({"success": True, "mobile": mobile}, message="Success")
+
+
+def passcode_not_registered():
+    # user/send/passcode for an unknown address, HTTP 400 on QA
+    return failure_body({"code": "not_registered", "message": "You are not registered with this email ID"})
+
+
+def email_check_body(allowed):
+    # user/emailCheck?email=…&primaryIdType=buyer: data is a bare boolean
+    return success_body(allowed, message="Success")
+
+
+def login_success(email, session_id="automation-session-id", uid="automation-buyer-uid", user_type=3):
+    """A `POST user` success body, in the shape Services.handleUserSession reads."""
+    return success_body({"code": "company_found", "sessionID": session_id, "userType": user_type,
+                         "uid": uid, "email": email, "name": "Automation Buyer", "phone": "9000000000",
+                         "officialSignup": True, "classification": "corporate"}, message="Success")
+
+
+def buyer_status_body(status, onboarding_stage=2):
+    # GET buyer/status: the saga stores data.data as buyerVerificationState
+    return success_body({"status": status, "onboardingStage": onboarding_stage}, message="Success")
 
 
 # ------------------------------------------------------------------ deals (deal/query rows)

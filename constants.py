@@ -9,6 +9,8 @@ Sources:
   src/Component/NewCueCard/CuecardDefaultSection/components/RequestedDocuments.js (buyer cue card)
   src/Container/SellerDealsAndInvestors/components/IntroductionSetupModal.js, RequestedDocumentRow.js
   src/Container/SellerDealsAndInvestors/components/ManageSharedDocsModal.js, hooks/useSharedDocs.js
+  src/Component/LoginFormField/index.js, src/Component/NewAuthOtpFlow/index.js               (buyer login)
+  src/Container/BuyersContainer/BuyerLogin/index.js, src/Container/NewLoginContainer/index.js (buyer login)
 """
 
 PITCHDECK = "pitch_deck"
@@ -119,6 +121,65 @@ class Copy:
     ADMIN_NO_DOCS = "No Documents Shared"
     ADMIN_TOPICS_TITLE = "Topics for the intro call"
     ADMIN_EDIT_DEAL_TITLE = "Edit deal state for D"
+
+
+# ---------------------------------------------------------------- buyer login (module buyer-login)
+
+# localStorage keys a login writes or clears. src/constants/index.js:5,6,147,307,308.
+TOKEN_KEY = "authToken"
+SESSION_ID_KEY = "sessionid"          # written pre-login from a response header (apiService.js:105-109)
+BUYER_ID_KEY = "buyerId"
+SELLER_UID_KEY = "seller_uid"
+SAVED_PROFILE_KEY = "saved_buyer_profile"
+SAVE_LOGIN_MODAL_SHOWN_KEY = "saveLoginModalShown"
+# The whole persisted Redux state (authorizationStore, commonStore, buyerVerificationStore).
+# src/utils/persistState.js:3,16 - it is what the store boots from, so seeding it seeds a session.
+PERSISTED_STATE_KEY = "state"
+
+# Where a buyer lands after login. Services/index.js:18-35, NewLoginContainer/index.js:313-333.
+BUYER_LANDING_DESKTOP = "/buyer/recommendations"
+BUYER_LANDING_MOBILE = "/buyer/browse"      # <= 1180px (commonHelper.js:173-184)
+BUYER_PROFILE_PATH = "/buyer/profile"
+BUYER_ONBOARDING_PATH = "/buyer/onboarding"
+BUYER_LOGIN_PATH = "/buyer/login"
+
+
+class BuyerLoginCopy:
+    """Exact strings on /buyer/login. Straight quotes are NOT interchangeable with the app's U+2019."""
+
+    PAGE_TITLE = "Login - Done Deal"                          # helper/PageMeta.js:23-25
+
+    # Step 1 (LoginFormField)
+    EMAIL_HEADING = "Enter your email to continue"
+    EMAIL_SUBTITLE = "We’ll verify your email and take you forward."
+    EMAIL_LABEL = "Official Email ID"
+    EMAIL_PLACEHOLDER = "Enter your work email"
+    EMAIL_HINT = "A 6-digit code will be sent to your email and mobile for verification."
+    VERIFY_CTA = "Verify"                                     # StepActionTitle[1]
+    SIGNUP_PROMPT = "Don’t have an account?"
+    SIGNUP_LINK = "Sign up here"
+    GOOGLE_CAPTION = "Use a work email to Sign in"             # uppercased by CSS
+
+    # Step 2 (NewAuthOtpFlow, BuyerLogin footer)
+    OTP_HEADING = "Check Your Device"
+    OTP_SENT_PREFIX = "We’ve sent a 6-digit code to"
+    OTP_SENT_SUFFIX = ". Enter it below to verify and continue securely."
+    OTP_LABEL = "Verification code"
+    OTP_PLACEHOLDER = "Enter 6-digit code"
+    OTP_CTA = "Verify & Login"                                # StepActionTitle[2]
+    RESEND_PROMPT = "Didn’t receive the code?"
+    RESEND_LINK = "Click here"
+
+    # Errors and snackbars (src/constants/index.js:167-169; NewLoginContainer/index.js:200,377,386)
+    INCORRECT_EMAIL_HELPER = "Please enter your registered email ID"
+    INCORRECT_OTP_HELPER = "The OTP you entered is incorrect. Please try again."
+    SOMETHING_WENT_BAD = "Something went bad!!"
+    NOT_PROFESSIONAL_EMAIL = "Please register using your professional email ID."
+    PASSCODE_SENT = "Passcode Sent"
+    RESEND_FAILED = "Please try again later"
+
+    # Production-only guard, inert on QA (hooks/useViewportGuard.js:24-31)
+    VIEWPORT_GUARD = "Screen size changed"
 
 
 def send_request_label(count):

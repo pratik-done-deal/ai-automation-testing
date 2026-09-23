@@ -7,3 +7,4 @@ python-dotenv==1.0.1
 pyflakes==3.4.0
 PyYAML==6.0.2
 Pillow==10.4.0
+allure-pytest==2.16.1

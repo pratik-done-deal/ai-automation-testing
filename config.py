@@ -35,5 +35,11 @@ class Settings:
     admin_deal_with_request_uid: str = os.getenv("DD_ADMIN_DEAL_WITH_REQUEST_UID", "")
     admin_deal_without_request_uid: str = os.getenv("DD_ADMIN_DEAL_WITHOUT_REQUEST_UID", "")
 
+    # buyer-login (BUY-LGN): only the live login test and the real not_registered check need these.
+    # Everything else on /buyer/login runs against rewritten responses, with no account at all.
+    buyer_login_email: str = os.getenv("DD_BUYER_LOGIN_EMAIL", "")
+    buyer_login_otp: str = os.getenv("DD_BUYER_LOGIN_OTP", "")
+    buyer_login_unregistered_email: str = os.getenv("DD_BUYER_LOGIN_UNREGISTERED_EMAIL", "")
+
 
 settings = Settings()
