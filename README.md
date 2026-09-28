@@ -245,3 +245,24 @@ pytest test_cases/e2e/test_hot_lead_flows.py
 The flows need dedicated, never-hot buyer leads, set per case in `.env` (`DD_HLE_*`, see
 `.env.example`). Each lead is used up for 14 days; used links and uids are recorded in
 `run_state/hle.json` and skipped on the next run. Deselect the flows with `-m "not slow"`.
+
+## Star seller marking for fundraising sellers (admin + biz user, feature `star-seller-fundraising`)
+
+Spec: `specs/features/star-seller-fundraising/test-cases.md` (S1-01 … S18-05; S19-01/02 are manual).
+Admin tests need `auth/admin.json` (userType 2). Biz-user tests need a **separate** biz user session
+(userType 4) and skip until it is saved:
+
+```bash
+python scripts/save_auth_state.py biz_user      # opens /admin/login; log in as a userType 4 biz user
+```
+
+Sellers are cue card uids in `DD_SSF_SELLERS` (see `.env.example`); a case whose seller isn't set
+skips and names it. Most cases are `pending_feature` (strict xfail until the feature ships); the
+`destructive` ones star sellers, change objectives, upload or delete documents.
+
+```bash
+pytest test_cases/admin_test_cases/test_admin_star_seller_marking.py \
+       test_cases/admin_test_cases/test_admin_star_seller_objective.py \
+       test_cases/biz_user_test_cases/test_biz_user_star_seller.py -m smoke --headed
+pytest test_cases/e2e/test_star_seller_legacy.py   # S18: needs a legacy star prepared BEFORE the release
+```

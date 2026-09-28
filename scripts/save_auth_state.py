@@ -5,6 +5,7 @@ Usage (from automation/):
     python scripts/save_auth_state.py admin    # opens <app>/admin/login  (use a biz user)
     python scripts/save_auth_state.py seller   # optional: the test run asks for the seller login itself
     python scripts/save_auth_state.py hle_buyer  # a POC of the dedicated hot-lead buyer lead (HLE S6-01)
+    python scripts/save_auth_state.py biz_user   # opens <app>/admin/login: a biz user (userType 4), star-seller-fundraising
 
 Complete the login (OTP / LinkedIn) in the opened browser, then press Enter here.
 """

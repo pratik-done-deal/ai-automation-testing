@@ -51,6 +51,12 @@ def admin_page(browser):
     yield from _role_page(browser, "admin")
 
 
+@pytest.fixture
+def biz_user_page(browser):
+    """A biz user (userType 4) page; skips while auth/biz_user.json is missing (star-seller-fundraising)."""
+    yield from _role_page(browser, "biz_user")
+
+
 @pytest.fixture(scope="module")
 def _logged_out_context(browser):
     """ONE logged-out context per test file. Opening a context per test is the slowest thing a

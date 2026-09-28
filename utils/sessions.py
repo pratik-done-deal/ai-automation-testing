@@ -9,8 +9,11 @@ from utils.api_client import find_key
 VIEWPORT = {"width": 1440, "height": 900}
 STATE_BY_ROLE = {"buyer": settings.buyer_state, "seller": settings.seller_state, "admin": settings.admin_state,
                  # hot-lead-engagement-visibility: a POC of a dedicated, never-hot buyer lead
-                 "hle_buyer": settings.hle_buyer_state}
-LOGIN_PATHS = {"buyer": "buyer/login", "seller": "login", "admin": "admin/login", "hle_buyer": "buyer/login"}
+                 "hle_buyer": settings.hle_buyer_state,
+                 # star-seller-fundraising: a biz user (userType 4), separate from the userType 2 admin
+                 "biz_user": settings.biz_user_state}
+LOGIN_PATHS = {"buyer": "buyer/login", "seller": "login", "admin": "admin/login", "hle_buyer": "buyer/login",
+               "biz_user": "admin/login"}
 
 
 def require_state(path: Path, role: str) -> Path:

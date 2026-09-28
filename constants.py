@@ -256,3 +256,78 @@ class HotLeadEngagementCopy:
     EXPIRING_THIS_WEEK = "Expiring this week"
     HOT_LEAD_TOOLTIP = "Hot Lead"
     EXPIRED_HOT_LEAD_TOOLTIP = "Expired Hot Lead"
+
+
+# ---------------------------------------------------------------- star-seller-fundraising (SSF)
+# Admin seller cue card: /admin/notes/<uid> (SellerNotesContainer > NewCueCard, right rail).
+ADMIN_SELLER_NOTES_PATH = "admin/notes/{uid}"
+ADMIN_SELLERS_PATH = "admin/seller"
+INVESTMENT_TEASER = "investment_teaser"
+
+
+class StarSellerCopy:
+    """Copy around star marking and the objective change.
+
+    Sources:
+      src/CommonComponent/StarSellerRequirements/index.js                     (requirements panel)
+      src/CommonComponent/StarSellerRequirements/useStarSellerRequirements.js  (today's block toasts)
+      src/Component/NewCueCard/CuecardDefaultSection/Modal/AdditionalFieldsModal.js
+      src/Component/NewCueCard/CuecardDefaultSection/Modal/CompanyObjectiveModal.js, CompanyObjective.js
+      src/Component/NewCueCard/CuecardDefaultSection/components/AdminSidebarSections.js (rail blocks)
+      src/Component/EditCuecardModal/index.js:310-315, src/CommonModels/TabModels/index.js:37
+      src/Component/NewCueCard/CuecardDataroom/CuecardDataRoomModel.js (Data Room subsections)
+    """
+
+    # Rail blocks (h6 headings)
+    ADDITIONAL_DETAILS_BLOCK = "Additional details for this seller"
+    OBJECTIVE_BLOCK = "Company's Objective"
+    IMPORTANT_DOCUMENTS = "Important Documents"
+    PITCH_DECK_LIST_LABEL = "Pitch Deck"                     # CuecardPitchDeck/index.js:36
+    EDIT = "Edit"
+    ADD = "Add"                                              # the additional-details CTA before any value is set
+    EDIT_CUE_CARD = "Edit Cue Card"
+    DATA_ROOM_TAB = "Data Room"
+    DATA_ROOM_PITCHDECK = "Pitchdeck"
+    UPLOAD_DOCUMENT = "Upload Document"                      # CuecardDataroom/index.js:373, DocumentUploadModal.js
+    SELECT_DOCUMENT_TYPE = "Select Document Type"
+
+    # Additional Details modal
+    ADDITIONAL_DETAILS_TITLE = "Additional Details for this Seller"
+    STAR = "Star"
+    GROWTH = "Growth"
+    YES = "Yes"
+    NO = "No"
+    CANCEL = "Cancel"
+    CONFIRM = "Confirm"
+    BACK_TO_CUE_CARD = "Back to cue card"                    # star-seller-fundraising: Figma 44664:47911
+    REQUIREMENTS_PANEL = "Star seller requirements"
+    HIGHLIGHTS_ROW = "All 3 company highlights"
+    HIGHLIGHTS_COUNT_RE = r"(\d) of 3 added on the cue card"   # `${highlightsFilledCount} of 3 added on the cue card`
+    QUALIFYING_DOCUMENT = "A qualifying document"            # acquisition row title (unchanged)
+    VERIFIED_DOCUMENT = "A verified document"                # star-seller-fundraising: funding row title (Figma, Q8)
+    INVESTMENT_TEASER = "Investment teaser"
+    PITCH_DECK = "Pitch deck"                                # star-seller-fundraising
+    CALL_OR_MIS_ROW = "A completed call with Seller or MIS document upload"
+    # Today's first-item-only toast; star-seller-fundraising replaces it with "<item> is missing" (Answer 2)
+    TEASER_TOAST_TODAY = "Please add an investment teaser in order to mark this seller as a Star Seller."
+    MISSING = "missing"
+    # Item keywords the combined message is matched on, ignoring case (test-cases.md assumption 2)
+    ITEM_HIGHLIGHT = "highlight"
+    ITEM_PITCH_DECK = "pitch deck"
+    ITEM_TEASER = "investment teaser"
+    ITEM_MIS = "MIS"
+
+    # Edit Company's Objective modal
+    OBJECTIVE_TITLE = "Edit Company's Objective"
+    ACQUISITION = "Acquisition"
+    FUNDING = "Funding"
+    STAR_WORD = "star"                                       # star-seller-fundraising: the objective message mentions it (Answer 5)
+    PDF = "PDF"
+
+    # Cue card edit modal
+    CUE_CARD_EDIT_TITLE = "Cue card edit"
+
+    # Sellers list
+    STAR_SELLERS_TAB = "Star Sellers"
+    STAR_MARK = "⭐"                                          # SellerDataModel.js:84 renders "⭐️"
+

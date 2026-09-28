@@ -21,6 +21,8 @@ class Settings:
     buyer_state: Path = ROOT / os.getenv("DD_BUYER_STATE", "auth/buyer.json")
     seller_state: Path = ROOT / os.getenv("DD_SELLER_STATE", "auth/seller.json")
     admin_state: Path = ROOT / os.getenv("DD_ADMIN_STATE", "auth/admin.json")
+    # star-seller-fundraising: a biz user (userType 4), kept apart from the userType 2 admin session
+    biz_user_state: Path = ROOT / os.getenv("DD_BIZ_USER_STATE", "auth/biz_user.json")
 
     seller_company_id: str = os.getenv("DD_SELLER_COMPANY_ID", "")
     # Phase 1: how many companies get a document request. Phase 2: which phase 1 uid to test now.
@@ -50,6 +52,10 @@ class Settings:
     hle_teaser_unlocked_link: str = os.getenv("DD_HLE_TEASER_UNLOCKED_LINK", "")
     # One scheduler cycle (5 min) plus a 2 min buffer.
     hle_hot_poll_seconds: int = int(os.getenv("DD_HLE_HOT_POLL_SECONDS", "420"))
+
+    # star-seller-fundraising (SSF): the test sellers, keyed by their name in test-cases.md section 6,
+    # e.g. "F-ready:<uid>,F-nodeck:<uid>". A missing name skips the cases that need it.
+    ssf_sellers: str = os.getenv("DD_SSF_SELLERS", "")
 
 
 settings = Settings()

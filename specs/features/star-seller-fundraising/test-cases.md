@@ -1,5 +1,5 @@
 # Star Seller Marking — Fundraising Sellers — test cases
-Status: WAITING_REVIEW
+Status: APPROVED
 Slug: star-seller-fundraising | Analysis: automation/specs/prd/star-seller-fundraising.analysis.md | Impact: automation/specs/features/star-seller-fundraising/impact.md
 Requirements covered: 36 of 36  (2 manual: SSF-31, SSF-36)
 
@@ -347,4 +347,7 @@ None. No case needs more than six steps.
     so it proves the save path, not the new rule; S2-01 proves the rule.
 
 ## 8. Review
-(filled by the caller: approved, changed and rejected rows, plus the date)
+Approved by the user on 2026-09-28 ("approve").
+- Approved: all 59 cases (S1-01 .. S19-02), including S2-04 ("Back to cue card") as written.
+- Changed: none.
+- Dropped: none.
