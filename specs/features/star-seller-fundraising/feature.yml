@@ -1,0 +1,20 @@
+name: Star Seller Marking — Fundraising Sellers
+slug: star-seller-fundraising
+req_prefix: SSF
+status: in_development        # pending_feature tests xfail until this says shipped
+modules: []                   # admin-deal-notes (ADM-DLN, /admin/notes/:uid) and admin-sellers (ADM-SLR, /admin/seller) are not mapped yet (specs/modules/README.md: todo)
+
+docs:
+  prd: prd/star-seller-fundraising.md
+  analysis: prd/star-seller-fundraising.analysis.md
+  test_cases: features/star-seller-fundraising/test-cases.md
+
+footprint:
+  routes:
+    - /admin/seller
+    - /admin/notes/:uid
+  screens:
+    - Admin cue card right rail (Investment Teaser block, Company's Objective, Additional details for this seller)
+    - Additional Details for this Seller modal (Star Yes/No, Star seller requirements panel)
+    - Edit Company's Objective modal (Primary Objective dropdown, star document check + upload option)
+    - Cue card edit modal (Star seller requirements panel)
