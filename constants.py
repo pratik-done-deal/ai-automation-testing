@@ -199,3 +199,60 @@ def remove_attached_label(row_label):
 def share_toggle_label(file_name):
     # DocumentShareRow.js ShareToggle aria-label
     return f"Share {file_name} with the investor"
+
+
+# ---------------------------------------------------------------- hot-lead-engagement-visibility (HLE)
+# Admin Deals > Unverified Deals: /admin/deals. tabData holds 3 tabs (Scheduled Calls is commented
+# out, AdminDealsTabModel.js), so Unverified Deals is tabIndex=2; tabIndex=3 would be tabData[3],
+# i.e. undefined. `key` picks the tab's default status filter (AdminDeals/index.js:51-59).
+UNVERIFIED_DEALS_PATH = "admin/deals?tabIndex=2&key=Unverified%20Deals"
+# Admin Leads: Company Leads is tab 0, Investor Leads tab 1 (LeadContainer/leadTabModel.js).
+INVESTOR_LEADS_PATH = "admin/leads?tabIndex=1"
+
+
+class HotLeadEngagementCopy:
+    """Copy on Unverified Deals, its engagement drill-down and the Investor Leads hot-lead toggles.
+
+    Sources:
+      src/Container/AdminContainer/AdminDeals/AdminDealsTableModel.js:1584-1700  (table headers)
+      src/Container/AdminContainer/AdminDeals/AdminDealsTableModel.js:477-560    (drill-down)
+      src/Container/AdminContainer/AdminDeals/DealsLink/index.jsx                (modal, error state)
+      src/Container/LeadContainer/index.js:100-150, leadTableModel.js:862-872   (toggles, icons)
+      Figma 43508:119587 (table), 43651:131869 (drill-down); PRD S2 AC2 ("not yet viewed")
+    """
+
+    UNVERIFIED_DEALS_TAB = "Unverified Deals"
+    # The app writes "CC<br> Views / Time"; CustomTableGrid renders it as "CC" <br/> " Views / Time".
+    CC_HEADER = "CC Views / Time"
+    DOC_HEADER = "Doc Views / Time"
+    # Today's header row (code). Figma's differs in "Buyer / Investor", "Deal Status" and "Actions".
+    UNVERIFIED_HEADERS = ["Deal ID", "Buyer/Investor", "Seller/Company", "Lead Owner", "Lead Type", "Status",
+                          CC_HEADER, DOC_HEADER, "Created At", "Last Activity", "Action"]
+    # hot-lead-engagement-visibility: Figma 43508:119587, answer 3
+    FIGMA_UNVERIFIED_HEADERS = ["Deal ID", "Buyer / Investor", "Seller / Company", "Lead Owner", "Lead Type",
+                                "Deal Status", CC_HEADER, DOC_HEADER, "Created At", "Last Activity", "Actions"]
+    EMPTY_METRIC = "-"                               # formatViewsTime() with no count and no time
+    NOT_YET_VIEWED = "not yet viewed"                # hot-lead-engagement-visibility: PRD S2 AC2, matched ignoring case
+
+    # Drill-down modal (DealsLink). Today: "Engagement for D<dealId>", first column "POC Email".
+    ENGAGEMENT_TITLE_PREFIX = "Engagement for "
+    POC_EMAIL_HEADER = "POC Email"
+    POC_NAME_HEADER = "POC Name"                     # hot-lead-engagement-visibility: Figma 43651:131869
+    CC_VIEWS = "CC Views"
+    CC_AVG_TIME = "CC Avg Time Spent"
+    DOC_VIEWS = "Doc Views"
+    DOC_AVG_TIME = "Doc Avg Time Spent"
+    FIGMA_MODAL_HEADERS = [POC_NAME_HEADER, CC_VIEWS, CC_AVG_TIME, DOC_VIEWS, DOC_AVG_TIME]
+    PRIMARY_CHIP = "Primary"                         # hot-lead-engagement-visibility: Figma 43651:131869
+    CLOSE = "Close"
+    LOAD_ERROR = "Unable to load engagement detail. Try again."
+    LOADING = "Loading engagement detail..."
+
+    # Admin Leads (LeadContainer)
+    COMPANY_LEADS_TAB = "Company Leads"
+    INVESTOR_LEADS_TAB = "Investor Leads"
+    HOT_LEADS = "Hot Leads"
+    EXPIRED_HOT_LEADS = "Expired Hot Leads"
+    EXPIRING_THIS_WEEK = "Expiring this week"
+    HOT_LEAD_TOOLTIP = "Hot Lead"
+    EXPIRED_HOT_LEAD_TOOLTIP = "Expired Hot Lead"

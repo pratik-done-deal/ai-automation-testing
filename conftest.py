@@ -69,6 +69,23 @@ def logged_out_page(_logged_out_context):
     return page
 
 
+@pytest.fixture(scope="module")
+def _admin_module_context(browser):
+    """ONE logged-in admin context per test file (skips the whole file without auth/admin.json)."""
+    ctx, page = new_role_page(browser, "admin")
+    yield ctx, page
+    ctx.close()
+
+
+@pytest.fixture
+def admin_module_page(_admin_module_context):
+    """The file's admin page, with the previous test's routes and listeners removed (the login stays).
+    Tests navigate themselves."""
+    ctx, page = _admin_module_context
+    reset_page(ctx, page, keep_session=True)
+    return page
+
+
 # ---------------------------------------------------------------- API clients
 
 @pytest.fixture(scope="session")

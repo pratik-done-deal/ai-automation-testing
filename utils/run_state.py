@@ -58,3 +58,20 @@ def phase2_record(with_request=True) -> dict:
         pytest.skip(f"Set DD_PHASE2_SELLER_CUE_CARD_UID to the deal {kind} whose seller is logged in "
                     f"(candidates: {', '.join(candidates)})")
     return {"uid": candidates[0], **records[candidates[0]]}
+
+
+# ---------------------------------------------------------------- hot-lead-engagement-visibility
+# A lead that a hot-lead case touched is used up for 14 days, so every POC link, teaser link and
+# company uid a run consumed is recorded here and never used again.
+HLE_FILE = ROOT / "run_state" / "hle.json"
+
+
+def hle_used() -> dict:
+    return json.loads(HLE_FILE.read_text()) if HLE_FILE.exists() else {}
+
+
+def save_hle_use(key: str, record: dict):
+    HLE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    used = hle_used()
+    used[key] = record
+    HLE_FILE.write_text(json.dumps(used, indent=2))

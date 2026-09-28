@@ -1,5 +1,5 @@
 ---
-description: Write pytest + Playwright tests for a mapped module (test-case-writer), from its module spec
+description: Write pytest + Playwright tests for a mapped module (test-script-writer), from its module spec
 argument-hint: <module slug> [roles or screens to focus on]
 ---
 
@@ -15,7 +15,7 @@ $ARGUMENTS
 - The spec's suspected bugs and blocking questions must be answered (the `/map-module` checkpoint).
   If any are open, show them and stop: ids and assertions depend on those answers.
 
-## 2. Write the tests (test-case-writer subagent)
+## 2. Write the tests (test-script-writer subagent)
 Pass:
 - the module spec path, which is its requirements source — **keep its ids**
 - the module.yml path (routes, endpoints, data cost)

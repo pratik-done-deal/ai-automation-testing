@@ -1,6 +1,6 @@
 ---
 description: Check which existing automated tests a new feature (or code change) affects, without writing tests
-argument-hint: <feature slug> [figma-url ...] [git range, e.g. main...feature/x]
+argument-hint: <feature slug> [git range, e.g. main...feature/x] [figma-url]
 ---
 
 Run only the impact step, e.g. when a feature's design or code changed after its tests were written.
@@ -11,8 +11,11 @@ $ARGUMENTS
 
 1. The feature needs `automation/specs/prd/<slug>.analysis.md`. If it doesn't exist, suggest
    `/analyze-prd` first. For a quick look without an analysis, run from `automation/`:
-   `python -m impact.find --src <files> --endpoint <api> --copy "<old text>"` and show the candidates.
-2. Use the **impact-analyzer** subagent with the slug, the analysis path, the Figma URLs and the git range.
-3. Show the summary, the numbered changed/removed rows and the decisions, then **stop for approval**.
+   `python -m impact.find --route <route> --copy "<old text>"` and show the candidates.
+2. Use the **impact-analyzer** subagent with the slug, the analysis path, the git range and the Figma URL
+   if there is one.
+3. Show the summary, **the "Files to change" table in full**, the numbered `supersede` rows and the
+   decisions, then **stop for approval**.
 4. After approval, fill impact.md's `## Approval` section and set `Status: APPROVED`. Ask whether to
-   apply it now with **test-case-writer**, plus **design-mapper** if design refs are superseded.
+   apply it now with **test-script-writer** — and, if the feature also redesigns screens an existing
+   `flow.yaml` covers, whether to run `/design-checks <slug>`.

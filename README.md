@@ -225,3 +225,23 @@ pytest -m "pending_feature or superseded_by" --collect-only -q   # what is waiti
 
 Design steps in an older `flow.yaml` can carry `superseded_by: <slug>` too; `--design` skips them once
 that feature ships.
+
+## Hot lead engagement visibility (admin, feature `hot-lead-engagement-visibility`)
+
+Spec: `specs/features/hot-lead-engagement-visibility/test-cases.md` (cases S1-01 … S9-01; S9-02 and
+S10 are manual). Needs `auth/admin.json` (`python scripts/save_auth_state.py admin`, a biz user);
+without it every test here skips.
+
+```bash
+# Read-only admin checks on existing QA data: Unverified Deals columns + drill-down, Hot Leads toggles
+pytest test_cases/admin_test_cases/test_admin_deals_unverified_engagement.py \
+       test_cases/admin_test_cases/test_admin_leads_hot_leads.py -m "not destructive"
+
+# Hot-lead flows (destructive, slow: ~8 min of POC viewing, then up to DD_HLE_HOT_POLL_SECONDS)
+python scripts/save_auth_state.py hle_buyer      # a POC of the dedicated S6-01 lead
+pytest test_cases/e2e/test_hot_lead_flows.py
+```
+
+The flows need dedicated, never-hot buyer leads, set per case in `.env` (`DD_HLE_*`, see
+`.env.example`). Each lead is used up for 14 days; used links and uids are recorded in
+`run_state/hle.json` and skipped on the next run. Deselect the flows with `-m "not slow"`.

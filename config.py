@@ -41,5 +41,15 @@ class Settings:
     buyer_login_otp: str = os.getenv("DD_BUYER_LOGIN_OTP", "")
     buyer_login_unregistered_email: str = os.getenv("DD_BUYER_LOGIN_UNREGISTERED_EMAIL", "")
 
+    # hot-lead-engagement-visibility (HLE): hot-lead flows use dedicated, never-hot buyer leads,
+    # never auth/buyer.json. Each value is keyed by the test case it feeds (see .env.example).
+    hle_buyer_state: Path = ROOT / os.getenv("DD_HLE_BUYER_STATE", "auth/hle_buyer.json")
+    hle_poc_links: str = os.getenv("DD_HLE_POC_LINKS", "")
+    hle_lead_names: str = os.getenv("DD_HLE_LEAD_NAMES", "")
+    hle_fresh_company_uids: str = os.getenv("DD_HLE_FRESH_COMPANY_UIDS", "")
+    hle_teaser_unlocked_link: str = os.getenv("DD_HLE_TEASER_UNLOCKED_LINK", "")
+    # One scheduler cycle (5 min) plus a 2 min buffer.
+    hle_hot_poll_seconds: int = int(os.getenv("DD_HLE_HOT_POLL_SECONDS", "420"))
+
 
 settings = Settings()

@@ -1,0 +1,22 @@
+name: Hot Lead Refinement & Engagement Visibility
+slug: hot-lead-engagement-visibility
+req_prefix: HLE
+status: in_development        # pending_feature tests xfail until this says shipped
+modules: []                   # admin-leads (ADM-LDS) and admin-deals (ADM-DLS) are not mapped yet (specs/modules/README.md: todo)
+
+docs:
+  prd: prd/hot-lead-engagement-visibility.md
+  analysis: prd/hot-lead-engagement-visibility.analysis.md
+  test_cases: features/hot-lead-engagement-visibility/test-cases.md
+
+footprint:
+  routes:
+    - /admin/leads
+    - /admin/deals
+    - /buyer/cue-card/:uid
+    - /buyer/deeplink            # POC cue-card links (pocUid): time spent per POC
+  screens:
+    - Admin Leads, Investor Leads tab (Hot Leads / Expired Hot Leads toggles, flame icon)
+    - Admin Deals, Unverified Deals tab (CC Views / Time, Doc Views / Time columns)
+    - Engagement drill-down modal (per-POC views and time)
+    - Buyer cue card opened from a POC deep link (pocUid), time tracking

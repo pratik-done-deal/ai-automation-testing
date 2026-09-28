@@ -1,6 +1,6 @@
 import re
 
-from playwright.sync_api import expect
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, expect
 
 from constants import DOC_LABELS, Copy
 from pages.shared.base_page import BasePage
@@ -105,3 +105,40 @@ class BuyerCueCardPage(BasePage):
         # Wait for the right rail first, so "absent" is not just "not rendered yet".
         expect(self.express_interest_button.or_(self.expressed_interest_button).first).to_be_visible(timeout=15_000)
         expect(self.page.get_by_text(Copy.FLAGGED_TITLE)).to_have_count(0)
+
+    # --- POC deep links and time spent (hot-lead-engagement-visibility) ---
+    # A POC's cue-card link is /buyer/deeplink?listingUid=...&pocUid=... (RichTextEditor/utils:94-100).
+    # DeepLink loads the card through the same company/cue/card/fetch (hooks/useCuecardData.js:201),
+    # and useBatchTimeTracker sends the tab-visible time on pagehide/beforeunload, by beacon once the
+    # page is terminating (analytics/services/trackingService.js).
+    TRACKING_API = re.compile(r"integration/cue-card/engagement")
+
+    def open_deep_link(self, url: str):
+        with self.page.expect_response(lambda r: self.CUE_CARD_API.search(r.url), timeout=30_000) as res:
+            self.page.goto(url)
+        if not res.value.ok:
+            raise AssertionError(f"company/cue/card/fetch returned HTTP {res.value.status} for {url}")
+        self.cue_card_payload = res.value.json()
+        return self
+
+    def open_link(self, url: str):
+        """Any other buyer link (e.g. an unlocked investment teaser): open it and let it settle."""
+        self.page.goto(url)
+        self.page.wait_for_load_state("networkidle")
+        return self
+
+    def dwell(self, seconds: int):
+        """Keep this tab in front for `seconds`: only tab-visible time counts."""
+        self.page.bring_to_front()
+        self.page.wait_for_timeout(seconds * 1000)
+        return self
+
+    def leave(self) -> bool:
+        """Navigate away so the visible time is sent. True if the tracking request was seen."""
+        try:
+            with self.page.context.expect_event("request", lambda r: self.TRACKING_API.search(r.url),
+                                                timeout=15_000):
+                self.page.goto("about:blank")
+            return True
+        except PlaywrightTimeoutError:
+            return False
