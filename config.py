@@ -55,7 +55,6 @@ class Settings:
 
     # star-seller-fundraising (SSF): the test sellers, keyed by their name in test-cases.md section 6,
     # e.g. "F-ready:<uid>,F-nodeck:<uid>". A missing name skips the cases that need it.
-    ssf_sellers: str = os.getenv("DD_SSF_SELLERS", "")
 
 
 settings = Settings()

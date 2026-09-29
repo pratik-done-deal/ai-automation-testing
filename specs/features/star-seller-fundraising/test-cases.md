@@ -163,28 +163,28 @@ reset).
 
 | TC | Title | Steps | Expected result | Pri | Type | Req | Run as |
 |---|---|---|---|---|---|---|---|
-| S12-01 | Switching to Acquisition shows the star-seller message | 1. Open the Objective modal for F-star → 2. Select "Acquisition" in "Primary Objective*" → 3. Click "Confirm" | A message below the dropdown contains "star" and "investment teaser" | P0 | gating | SSF-18, SSF-19 | auto |
-| S12-02 | Teaser upload option appears right below the message | 1. Repeat S12-01 → 2. Look directly below the message | An investment teaser upload option is shown | P1 | state | SSF-20 | auto |
+| S12-01 | Switching to Acquisition shows the star-seller message | 1. Open the Objective modal for F-star → 2. Select "Acquisition" in "Primary Objective*" | A message below the dropdown contains "star" and "investment teaser", and "Confirm" is disabled | P0 | gating | SSF-18, SSF-19 | auto |
+| S12-02 | Teaser upload option appears right below the message | 1. Repeat S12-01 → 2. Look directly below the message | An investment teaser box with a "Required" tag and an "Upload" button is shown | P1 | state | SSF-20 | auto |
 | S12-03 | The objective is not saved while blocked | 1. Repeat S12-01 → 2. Reload the cue card | "Company's Objective" still reads "Primary: Funding" | P1 | gating | SSF-18 | auto |
-| S12-04 | Uploading the teaser clears the message | 1. Repeat S12-01 → 2. Upload a PDF in the upload option | The star-seller message is gone | P1 | happy | SSF-22 | auto |
-| S12-05 | Change saves in the same step after upload | 1. Open the Objective modal for F-star → 2. Select "Acquisition" → 3. Click "Confirm" → 4. Upload a PDF in the upload option → 5. Click "Confirm" → 6. Reload | "Company's Objective" reads "Primary: Acquisition" | P0 | happy | SSF-22 | auto |
+| S12-04 | Uploading the teaser clears the message | 1. Repeat S12-01 → 2. Upload a PDF in the upload option | The star-seller message is gone, the box shows the file name and "Added to the data room", and "Confirm" is enabled | P1 | happy | SSF-22 | auto |
+| S12-05 | Change saves in the same step after upload | 1. Open the Objective modal for F-star → 2. Select "Acquisition" → 3. Upload a PDF in the upload option → 4. Click "Confirm" → 5. Reload | "Company's Objective" reads "Primary: Acquisition" | P0 | happy | SSF-22 | auto |
 
 ### S13 — Admin hits a failing or wrong upload in the objective-change upload option
 **Role:** admin · **Precondition:** admin session; F-star in the blocked state of S12-01 (run before S12-04/S12-05); for S13-01/02 the upload request is forced to fail with network mocking · **Path:** Objective modal → upload option
 
 | TC | Title | Steps | Expected result | Pri | Type | Req | Run as |
 |---|---|---|---|---|---|---|---|
-| S13-01 | Failed upload shows an error | 1. Reach the blocked state (S12-01) → 2. Make the upload request fail → 3. Upload a PDF | An upload error is shown and the star-seller message stays | P2 | edge | SSF-23 | auto |
-| S13-02 | User can retry after a failed upload | 1. Do S13-01 → 2. Let requests succeed again → 3. Upload a PDF again in the same option | The star-seller message is gone | P2 | edge | SSF-23 | auto |
-| S13-03 | Wrong file type is rejected with the needed type | 1. Reach the blocked state → 2. Choose a .docx file in the upload option | A message naming "PDF" appears and the star-seller message stays | P2 | edge | SSF-24 | auto |
+| S13-01 | Failed upload shows an error | 1. Reach the blocked state (S12-01) → 2. Make the upload request fail → 3. Upload a PDF | An upload error is shown, the star-seller message stays and "Confirm" stays disabled | P2 | edge | SSF-23 | auto |
+| S13-02 | User can retry after a failed upload | 1. Do S13-01 → 2. Let requests succeed again → 3. Upload a PDF again in the same option | The star-seller message is gone and "Confirm" is enabled | P2 | edge | SSF-23 | auto |
+| S13-03 | Wrong file type is rejected with the needed type | 1. Reach the blocked state → 2. Choose a .docx file in the upload option | A message naming "PDF" appears, the star-seller message stays and "Confirm" stays disabled | P2 | edge | SSF-24 | auto |
 
 ### S14 — Admin changes a star acquisition seller to Funding with no pitch deck, uploads, then cancels
 **Role:** admin · **Precondition:** admin session; a star, acquisition-primary seller with a teaser and no pitch deck ("A-star"; S5-01 creates one from A-ready) · **Path:** /admin/notes/<companyId> → Objective modal
 
 | TC | Title | Steps | Expected result | Pri | Type | Req | Run as |
 |---|---|---|---|---|---|---|---|
-| S14-01 | Switching to Funding names the pitch deck | 1. Open the Objective modal for A-star → 2. Select "Funding" → 3. Click "Confirm" | A message below the dropdown contains "star" and "pitch deck" | P1 | gating | SSF-21 | auto |
-| S14-02 | Pitch deck upload option appears below the message | 1. Repeat S14-01 → 2. Look directly below the message | A pitch deck upload option is shown | P1 | state | SSF-21 | auto |
+| S14-01 | Switching to Funding names the pitch deck | 1. Open the Objective modal for A-star → 2. Select "Funding" | A message below the dropdown contains "star" and "pitch deck", and "Confirm" is disabled | P1 | gating | SSF-21 | auto |
+| S14-02 | Pitch deck upload option appears below the message | 1. Repeat S14-01 → 2. Look directly below the message | A pitch deck box with a "Required" tag and an "Upload" button is shown | P1 | state | SSF-21 | auto |
 | S14-03 | Cancel keeps the previous objective | 1. Repeat S14-01 → 2. Upload a PDF in the upload option → 3. Click "Cancel" → 4. Reload | "Company's Objective" still reads "Primary: Acquisition" | P1 | happy | SSF-25 | auto |
 | S14-04 | Pitch deck uploaded before Cancel stays on the profile | Given S14-03 has run: 1. Reload the cue card → 2. Read "Important Documents" | A pitch deck file is listed under "Pitch Deck" | P1 | state | SSF-26 | auto |
 | S14-05 | With the document present the change saves with no message | Given S14-04 has run: 1. Open the Objective modal → 2. Select "Funding" → 3. Click "Confirm" → 4. Reload | No star-seller message appeared and the block reads "Primary: Funding" | P1 | happy | SSF-27 | auto |
@@ -201,7 +201,7 @@ reset).
 
 | TC | Title | Steps | Expected result | Pri | Type | Req | Run as |
 |---|---|---|---|---|---|---|---|
-| S16-01 | Biz user gets the same block on a missing teaser | Given a star funding seller with no teaser (e.g. F-mis after S6-02): 1. Open the Objective modal → 2. Select "Acquisition" → 3. Click "Confirm" → 4. Click "Cancel" (cleanup) | After step 3 a message below the dropdown contains "star" and "investment teaser" | P1 | gating | SSF-18, SSF-19 | auto |
+| S16-01 | Biz user gets the same block on a missing teaser | Given a star funding seller with no teaser (e.g. F-mis after S6-02): 1. Open the Objective modal → 2. Select "Acquisition" → 3. Click "Cancel" (cleanup) | After step 2 a message below the dropdown contains "star" and "investment teaser", and "Confirm" is disabled | P1 | gating | SSF-18, SSF-19 | auto |
 | S16-02 | Objective change ignores MIS and seller call | Given a star seller with a teaser and a pitch deck but no MIS and no call (e.g. A-star after S14-05, now funding): 1. Open the Objective modal → 2. Select "Acquisition" → 3. Click "Confirm" → 4. Reload | No message appeared and the block reads "Primary: Acquisition" | P1 | happy | SSF-29 | auto |
 
 ### S17 — Another tab uploads the missing document while the objective change is blocked
@@ -209,7 +209,7 @@ reset).
 
 | TC | Title | Steps | Expected result | Pri | Type | Req | Run as |
 |---|---|---|---|---|---|---|---|
-| S17-01 | Teaser uploaded elsewhere is picked up on save | 1. Tab 1: reach the blocked state (S12-01) → 2. Tab 2: upload an investment teaser for the same seller → 3. Tab 1: click "Confirm" without using the upload option → 4. Reload | Block reads "Primary: Acquisition" with no second upload asked | P2 | edge | SSF-30 | auto |
+| S17-01 | Teaser uploaded elsewhere needs no second upload | 1. Tab 1: reach the blocked state (S12-01) → 2. Tab 2: upload an investment teaser for the same seller → 3. Tab 1: Cancel, reload, open the Objective modal and select "Acquisition" → 4. Click "Confirm" → 5. Reload | After step 3 no star-seller message shows; after step 5 the block reads "Primary: Acquisition" | P2 | edge | SSF-30 | auto |
 
 ### S18 — Seller starred before this release: kept, edited, unstarred and re-marked
 **Role:** admin, biz_user · **Precondition:** admin session; a funding-primary seller with highlights, no pitch deck, no MIS, no call, marked star **before the release reaches QA** under today's rules ("L-star"; none exists today, see section 6); S18-04 needs biz_user (BLOCKED: not saved). Run in the order below: S18-03 consumes the legacy star. · **Path:** /admin/notes/<companyId> → Additional Details modal
@@ -274,6 +274,10 @@ None. No case needs more than six steps.
 | SSF-36 | Star conversion rate by primary objective reported | S19-02 | manual |
 
 ## 6. Test data and run order
+
+> Updated 2026-09-28: sellers are no longer set as uids (`DD_SSF_SELLERS`). Each case browses the admin
+> Sellers list ("Star Sellers" / "Non Star Sellers") for the first seller in the state the table below
+> describes, and opens it by searching its S-id and clicking the row's Actions "View" (`utils/ssf_browse.py`).
 **Sellers each run needs** (all on qa.done.deals; "highlights" = all 3 company highlights, each 50+ characters, added via "Edit Cue Card"; pitch deck and MIS via Data Room → "Upload Document" into "Company Pitchdeck" / "Financials"):
 
 | Name | Primary | Star | Highlights | Pitch deck | Teaser | MIS | Calls | Used by |
@@ -327,8 +331,10 @@ None. No case needs more than six steps.
    Yes; only switching No → Yes runs the check (Answer 4, assumed, not confirmed by the user).
 5. The objective-change check lives in the "Edit Company's Objective" modal on the admin cue card, below
    "Primary Objective*"; the message mentions "star" and names the document; the upload option sits right below
-   it (Answer 5, assumed). Cases select the new objective and then click Confirm; if the message already appears
-   on selection, the case still passes.
+   it (Answer 5, assumed). As built (Figma, 2026-09-28): the message and a "<document> Required [Upload]" box show
+   as soon as the objective is selected, and Confirm stays disabled until the upload; after it the box shows the
+   file name and "Added to the data room". The check reads the documents on the cue card, so a document uploaded
+   elsewhere is seen after the cue card reloads (S17-01), not while the modal stays open.
 6. "Highlight present" means all 3 company highlights, each 50+ characters (analysis Q6).
 7. "Back to cue card" (Figma) is in scope as a UI element; S2-04 is `new — needs an id` and should be dropped if
    it does not ship (Q7).
@@ -351,3 +357,5 @@ Approved by the user on 2026-09-28 ("approve").
 - Approved: all 59 cases (S1-01 .. S19-02), including S2-04 ("Back to cue card") as written.
 - Changed: none.
 - Dropped: none.
+- Updated 2026-09-28 to the built objective-change flow (assumption 5): S12-01/02/04/05, S13-01..03, S14-01/02,
+  S16-01 and S17-01 (retitled "Teaser uploaded elsewhere needs no second upload"). No case added or dropped.

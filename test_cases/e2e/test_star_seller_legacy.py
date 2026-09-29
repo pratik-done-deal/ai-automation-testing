@@ -4,7 +4,7 @@ Spec: specs/features/star-seller-fundraising/test-cases.md. Admin and biz user, 
 S18-01 -> S18-02 -> S18-03 (unstars it for good) -> admin uploads a pitch deck -> S18-04 (biz user)
 -> S18-05.
 
-L-star (DD_SSF_SELLERS=L-star:<uid>) is a funding seller with 3 highlights, no pitch deck, no MIS
+L-star is a funding seller with 3 highlights, no pitch deck, no MIS
 and no call, marked star under today's rules BEFORE the release reaches QA. It can't be recreated
 once the release is on QA, and S18-03 consumes it, so S18-03 runs only once the feature is on QA.
 """

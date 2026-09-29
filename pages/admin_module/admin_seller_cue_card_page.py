@@ -2,9 +2,10 @@ import re
 
 from playwright.sync_api import expect
 
-from constants import ADMIN_SELLER_NOTES_PATH, StarSellerCopy as Ssc
+from constants import StarSellerCopy as Ssc
 from locators.admin import star_seller_locators as L
 from pages.admin_module.additional_details_modal import AdditionalDetailsModal
+from pages.admin_module.admin_sellers_page import AdminSellersPage
 from pages.admin_module.company_objective_modal import CompanyObjectiveModal
 from pages.admin_module.cue_card_edit_modal import CueCardEditModal
 from pages.shared.base_page import BasePage
@@ -18,16 +19,35 @@ class AdminSellerCueCardPage(BasePage):
 
     The right rail holds "Company's Objective" and "Additional details for this seller"; both open
     their modal from an "Edit" button and save with PUT company/update/admin, then reload the page.
+
+    open_seller gets there like a user: Sellers > "Star Sellers" / "Non Star Sellers" > search the
+    S-id > Actions "View". The cue card opens in a new tab and `self.page` moves to it; the list
+    stays open in the tab the page object was made with.
     """
 
+    def __init__(self, page):
+        super().__init__(page)
+        self.list_page = page
+
     def open_seller(self, uid):
+        from utils.ssf_browse import describe   # read-only: the seller's S-id and star flag
+        facts = describe(uid)
+        tab = Ssc.STAR_SELLERS_TAB if facts["star"] else Ssc.NON_STAR_SELLERS_TAB
+        sellers = AdminSellersPage(self.list_page).open_tab(tab).search(facts["sid"])
+        if self.page is not self.list_page:
+            self.page.close()
+        self.page = sellers.view_cue_card(facts["sid"], uid)
         self.uid = uid
-        self.open(ADMIN_SELLER_NOTES_PATH.format(uid=uid))
+        return self._wait_loaded()
+
+    def _wait_loaded(self):
         expect(self.block(Ssc.ADDITIONAL_DETAILS_BLOCK)).to_be_visible(timeout=30_000)
+        self.page.wait_for_load_state("networkidle")
         return self
 
     def reload(self):
-        return self.open_seller(self.uid)
+        self.page.reload()
+        return self._wait_loaded()
 
     def seller_heading(self):
         """("S5133", "test company") from the page heading "S5133: test company"."""
@@ -96,17 +116,23 @@ class AdminSellerCueCardPage(BasePage):
         return self
 
     def delete_all_pitch_decks(self):
-        """Delete every file in the Data Room "Pitchdeck" subsection. Returns how many were deleted."""
-        section = self.page.locator(L.DATA_ROOM_SUBSECTION).filter(
-            has=self.page.get_by_text(Ssc.DATA_ROOM_PITCHDECK, exact=True))
+        """Delete every file in the Data Room "Pitchdeck" subsection. Returns (deleted, left).
+
+        Stops at the first file the app refuses to delete (e.g. "This document has already been
+        shared with the buyer and can't be deleted"), so a refused delete can't loop forever."""
+        files = self.page.locator(L.DATA_ROOM_SUBSECTION).filter(
+            has=self.page.get_by_text(Ssc.DATA_ROOM_PITCHDECK, exact=True)).locator(L.DATA_ROOM_FILE)
         deleted = 0
-        while section.count() and section.first.locator(L.DATA_ROOM_FILE).count():
+        while files.count():
+            before = files.count()
             with self.page.expect_response(lambda r: DELETE_DOC_API in r.url, timeout=30_000):
-                section.first.locator(L.DATA_ROOM_FILE).first.locator(L.DATA_ROOM_DELETE).click()
-            deleted += 1
+                files.first.locator(L.DATA_ROOM_DELETE).click()
             self.page.wait_for_load_state("networkidle")
             self.page.wait_for_timeout(1_000)  # the list re-renders after updateCuecardRefresh
-        return deleted
+            if files.count() >= before:
+                break
+            deleted += 1
+        return deleted, files.count()
 
     def upload_pitch_deck(self, path):
         """Data Room > "Upload Document" > "Pitch Deck" > the PDF (DocumentUploadModal)."""

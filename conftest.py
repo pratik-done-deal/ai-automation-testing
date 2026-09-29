@@ -86,8 +86,13 @@ def _admin_module_context(browser):
 @pytest.fixture
 def admin_module_page(_admin_module_context):
     """The file's admin page, with the previous test's routes and listeners removed (the login stays).
-    Tests navigate themselves."""
+    Tabs the previous test opened (e.g. a cue card opened from the Sellers list) are closed, and
+    context-wide routes dropped. Tests navigate themselves."""
     ctx, page = _admin_module_context
+    for other in ctx.pages:
+        if other is not page:
+            other.close()
+    ctx.unroute_all(behavior="ignoreErrors")
     reset_page(ctx, page, keep_session=True)
     return page
 

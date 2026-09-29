@@ -23,6 +23,8 @@ SELECTED_CHIP_BG = "rgb(23, 92, 211)"      # #175CD3
 OBJECTIVE_DROPDOWN = ".filter-label"
 OBJECTIVE_OPTION = ".filter-list-item"
 FILE_INPUT = "input[type='file']"
+# The objective-change upload option's button: CustomFileUpload wraps the CTA in this label (CustomFileUpload/index.js).
+UPLOAD_OPTION = "label.custom-upload-label"
 
 TAB = "div.tab-item"
 DATA_ROOM_SUBSECTION = "div.p-3.rounded"
@@ -31,3 +33,8 @@ DATA_ROOM_DELETE = "[data-testid='DeleteOutlineRoundedIcon']"
 
 SNACKBAR = ".MuiSnackbar-root, [role='alert']"
 SELLER_ROWS = ".custom-table-grid-container table tbody tr:has(td)"
+# Sellers list search: a magnifier that opens a "Type Keywords to search" box; Enter searches in the open tab.
+SELLER_SEARCH_TOGGLE = ".search-filter-container .filter-label"
+SELLER_SEARCH_INPUT = "input[placeholder='Type Keywords to search']"
+# The row's "Actions" column "View" chip: the only /notes/ link in a row (SellerDataModel.js `notes`, new tab).
+ROW_VIEW = "a[href*='/notes/']"

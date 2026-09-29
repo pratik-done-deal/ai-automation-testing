@@ -256,7 +256,9 @@ Admin tests need `auth/admin.json` (userType 2). Biz-user tests need a **separat
 python scripts/save_auth_state.py biz_user      # opens /admin/login; log in as a userType 4 biz user
 ```
 
-Sellers are cue card uids in `DD_SSF_SELLERS` (see `.env.example`); a case whose seller isn't set
+No seller uids: each case browses Sellers > "Star Sellers" / "Non Star Sellers" for a seller in the
+state it needs (first fit; `utils/ssf_browse.py`), then opens it like a user, by searching its S-id and
+clicking the row's Actions "View" (the cue card opens in a new tab). A kind of seller that isn't found
 skips and names it. Most cases are `pending_feature` (strict xfail until the feature ships); the
 `destructive` ones star sellers, change objectives, upload or delete documents.
 
@@ -265,4 +267,14 @@ pytest test_cases/admin_test_cases/test_admin_star_seller_marking.py \
        test_cases/admin_test_cases/test_admin_star_seller_objective.py \
        test_cases/biz_user_test_cases/test_biz_user_star_seller.py -m smoke --headed
 pytest test_cases/e2e/test_star_seller_legacy.py   # S18: needs a legacy star prepared BEFORE the release
+```
+
+To run every SSF test in a visible Chromium window, use `scripts/run_star_seller_tests.sh`. By default it
+targets your local app (`http://localhost:3000`) with the feature counted as shipped (`DD_SHIPPED`) and
+logins kept in `auth/local/`; `qa` targets QA. Extra arguments go to pytest; `SLOWMO=<ms>` slows it down.
+
+```bash
+scripts/run_star_seller_tests.sh                    # local app, all SSF tests, headed
+scripts/run_star_seller_tests.sh qa -m smoke        # QA, smoke subset
+scripts/run_star_seller_tests.sh local --pause-on-failure
 ```

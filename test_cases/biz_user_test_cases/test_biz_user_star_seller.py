@@ -2,7 +2,7 @@
 
 Spec: specs/features/star-seller-fundraising/test-cases.md. Needs a biz user (userType 4) session:
 `python scripts/save_auth_state.py biz_user`; every test here skips while auth/biz_user.json is
-missing. Sellers come from DD_SSF_SELLERS (test-cases.md section 6).
+missing. Sellers are browsed for (utils.ssf_browse) and opened from the Sellers list.
 
 A biz user needs the call-or-MIS requirement on top of the admin's. Funding sellers that pass
 today (they need only highlights) run as normal tests; the new funding rules, the call/MIS row for
@@ -149,16 +149,17 @@ def test_s10_02_acquisition_seller_with_an_mis_is_starred(cue):
 
 @pytest.mark.pending_feature(SLUG)
 def test_s16_01_biz_user_gets_the_same_block_on_a_missing_teaser(cue):
-    """SSF-18, SSF-19 (S16-01): a star funding seller without a teaser: the message mentions "star" and the teaser."""
+    """SSF-18, SSF-19 (S16-01): a star funding seller without a teaser: on selecting Acquisition the message mentions
+    "star" and the teaser, and Confirm is disabled."""
     uid = produced_or_env("S16-01", "F-star-biz", "S6-02")
     hold_objective_save_until_shipped(cue.page)
     cue.open_seller(uid)
     if cue.star_value() != Ssc.YES:
         pytest.skip("S16-01: the seller must be star")
     modal = cue.open_objective().select_primary(Ssc.ACQUISITION)
-    modal.confirm()
     _, text = modal.expect_star_message()
     assert re.search(re.escape(Ssc.ITEM_TEASER), text, re.I), text
+    modal.expect_confirm_disabled()
     modal.cancel()
 
 
@@ -167,6 +168,7 @@ def test_s16_02_objective_change_ignores_mis_and_seller_call(cue):
     """SSF-29 (S16-02): a star seller with teaser and pitch deck but no MIS/call changes to Acquisition with no message."""
     uid = require_done("S16-02", "S14-05")   # A-star, now funding, with both documents
     modal = cue.open_seller(uid).open_objective().select_primary(Ssc.ACQUISITION)
+    modal.expect_no_star_message()
     modal.confirm_and_save()
     cue.reload()
     assert cue.primary_objective() == Ssc.ACQUISITION

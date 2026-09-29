@@ -2,15 +2,12 @@
 
 Spec: specs/features/star-seller-fundraising/test-cases.md. One admin context for the file.
 
-Sellers (DD_SSF_SELLERS, test-cases.md section 6):
-  * F-star: a star funding seller with no investment teaser. Set it, or run S1-04 first in the same
-    run (test_admin_star_seller_marking.py stars F-ready, which then serves as F-star).
-  * A-star: a star acquisition seller with a teaser and no pitch deck; or S5-01 in the same run.
-  * Non-star funding seller for S15-01.
+Sellers are browsed for (utils.ssf_browse) and opened from Sellers > "Star Sellers" > Actions "View":
+  * F-star: a star funding seller with no investment teaser (S1-04 may also produce one).
+  * A-star: a star acquisition seller with a teaser and no pitch deck.
+  * Nonstar-funding (from "Non Star Sellers") for S15-01.
 Every case that uploads the missing document uses its seller up (S12-04, S12-05, S13-02, S14-03,
-S17-01). A later case that needs the document still missing then skips and asks for a seller of its
-own: DD_SSF_SELLERS=F-star-S12-05:<uid>. The smoke run (S12-01, S12-05) needs one F-star.
-
+S17-01); the next case of that kind browses for another. The smoke run (S12-01, S12-05) needs one F-star.
 Order: the run order of test-cases.md section 6 — S12-01..03, then S13 and S17 (which need the
 blocked state before anything uploads the teaser), then S12-04/05; S14 in order; S15 last.
 
@@ -48,15 +45,16 @@ def _has(text, needle):
 
 
 def _blocked(cue, uid, case, new_objective, document):
-    """Open the objective modal of star seller `uid`, pick `new_objective`, Confirm; return (modal, message)."""
+    """Open the objective modal of star seller `uid` and pick `new_objective`: the star-seller message
+    shows on selection and Confirm is disabled. Returns (modal, message)."""
     hold_objective_save_until_shipped(cue.page)
     cue.open_seller(uid)
     if cue.star_value() != Ssc.YES:
         pytest.skip(f"{case}: the seller must be star")
     modal = cue.open_objective().select_primary(new_objective)
-    modal.confirm()
     message, text = modal.expect_star_message()
     assert _has(text, document), text
+    modal.expect_confirm_disabled()
     return modal, message
 
 
@@ -71,17 +69,19 @@ def _fail_uploads(page):
 @pytest.mark.smoke
 @pytest.mark.pending_feature(SLUG)
 def test_s12_01_switching_to_acquisition_shows_the_star_seller_message(cue):
-    """SSF-18, SSF-19 (S12-01): a message below the dropdown mentions "star" and names the investment teaser."""
+    """SSF-18, SSF-19 (S12-01): on selecting Acquisition a message below the dropdown mentions "star" and names
+    the investment teaser, and Confirm is disabled."""
     uid = star_seller("S12-01", "F-star", "S1-04")
     _blocked(cue, uid, "S12-01", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
 
 
 @pytest.mark.pending_feature(SLUG)
 def test_s12_02_teaser_upload_option_appears_below_the_message(cue):
-    """SSF-20 (S12-02): an investment teaser upload option is shown right below the message."""
+    """SSF-20 (S12-02): an investment teaser upload option ("Required", "Upload") is shown right below the message."""
     uid = star_seller("S12-02", "F-star", "S1-04")
     modal, message = _blocked(cue, uid, "S12-02", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
     expect(modal.upload_option).to_be_visible()
+    expect(modal.required_tag).to_be_visible()
     assert modal.upload_option.bounding_box()["y"] >= message.bounding_box()["y"]
 
 
@@ -105,6 +105,7 @@ def test_s13_01_failed_upload_shows_an_error(cue, make_pdf):
     modal.upload(make_pdf("ssf-teaser"))
     expect(modal.upload_error.first).to_be_visible(timeout=15_000)
     expect(message).to_be_visible()
+    modal.expect_confirm_disabled()
 
 
 @pytest.mark.pending_feature(SLUG)
@@ -115,12 +116,13 @@ def test_s13_03_wrong_file_type_is_rejected_naming_pdf(cue, docx):
     modal.upload(docx)
     expect(modal.pdf_rule_message.first).to_be_visible(timeout=15_000)
     expect(message).to_be_visible()
+    modal.expect_confirm_disabled()
 
 
 @pytest.mark.destructive
 @pytest.mark.pending_feature(SLUG)
 def test_s13_02_user_can_retry_after_a_failed_upload(cue, make_pdf):
-    """SSF-23 (S13-02): after a failed upload, a second upload in the same option clears the message."""
+    """SSF-23 (S13-02): after a failed upload, a second upload in the same option clears the message and enables Confirm."""
     uid = star_seller("S13-02", "F-star", "S1-04", consumes=True)
     modal, message = _blocked(cue, uid, "S13-02", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
     _fail_uploads(cue.page)
@@ -128,15 +130,18 @@ def test_s13_02_user_can_retry_after_a_failed_upload(cue, make_pdf):
     expect(modal.upload_error.first).to_be_visible(timeout=15_000)
     cue.page.unroute(UPLOAD_API)
     modal.upload(make_pdf("ssf-teaser"))
-    expect(modal.star_message).to_have_count(0, timeout=30_000)
+    modal.expect_uploaded()
 
 
 # ================================================================== S17: another tab uploads the missing teaser
 
 @pytest.mark.destructive
 @pytest.mark.pending_feature(SLUG)
-def test_s17_01_teaser_uploaded_elsewhere_is_picked_up_on_save(cue, make_pdf):
-    """SSF-30 (S17-01): a teaser uploaded from a second tab while blocked lets Confirm save with no second upload."""
+def test_s17_01_teaser_uploaded_elsewhere_needs_no_second_upload(cue, make_pdf):
+    """SSF-30 (S17-01): a teaser uploaded from a second tab while tab 1 is blocked: once tab 1's cue card is
+    reloaded, picking Acquisition shows no message and Confirm saves, with no second upload asked.
+
+    The modal reads the documents from the cue card data, so tab 1 only sees tab 2's upload after a reload."""
     uid = star_seller("S17-01", "F-star", "S1-04", consumes=True)
     modal, _ = _blocked(cue, uid, "S17-01", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
     # The only teaser upload surface for a funding seller is the objective modal's own option, so
@@ -146,11 +151,14 @@ def test_s17_01_teaser_uploaded_elsewhere_is_picked_up_on_save(cue, make_pdf):
         hold_objective_save_until_shipped(tab2)
         other, _ = _blocked(AdminSellerCueCardPage(tab2), uid, "S17-01", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
         other.upload(make_pdf("ssf-teaser-tab2"))
-        expect(other.star_message).to_have_count(0, timeout=30_000)
+        other.expect_uploaded()
         other.cancel()
     finally:
         tab2.close()
-    assert modal.confirm(), "Confirm in tab 1 did not save"
+    modal.cancel()
+    retry = cue.reload().open_objective().select_primary(Ssc.ACQUISITION)
+    retry.expect_no_star_message()
+    retry.confirm_and_save()
     cue.reload()
     assert cue.primary_objective() == Ssc.ACQUISITION
 
@@ -160,11 +168,13 @@ def test_s17_01_teaser_uploaded_elsewhere_is_picked_up_on_save(cue, make_pdf):
 @pytest.mark.destructive
 @pytest.mark.pending_feature(SLUG)
 def test_s12_04_uploading_the_teaser_clears_the_message(cue, make_pdf):
-    """SSF-22 (S12-04): uploading a PDF in the upload option clears the star-seller message."""
+    """SSF-22 (S12-04): uploading a PDF clears the star-seller message; the box shows the file, "Added to the data
+    room", and Confirm is enabled."""
     uid = star_seller("S12-04", "F-star", "S1-04", consumes=True)
     modal, _ = _blocked(cue, uid, "S12-04", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
     modal.upload(make_pdf("ssf-teaser"))
-    expect(modal.star_message).to_have_count(0, timeout=30_000)
+    text = modal.expect_uploaded()
+    assert _has(text, ".pdf"), text
 
 
 @pytest.mark.smoke
@@ -175,7 +185,7 @@ def test_s12_05_change_saves_in_the_same_step_after_upload(cue, make_pdf):
     uid = star_seller("S12-05", "F-star", "S1-04", consumes=True)
     modal, _ = _blocked(cue, uid, "S12-05", Ssc.ACQUISITION, Ssc.ITEM_TEASER)
     modal.upload(make_pdf("ssf-teaser"))
-    expect(modal.star_message).to_have_count(0, timeout=30_000)
+    modal.expect_uploaded()
     modal.confirm_and_save()
     cue.reload()
     assert cue.primary_objective() == Ssc.ACQUISITION
@@ -192,10 +202,11 @@ def test_s14_01_switching_to_funding_names_the_pitch_deck(cue):
 
 @pytest.mark.pending_feature(SLUG)
 def test_s14_02_pitch_deck_upload_option_appears_below_the_message(cue):
-    """SSF-21 (S14-02): a pitch deck upload option is shown below the message."""
+    """SSF-21 (S14-02): a pitch deck upload option ("Required", "Upload") is shown below the message."""
     uid = star_seller("S14-02", "A-star", "S5-01")
     modal, message = _blocked(cue, uid, "S14-02", Ssc.FUNDING, Ssc.ITEM_PITCH_DECK)
     expect(modal.upload_option).to_be_visible()
+    expect(modal.required_tag).to_be_visible()
     assert modal.upload_option.bounding_box()["y"] >= message.bounding_box()["y"]
 
 
@@ -206,7 +217,7 @@ def test_s14_03_cancel_keeps_the_previous_objective(cue, make_pdf):
     uid = star_seller("S14-03", "A-star", "S5-01", consumes=True)
     modal, _ = _blocked(cue, uid, "S14-03", Ssc.FUNDING, Ssc.ITEM_PITCH_DECK)
     modal.upload(make_pdf("ssf-pitch-deck"))
-    expect(modal.star_message).to_have_count(0, timeout=30_000)
+    modal.expect_uploaded()
     modal.cancel()
     cue.reload()
     assert cue.primary_objective() == Ssc.ACQUISITION
@@ -227,6 +238,7 @@ def test_s14_05_with_the_document_present_the_change_saves(cue):
     """SSF-27 (S14-05): with the pitch deck present, Funding saves with no star-seller message."""
     uid = require_done("S14-05", "S14-04")
     modal = cue.open_seller(uid).open_objective().select_primary(Ssc.FUNDING)
+    modal.expect_no_star_message()
     modal.confirm_and_save()   # the save request only goes out when nothing blocks it
     cue.reload()
     assert cue.primary_objective() == Ssc.FUNDING
@@ -244,6 +256,7 @@ def test_s15_01_non_star_seller_changes_objective_with_no_check(cue):
         pytest.skip("S15-01: Nonstar-funding must be a non-star, funding-primary seller")
     modal = cue.open_objective().select_primary(Ssc.ACQUISITION)
     try:
+        modal.expect_no_star_message()
         modal.confirm_and_save()
         cue.reload()
         assert cue.primary_objective() == Ssc.ACQUISITION

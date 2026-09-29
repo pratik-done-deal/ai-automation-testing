@@ -323,11 +323,18 @@ class StarSellerCopy:
     FUNDING = "Funding"
     STAR_WORD = "star"                                       # star-seller-fundraising: the objective message mentions it (Answer 5)
     PDF = "PDF"
+    # StarSellerDocumentPrompt.js: "This is a star seller. Upload a pitch deck to make Funding the primary objective.",
+    # then a dashed box "<document> Required [Upload]"; after the upload the box shows "<file> / Added to the data room".
+    REQUIRED_TAG = "Required"
+    UPLOAD = "Upload"
+    ADDED_TO_DATA_ROOM = "Added to the data room"
 
     # Cue card edit modal
     CUE_CARD_EDIT_TITLE = "Cue card edit"
 
     # Sellers list
     STAR_SELLERS_TAB = "Star Sellers"
+    NON_STAR_SELLERS_TAB = "Non Star Sellers"
+    VIEW = "View"
     STAR_MARK = "⭐"                                          # SellerDataModel.js:84 renders "⭐️"
 

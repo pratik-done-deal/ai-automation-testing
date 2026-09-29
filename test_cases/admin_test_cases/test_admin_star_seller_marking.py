@@ -1,8 +1,8 @@
 """Admin star marking on the seller cue card (star-seller-fundraising, scenarios S1-S5 and S11).
 
 Spec: specs/features/star-seller-fundraising/test-cases.md. One admin context for the file; every
-test opens /admin/notes/<uid> of the seller it needs from DD_SSF_SELLERS (test-cases.md section 6)
-and skips, naming the seller, when it isn't set.
+test browses for the seller it needs (utils.ssf_browse) and opens its cue card from Sellers > tab >
+Actions "View", skipping, naming the kind of seller, when none fits.
 
 Cases that pass on today's build (the save path, rules that don't change) run as normal tests; the
 new funding rule, the requirements-panel rows and the "<item> is missing" message are
@@ -84,8 +84,8 @@ def test_s1_04_confirm_saves_the_star(cue):
 def test_s1_05_starred_seller_is_in_the_star_sellers_tab(cue):
     """SSF-01 (S1-05): after S1-04 the seller's row in "Star Sellers" shows the star after its S-id."""
     uid = require_done("S1-05", "S1-04")
-    sid, name = cue.open_seller(uid).seller_heading()
-    row = AdminSellersPage(cue.page).open_star_sellers(name).row(sid)
+    sid, _ = cue.open_seller(uid).seller_heading()
+    row = AdminSellersPage(cue.page).open_star_sellers(sid).row(sid)
     expect(row).to_contain_text(Ssc.STAR_MARK)
 
 
@@ -256,7 +256,10 @@ def test_s11_01_pitch_deck_deleted_before_confirm_blocks_the_save(cue):
     modal.click_star(Ssc.YES)
     tab2 = cue.page.context.new_page()
     try:
-        deleted = AdminSellerCueCardPage(tab2).open_seller(uid).open_data_room().delete_all_pitch_decks()
+        deleted, left = AdminSellerCueCardPage(tab2).open_seller(uid).open_data_room().delete_all_pitch_decks()
+        if left:
+            pytest.skip("S11-01: the seller's pitch deck can't be deleted (shared with a buyer); "
+                        "needs a seller whose pitch deck was never shared")
         assert deleted, "F-del has no pitch deck in its Data Room to delete"
     finally:
         tab2.close()
@@ -273,6 +276,9 @@ def test_s11_02_deleting_the_pitch_deck_after_starring_keeps_the_star(cue):
     cue.open_seller(seller("F-star-del", "S11-02"))
     if cue.star_value() != Ssc.YES:
         pytest.skip("S11-02: F-star-del must be a star funding seller with a pitch deck")
-    cue.open_data_room().delete_all_pitch_decks()
+    _, left = cue.open_data_room().delete_all_pitch_decks()
+    if left:
+        pytest.skip("S11-02: the seller's pitch deck can't be deleted (shared with a buyer); "
+                    "needs a star seller whose pitch deck was never shared")
     cue.reload()
     assert cue.star_value() == Ssc.YES

@@ -1,31 +1,20 @@
-"""Test data and run chains for star-seller-fundraising (SSF), read from DD_SSF_SELLERS in .env.
+"""Test data and run chains for star-seller-fundraising (SSF).
 
-    DD_SSF_SELLERS=F-ready:<uid>,F-nodeck:<uid>,A-ready:<uid>,...
-
-Names are the seller names of test-cases.md section 6 (case-insensitive). A missing name skips the
-cases that need it, naming the variable. Some sellers are produced by an earlier case of the same
-run (F-ready becomes F-star after S1-04); `produced_or_env` covers both.
+Sellers are found by browsing, never from uids: each case names the kind of seller it needs
+("F-ready", "F-star", ...; test-cases.md section 6) and utils.ssf_browse picks one from the admin
+Sellers list ("Star Sellers" / "Non Star Sellers"). AdminSellerCueCardPage.open_seller then opens it
+the way a user does: Sellers > tab > search the S-id > Actions "View". Some sellers are produced by
+an earlier case of the same run (S1-04 stars an F-ready); `produced_or_env` falls back to those.
 """
 import json
 
 import pytest
 
-from config import settings
+from utils import ssf_browse
 from utils.network import failure_body
 from utils.registry import is_shipped
 
 SLUG = "star-seller-fundraising"
-VAR = "DD_SSF_SELLERS"
-
-# Why a seller can't be prepared on QA today (test-cases.md section 6). Shown in the skip.
-BLOCKED = {
-    "F-NOCONSENT": "where the pitch deck consent setting is turned off is not known",
-    "F-CALL": "how a 1-on-1 seller call is marked completed on QA is not known (needs a recipe from dev)",
-    "F-DEALCALL": "how to give a seller only a buyer deal call on QA is not known (needs a recipe from dev)",
-    "F-CANCELLED": "how a 1-on-1 seller call is cancelled on QA is not known (needs a recipe from dev)",
-    "F-SCHEDULED": "a seller with only a scheduled, not completed 1-on-1 call must be set up by hand",
-    "L-STAR": "a legacy star (funding, highlights, no pitch deck) must be starred BEFORE the release reaches QA",
-}
 
 # Cases that passed in this run, for the chains in test-cases.md section 6.
 _DONE = {}
@@ -33,22 +22,9 @@ _DONE = {}
 _CONSUMED = {}
 
 
-def _sellers():
-    pairs = {}
-    for part in (settings.ssf_sellers or "").split(","):
-        if ":" in part:
-            key, value = part.split(":", 1)
-            if key.strip() and value.strip():
-                pairs[key.strip().upper()] = value.strip()
-    return pairs
-
-
 def seller(name, case):
-    uid = _sellers().get(name.upper())
-    if not uid:
-        why = BLOCKED.get(name.upper())
-        pytest.skip(f"{case}: set {VAR}={name}:<cue card uid>" + (f" (BLOCKED: {why})" if why else ""))
-    return uid
+    """A seller of kind `name`, browsed for (see utils.ssf_browse). Skips when none fits."""
+    return ssf_browse.pick(name, case)
 
 
 def done(case, uid=None):
@@ -62,25 +38,27 @@ def require_done(case, needs):
 
 
 def produced_or_env(case, name, produced_by):
-    """The seller `name` from .env, else the one `produced_by` turned into it in this run."""
-    uid = _sellers().get(name.upper())
-    if uid:
-        return uid
-    if produced_by in _DONE:
-        return _DONE[produced_by]
-    pytest.skip(f"{case}: set {VAR}={name}:<cue card uid>, or run {produced_by} first in the same run")
+    """A browsed seller of kind `name`, else the one `produced_by` turned into it in this run."""
+    try:
+        return ssf_browse.pick(name, case)
+    except pytest.skip.Exception:
+        if produced_by in _DONE:
+            return _DONE[produced_by]
+        raise
 
 
 def star_seller(case, name, produced_by, consumes=False):
-    """A star seller still missing its document: `<name>-<case>` from .env first (a seller of its own
-    for that case), else `name` / what `produced_by` made of it this run, unless an earlier case of
-    this run already uploaded the document to it. `consumes`: this case uploads it."""
-    uid = _sellers().get(f"{name}-{case}".upper()) or produced_or_env(case, name, produced_by)
-    if uid in _CONSUMED:
-        pytest.skip(f"{case}: {_CONSUMED[uid]} already uploaded the missing document to {name} in this run; "
-                    f"give {case} its own seller: {VAR}={name}-{case}:<cue card uid>")
+    """A star seller still missing its document, browsed for; never one an earlier case of this run
+    uploaded the document to. `consumes`: this case uploads it, so later cases browse for another."""
+    try:
+        uid = ssf_browse.pick(name, case, exclude=set(_CONSUMED))
+    except pytest.skip.Exception:
+        uid = _DONE.get(produced_by)
+        if not uid or uid in _CONSUMED:
+            raise
     if consumes:
         _CONSUMED[uid] = case
+        ssf_browse.forget(name)
     return uid
 
 
@@ -93,7 +71,9 @@ def require_shipped(case, why):
 def hold_objective_save_until_shipped(page):
     """While the feature isn't on QA, answer the objective save with a failure so a pending
     objective-block case (strict xfail) can't really change a star seller's objective. The app's
-    callback reloads the page on any answer, so nothing is stored. Off once the feature ships."""
+    callback reloads the page on any answer, so nothing is stored. Off once the feature ships.
+
+    Routed on the whole context: the cue card opens in a new tab from the Sellers list ("View")."""
     if is_shipped(SLUG):
         return
 
@@ -104,4 +84,4 @@ def hold_objective_save_until_shipped(page):
                                  body=json.dumps(failure_body(message="held by automation")))
         return route.fallback()
 
-    page.route("**/company/update/admin", handler)
+    page.context.route("**/company/update/admin", handler)
