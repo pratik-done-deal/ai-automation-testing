@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Run every automated test of star-seller-fundraising (SSF) in a visible Chromium window.
 #
-# Usage (from anywhere):
-#   automation/scripts/run_star_seller_tests.sh               # against your local app, http://localhost:3000
-#   automation/scripts/run_star_seller_tests.sh qa            # against QA (DD_APP_URL from .env)
-#   automation/scripts/run_star_seller_tests.sh local -m smoke           # extra args go to pytest
-#   automation/scripts/run_star_seller_tests.sh local -k s12_01          # one case
+# Usage (from the suite folder: this repo, or donedeal-web/automation):
+#   scripts/run_star_seller_tests.sh               # against your local app, http://localhost:3000
+#   scripts/run_star_seller_tests.sh qa            # against QA (DD_APP_URL from .env)
+#   scripts/run_star_seller_tests.sh local -m smoke           # extra args go to pytest
+#   scripts/run_star_seller_tests.sh local -k s12_01          # one case
 #   SLOWMO=800 automation/scripts/run_star_seller_tests.sh               # slower, easier to follow
-#   automation/scripts/run_star_seller_tests.sh local --pause-on-failure # keep the window open on a failure
+#   scripts/run_star_seller_tests.sh local --pause-on-failure # keep the window open on a failure
 #
 # local: the feature is on your branch, so its pending_feature tests run as normal tests (DD_SHIPPED).
 #        Logins are kept apart from the QA ones, in auth/local/ (saved against localhost on first run).

@@ -1,8 +1,9 @@
 """Where everything lives.
 
-The suite owns everything under `automation/`, its specs included, so this folder can be moved to a
-repo of its own. The application it tests is reached through APP_ROOT, which defaults to the checkout
-this folder sits in; set DD_APP_ROOT when the suite lives somewhere else.
+The suite owns everything in its folder, specs included. It lives both as `automation/` inside
+donedeal-web and as the standalone ai-automation-testing repo. The application's source is reached
+through APP_ROOT: the donedeal-web checkout around the suite, else a `donedeal-web` checkout next to
+it; set DD_APP_ROOT to point anywhere else.
 """
 import os
 from pathlib import Path
@@ -14,7 +15,15 @@ MODULES_DIR = SPECS / "modules"     # platform modules: module.yml + module.md (
 FEATURES_DIR = SPECS / "features"   # PRD features: feature.yml, flow.yaml, refs/, impact.md
 PRD_DIR = SPECS / "prd"             # PRDs, analyses, test plans
 
-APP_ROOT = Path(os.getenv("DD_APP_ROOT", AUTOMATION.parent)).resolve()
+def _default_app_root():
+    """Inside donedeal-web (automation/) the app is the folder around the suite; in the standalone
+    ai-automation-testing repo it is a donedeal-web checkout next to it."""
+    if (AUTOMATION.parent / "src").is_dir():
+        return AUTOMATION.parent
+    return AUTOMATION.parent / "donedeal-web"
+
+
+APP_ROOT = Path(os.getenv("DD_APP_ROOT") or _default_app_root()).resolve()
 
 
 def app_file(*parts):
@@ -23,5 +32,5 @@ def app_file(*parts):
 
 
 def spec_file(relative):
-    """A spec path as the registry records it, e.g. "prd/x.analysis.md" -> automation/specs/prd/x.analysis.md."""
+    """A spec path as the registry records it, e.g. "prd/x.analysis.md" -> specs/prd/x.analysis.md."""
     return SPECS / relative

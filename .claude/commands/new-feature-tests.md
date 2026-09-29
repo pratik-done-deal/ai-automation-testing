@@ -22,7 +22,7 @@ $ARGUMENTS
 
 ## 0. Pre-flight (you, in the chat) — ask before spending a subagent
 - **PRD.** If it's only a Google Docs link, ask for the text: those links are private (HTTP 401). If it
-  was pasted into the chat, save it to `automation/specs/prd/<slug>.md` first — **subagents cannot see
+  was pasted into the chat, save it to `specs/prd/<slug>.md` first — **subagents cannot see
   this conversation.**
 - **Slug.** Kebab-case, e.g. `top-picks-expert-curated`. Use the user's if they gave one, otherwise
   propose one and say what you chose.
@@ -35,7 +35,7 @@ $ARGUMENTS
 
 ## 1. Analyze the requirements (prd-analyzer subagent)
 Pass the PRD **path**, the platform URL, the Figma URL if there is one, and the slug. It walks the live
-app with `scripts/explore.py` and writes `automation/specs/prd/<slug>.analysis.md`.
+app with `scripts/explore.py` and writes `specs/prd/<slug>.analysis.md`.
 
 ## 2. Stop: the requirements
 Show the document path, the `Status`, and the **blocking** questions numbered. If `WAITING`, stop and
@@ -44,7 +44,7 @@ under `## Answers`, or mark the questions as assumptions. If `READY`, say so and
 
 ## 3. Impact on existing tests (impact-analyzer subagent)
 Pass the slug, the analysis path, and the git range if there is one. It registers
-`automation/specs/features/<slug>/feature.yml` and writes `impact.md` — a proposal only.
+`specs/features/<slug>/feature.yml` and writes `impact.md` — a proposal only.
 Skip this step only when the registry has no other entry (nothing exists to affect).
 
 ## 4. Stop: approve the changes. ALWAYS STOP
@@ -62,7 +62,7 @@ If impact.md found nothing affected, say so in one line and continue without wai
 
 ## 5. Write the test cases (test-case-generator subagent)
 Pass the slug, the analysis path, the approved impact.md path, the platform URL, and the Figma URL if
-there is one. It writes `automation/specs/features/<slug>/test-cases.md`: scenarios, the happy flow, and
+there is one. It writes `specs/features/<slug>/test-cases.md`: scenarios, the happy flow, and
 the test cases in plain English, UI and flow only.
 
 ## 6. Stop: approve the test cases. ALWAYS STOP
@@ -78,7 +78,7 @@ test-cases.md, fill `## Review`, and set `Status: APPROVED`. Don't continue unti
 
 ## 7. Write the scripts (test-script-writer subagent)
 Pass the approved test-cases.md path, the analysis path, the impact.md path, the slug, the PRD path, the
-target folder `automation/`, and any constraint the user gave. Every P0 case gets the `smoke` marker;
+target folder (the repo root), and any constraint the user gave. Every P0 case gets the `smoke` marker;
 behaviour that isn't live yet gets `pending_feature("<slug>")`.
 
 The design track is **opt-in** — only pass a `flow.yaml` if the user ran `/design-checks <slug>` first.

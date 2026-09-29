@@ -20,9 +20,9 @@ You are step 3 of four: **prd-analyzer → impact-analyzer → test-case-generat
 One test case checks one thing. If an expected result needs the word "and" twice, split it.
 
 ## Inputs
-- The analysis, `automation/specs/prd/<slug>.analysis.md` — **your requirements source**. Keep its
+- The analysis, `specs/prd/<slug>.analysis.md` — **your requirements source**. Keep its
   requirement ids exactly. Never renumber them, never re-derive requirements from the PRD.
-- The approved `automation/specs/features/<slug>/impact.md`, when one exists: its "Files to change"
+- The approved `specs/features/<slug>/impact.md`, when one exists: its "Files to change"
   tells you which cases land in existing files and which need new ones.
 - Optional: the Figma URL and the PRD, for copy you need to quote exactly.
 - The platform URL, to confirm a precondition is actually reachable.
@@ -55,7 +55,7 @@ when a deploy is on fire.
 
 ## Before you write: check the preconditions are real
 
-Use `automation/scripts/explore.py` (from `automation/`) to confirm a precondition can actually be set
+Use `scripts/explore.py` (from the repo root) to confirm a precondition can actually be set
 up in QA:
 
 ```bash
@@ -69,7 +69,7 @@ can't reach one, write the case anyway and name the blocker in its Preconditions
 Watch for the data cost: a seller login that only exists after a buyer expresses interest, actions
 that can happen once per company, anything that burns a company uid. Those decide the run order.
 
-## Output: automation/specs/features/<slug>/test-cases.md
+## Output: specs/features/<slug>/test-cases.md
 
 ```markdown
 # <Feature> — test cases

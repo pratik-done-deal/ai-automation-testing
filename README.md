@@ -1,4 +1,18 @@
-# Data Room Document Request: UI automation
+# ai-automation-testing
+
+UI automation for **donedeal-web**: pytest + Playwright tests, and the Claude agents that turn a PRD into
+test cases and scripts. The same suite also lives as `automation/` inside the donedeal-web repo.
+
+- **Setup:** see *One-time setup* below. Keep a donedeal-web checkout next to this repo
+  (`../donedeal-web`), or set `DD_APP_ROOT` in `.env`: the agents and `impact/` tools read the app code.
+- **New feature:** open Claude Code in this repo and run `/new-feature-tests` with the PRD
+  (see `CLAUDE.md` for the pipeline).
+- **Reports:** `reports/report.html`, and `allure serve reports/allure`; a failed test's screenshots are
+  under *Tear down → failure_screenshots*.
+
+The sections below describe the suite's first feature and each later one.
+
+## Data Room Document Request
 
 pytest + Playwright suite for the **Data Room Document Request Management** PRD
 (Figma: *Sprint-Work > Data_Room_Document_Request*).
@@ -18,7 +32,6 @@ writes run_state/phase1.json                              admin checks
 ## One-time setup
 
 ```bash
-cd automation
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 playwright install chromium
@@ -173,7 +186,7 @@ with allure.step("Step 1: request the passcode"):
 ## How the suite is organised
 
 ```
-automation/
+ai-automation-testing/        (also automation/ inside donedeal-web)
 ├── conftest.py          role contexts, API clients, browse-picked companies, lifecycle, design hook
 ├── config.py            .env settings          paths.py   suite paths + DD_APP_ROOT
 ├── constants.py         doc keys/labels and UI copy mirrored from src/

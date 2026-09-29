@@ -14,7 +14,7 @@ $ARGUMENTS
 ## 1. Check it really shipped
 Ask the user to run the feature's pending tests against the environment:
 ```bash
-cd automation && DD_SHIPPED=<slug> python -m pytest -m pending_feature -k <slug-or-file>
+DD_SHIPPED=<slug> python -m pytest -m pending_feature -k <slug-or-file>
 ```
 If they still fail, stop: it hasn't shipped. (A strict XPASS on a pending test during a normal run is
 the same signal, the other way round.)
@@ -23,12 +23,12 @@ For a one-off run against an environment that's ahead or behind, `DD_SHIPPED=<sl
 `DD_UNSHIPPED=<slug>` override the status without editing anything.
 
 ## 2. Flip the status
-Set `status: shipped` in `automation/specs/features/<slug>/feature.yml`. That's the whole switch.
+Set `status: shipped` in `specs/features/<slug>/feature.yml`. That's the whole switch.
 
 ## 3. Fold into the module specs — only if `modules:` is non-empty
 Most features leave `modules: []`, and then there is nothing to fold: say so and skip to step 4.
 
-Otherwise, for each module listed, in `automation/specs/modules/<module>/module.md`:
+Otherwise, for each module listed, in `specs/modules/<module>/module.md`:
 - add the feature's requirement rows to the module's table, **keeping their original ids** (DR-06 stays
   DR-06), with Source `feature:<slug>`
 - mark each requirement the feature replaced as `superseded by <new id> (<slug>)` — keep the row, it's
@@ -48,7 +48,7 @@ Never rewrite an older analysis. The feature folder stays as history: keep `anal
 
 ## 4. Refresh and report
 ```bash
-cd automation && python -m impact.coverage --out specs/COVERAGE.md
+python -m impact.coverage --out specs/COVERAGE.md
 ```
 Show the user:
 - the tests that now run, and the superseded ones now skipped

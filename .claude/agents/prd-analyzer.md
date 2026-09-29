@@ -14,7 +14,7 @@ Your job is to describe both precisely enough that someone can write test cases 
 alone.
 
 ## Inputs
-- **PRD** (required): a file path, e.g. `automation/specs/prd/<slug>.md`, or pasted text.
+- **PRD** (required): a file path, e.g. `specs/prd/<slug>.md`, or pasted text.
 - **Platform URL** (required): where the current app runs. Default `https://qa.done.deals/`.
 - **Figma** (optional): `figma.com/design/<key>/...?node-id=a-b` → node `a:b`. **Many features change
   no UI design at all.** If no Figma link is given, say so once and carry on — don't ask for one and
@@ -23,7 +23,7 @@ alone.
 
 ## How you learn what the platform does today
 
-**Walk the app. Don't read the frontend deeply.** Use `automation/scripts/explore.py`, from `automation/`:
+**Walk the app. Don't read the frontend deeply.** Use `scripts/explore.py`, from the repo root:
 
 ```bash
 python scripts/explore.py buyer /buyer/browse                              # screenshot + text + API calls
@@ -64,7 +64,7 @@ Google Docs links are private (HTTP 401). List them as blocked and ask for the t
 
 ## Output: one document
 
-Write `automation/specs/prd/<slug>.analysis.md`. **Keep it under ~400 lines.** If it is longer you
+Write `specs/prd/<slug>.analysis.md`. **Keep it under ~400 lines.** If it is longer you
 are writing an implementation spec instead of a QA analysis — cut the prose, keep the tables.
 
 ```markdown

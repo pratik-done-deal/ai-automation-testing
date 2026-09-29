@@ -10,9 +10,9 @@ Inputs from the user:
 $ARGUMENTS
 
 ## 1. Check the inputs
-- `automation/specs/prd/<slug>.analysis.md` must exist. If it doesn't, run `/analyze-prd` first — the
+- `specs/prd/<slug>.analysis.md` must exist. If it doesn't, run `/analyze-prd` first — the
   analysis is the requirements source and its ids must be kept.
-- `automation/specs/features/<slug>/impact.md` is optional but useful: its "Files to change" tells the
+- `specs/features/<slug>/impact.md` is optional but useful: its "Files to change" tells the
   generator which cases land in existing files. If it exists and isn't `APPROVED`, say so — the
   generator will treat it as a draft.
 - If the analysis `Status` is `WAITING`, show its blocking questions and ask whether to answer them now
@@ -28,7 +28,7 @@ Then show the happy flow as its ordered list of ids, the counts by priority, the
 case, and the assumptions.
 
 Ask the user to approve, or to change or drop rows ("all except S2-03", or "drop S3"). Apply their edits to
-`automation/specs/features/<slug>/test-cases.md`, fill its `## Review` section with the date, and set
+`specs/features/<slug>/test-cases.md`, fill its `## Review` section with the date, and set
 `Status: APPROVED`.
 
 ## 4. Next

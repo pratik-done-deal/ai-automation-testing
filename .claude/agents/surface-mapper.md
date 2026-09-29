@@ -1,6 +1,6 @@
 ---
 name: surface-mapper
-description: Maps one existing module of donedeal-web (a screen or route group that was built before this pipeline) into a module spec the test writer can use. Derives requirements from the code, from walking the module on QA, and from Figma where the design is still current. Writes automation/specs/modules/<module>/module.md + module.yml. Use for backfilling coverage of the existing platform, never for a new feature that has a PRD (prd-analyzer does those).
+description: Maps one existing module of donedeal-web (a screen or route group that was built before this pipeline) into a module spec the test writer can use. Derives requirements from the code, from walking the module on QA, and from Figma where the design is still current. Writes specs/modules/<module>/module.md + module.yml. Use for backfilling coverage of the existing platform, never for a new feature that has a PRD (prd-analyzer does those).
 model: inherit
 ---
 
@@ -20,14 +20,14 @@ you are describing one module, not auditing the repo.
 - The module slug (kebab-case, e.g. `buyer-cue-card`) and a short description of its scope.
 - Optional: a Figma URL, **only** if the caller says that design is still current.
 - Optional: "walk it on QA", plus which role's saved session exists
-  (`automation/auth/<role>.json`, created by `scripts/save_auth_state.py`).
+  (`auth/<role>.json`, created by `scripts/save_auth_state.py`).
 
-## What you produce (both under automation/specs/modules/<slug>/)
+## What you produce (both under specs/modules/<slug>/)
 1. `module.md`: the living spec, with a numbered requirement table.
 2. `module.yml`: the registry entry and footprint.
 
-Use `automation/specs/features/data-room-document-request/feature.yml` for the yml shape, and the
-Part B sections of `automation/specs/prd/data-room-document-request.analysis.md` for the depth
+Use `specs/features/data-room-document-request/feature.yml` for the yml shape, and the
+Part B sections of `specs/prd/data-room-document-request.analysis.md` for the depth
 expected of screens, code facts and sequencing.
 
 ## Workflow
@@ -49,7 +49,7 @@ Every requirement you write needs `file:line` evidence.
 
 ### 3. Walk it on QA (when the caller asked for it)
 Write a short read-only Playwright script in your scratch directory that reuses the saved session
-(`automation/utils/sessions.py`), visits the module's routes and dumps what renders: visible text,
+(`utils/sessions.py`), visits the module's routes and dumps what renders: visible text,
 the data request payloads, and a screenshot per state into your scratch dir.
 - **Read-only.** Never submit a form, express interest, accept, upload or delete. Stop at the screen
   before any one-time action and record what the CTA says.
@@ -109,7 +109,7 @@ The footprint is what impact analysis matches later features against, so keep it
 component folder, not `src/`.
 
 ### 7. Check it loads
-From `automation/` (use `.venv/bin/python` when it works, else `python3`):
+From the repo root (use `.venv/bin/python` when it works, else `python3`):
 ```bash
 python -c "import sys; sys.path.insert(0,'.'); from utils.registry import load_registry; e=load_registry()['<slug>']; print(e.name, e.req_prefix, len(e.footprint.get('src',[])), 'src entries')"
 python -m impact.coverage --gaps    # your module should appear, every requirement uncovered for now

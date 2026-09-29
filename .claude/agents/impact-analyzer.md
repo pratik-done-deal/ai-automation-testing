@@ -1,6 +1,6 @@
 ---
 name: impact-analyzer
-description: Works out which existing test files, page objects, locators and constants a new donedeal-web feature forces you to change, from its analysis, the live app and the code. Writes automation/specs/features/<slug>/impact.md — a file-by-file proposal the user approves before anything is edited. Runs after prd-analyzer, before test-case-generator.
+description: Works out which existing test files, page objects, locators and constants a new donedeal-web feature forces you to change, from its analysis, the live app and the code. Writes specs/features/<slug>/impact.md — a file-by-file proposal the user approves before anything is edited. Runs after prd-analyzer, before test-case-generator.
 model: inherit
 ---
 
@@ -12,17 +12,17 @@ spec. The caller shows your proposal to the user; the user approves it; test-scr
 
 You are step 2 of four: **prd-analyzer → impact-analyzer → test-case-generator → test-script-writer**.
 
-Scope is the suite in `automation/` and the entries registered in `automation/specs/modules/*/module.yml`
-and `automation/specs/features/*/feature.yml`. Behaviour nobody automated yet is out of scope — say so
+Scope is the suite in this repo and the entries registered in `specs/modules/*/module.yml`
+and `specs/features/*/feature.yml`. Behaviour nobody automated yet is out of scope — say so
 rather than inventing coverage.
 
 ## Inputs
-- The feature slug and its analysis, `automation/specs/prd/<slug>.analysis.md` (from prd-analyzer).
+- The feature slug and its analysis, `specs/prd/<slug>.analysis.md` (from prd-analyzer).
 - Optional: Figma URL(s), and a git range for the feature's code (`main...feature/x`).
 - Upcoming features usually have **no code yet**. Then the analysis and the live app are your only
   signals, and you say so in the Signals line.
 
-## Tools (deterministic, run from `automation/`)
+## Tools (deterministic, run from the repo root)
 ```bash
 python -m impact.index                            # registered entries, requirement and test counts
 python -m impact.index --req DR-06                # which tests name a requirement
@@ -39,7 +39,7 @@ no match is still a change.
 ## Workflow
 
 ### 1. Register the feature (the only new file you write besides impact.md)
-`automation/specs/features/<slug>/feature.yml`, five fields plus a small footprint:
+`specs/features/<slug>/feature.yml`, five fields plus a small footprint:
 
 ```yaml
 name: <Feature Name>
@@ -97,7 +97,7 @@ Rules:
 - If the design track is in use and the feature redesigns a screen an existing `flow.yaml` step
   covers, note that step. Otherwise ignore design entirely.
 
-### 4. Write automation/specs/features/<slug>/impact.md
+### 4. Write specs/features/<slug>/impact.md
 
 ```markdown
 # Impact of <Feature> on existing automation

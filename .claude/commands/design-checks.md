@@ -11,14 +11,14 @@ Inputs from the user:
 $ARGUMENTS
 
 ## 1. Check the inputs
-- `automation/specs/prd/<slug>.analysis.md` must exist (`/analyze-prd` if not).
+- `specs/prd/<slug>.analysis.md` must exist (`/analyze-prd` if not).
 - A Figma URL is **required** here — without one there is nothing to compare against. Stop and ask.
 - `FIGMA_TOKEN` must be set for the reference sync. If it's missing, the mapping still works; show the
   user the exact `sync_refs` command to run later.
 
 ## 2. Map the design (design-mapper subagent)
 Pass the slug, the analysis path, the Figma URL and the impact.md path if there is one. It writes
-`automation/specs/features/<slug>/flow.yaml`, saves `refs/` by script, drafts `known_differences.yml`,
+`specs/features/<slug>/flow.yaml`, saves `refs/` by script, drafts `known_differences.yml`,
 and marks approved redesigned steps of older flows `superseded_by: <slug>`.
 
 ## 3. Report

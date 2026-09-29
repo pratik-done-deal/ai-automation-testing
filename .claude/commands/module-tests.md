@@ -10,7 +10,7 @@ Inputs from the user:
 $ARGUMENTS
 
 ## 1. Check the spec is ready
-- `automation/specs/modules/<slug>/module.md` and `module.yml` must exist.
+- `specs/modules/<slug>/module.md` and `module.yml` must exist.
   If they don't, run `/map-module <slug>` first.
 - The spec's suspected bugs and blocking questions must be answered (the `/map-module` checkpoint).
   If any are open, show them and stop: ids and assertions depend on those answers.
@@ -20,7 +20,7 @@ Pass:
 - the module spec path, which is its requirements source — **keep its ids**
 - the module.yml path (routes, endpoints, data cost)
 - the design flow path if the module has one
-- the target folder `automation/`, and the role folders its tests belong in
+- the target folder (the repo root), and the role folders its tests belong in
 - the user's constraints, and the data cost limit ("don't consume more than N companies per run")
 
 It writes locators, page objects and tests, and adds a traceability section to `module.md`.

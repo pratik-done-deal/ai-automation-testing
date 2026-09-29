@@ -7,7 +7,7 @@ Use the **prd-analyzer** subagent on:
 
 $ARGUMENTS
 
-- If the PRD was pasted in this conversation, save it to `automation/specs/prd/<slug>.md` first and pass
+- If the PRD was pasted in this conversation, save it to `specs/prd/<slug>.md` first and pass
   that path. The subagent can't see this conversation.
 - If the PRD is only a Google Docs link, ask the user to paste the text. Those links are private.
 - Pass the platform URL (default `https://qa.done.deals/`): the agent walks the live app to learn how

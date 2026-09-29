@@ -9,8 +9,8 @@ Inputs from the user:
 
 $ARGUMENTS
 
-1. The feature needs `automation/specs/prd/<slug>.analysis.md`. If it doesn't exist, suggest
-   `/analyze-prd` first. For a quick look without an analysis, run from `automation/`:
+1. The feature needs `specs/prd/<slug>.analysis.md`. If it doesn't exist, suggest
+   `/analyze-prd` first. For a quick look without an analysis, run from the repo root:
    `python -m impact.find --route <route> --copy "<old text>"` and show the candidates.
 2. Use the **impact-analyzer** subagent with the slug, the analysis path, the git range and the Figma URL
    if there is one.

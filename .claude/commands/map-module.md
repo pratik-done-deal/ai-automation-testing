@@ -12,14 +12,14 @@ $ARGUMENTS
 
 ## 1. Prepare
 - Pick a kebab-case slug, e.g. `buyer-cue-card`, and a requirement prefix, e.g. `BUY-CUE`.
-  Check `automation/specs/modules/` and `python -m impact.index` so neither is already taken.
-- If the user asked for a QA walk, check `automation/auth/<role>.json` exists. If it doesn't, tell them
+  Check `specs/modules/` and `python -m impact.index` so neither is already taken.
+- If the user asked for a QA walk, check `auth/<role>.json` exists. If it doesn't, tell them
   to run `python scripts/save_auth_state.py <role>` and log in, then continue.
 - Pass a Figma URL only if the user says that design is still current.
 
 ## 2. Map it (surface-mapper subagent)
 Pass the slug, the prefix, the scope description, the Figma URL if current, and whether to walk it on
-QA with which role. It writes `automation/specs/modules/<slug>/module.md` and `module.yml`.
+QA with which role. It writes `specs/modules/<slug>/module.md` and `module.yml`.
 
 ## 3. Checkpoint (you, here). ALWAYS STOP
 Show the user:
