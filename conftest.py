@@ -271,6 +271,20 @@ def _allure_labels(request):
 SCREENSHOT_DIR = Path(__file__).parent / "reports" / "screenshots"
 
 
+@pytest.fixture(autouse=True)
+def failure_screenshots(request):
+    """Attach a failed test's screenshots to its Allure "Tear down" section.
+
+    The screenshots are taken the moment the test fails (pytest_runtest_makereport, below), while
+    every tab is still open; by teardown the role's context may already be closed. This fixture is
+    set up first, so it is torn down last, after the test's own fixtures."""
+    yield
+    if allure is None:
+        return
+    for url, path in getattr(request.node, "failure_screenshots", []):
+        allure.attach.file(str(path), name=f"failure: {url}", attachment_type=allure.attachment_type.PNG)
+
+
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
@@ -288,8 +302,8 @@ def pytest_runtest_makereport(item, call):
             try:
                 page.screenshot(path=str(path), full_page=True)
                 report.sections.append(("screenshot", f"{page.url} -> {path}"))
-                if allure is not None:
-                    allure.attach.file(str(path), name=f"{page.url}", attachment_type=allure.attachment_type.PNG)
+                # attached to Allure's "Tear down" by the failure_screenshots fixture
+                item.failure_screenshots = getattr(item, "failure_screenshots", []) + [(page.url, path)]
             except Exception:
                 pass
     if item.config.getoption("--pause-on-failure") and item.config.getoption("headed"):

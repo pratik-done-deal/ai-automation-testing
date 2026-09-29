@@ -15,12 +15,17 @@ import pytest
 from constants import StarSellerCopy as Ssc
 from pages.admin_module.additional_details_modal import names_missing
 from pages.admin_module.admin_seller_cue_card_page import AdminSellerCueCardPage
+from utils import ssf_browse
 from utils.ssf_data import SLUG, done, hold_objective_save_until_shipped, produced_or_env, require_done, seller
 
 
 @pytest.fixture
 def cue(biz_user_page):
-    return AdminSellerCueCardPage(biz_user_page)
+    # Browse for sellers as the biz user: they see only their own sellers, so a seller picked from
+    # the admin's list may not be in theirs.
+    ssf_browse.browse_as("biz_user")
+    yield AdminSellerCueCardPage(biz_user_page)
+    ssf_browse.browse_as("admin")
 
 
 def _require_not_star(cue, case, name):

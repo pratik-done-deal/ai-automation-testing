@@ -335,6 +335,7 @@ class StarSellerCopy:
     # Sellers list
     STAR_SELLERS_TAB = "Star Sellers"
     NON_STAR_SELLERS_TAB = "Non Star Sellers"
+    NO_RESULTS = "No Results Found"
     VIEW = "View"
     STAR_MARK = "⭐"                                          # SellerDataModel.js:84 renders "⭐️"
 

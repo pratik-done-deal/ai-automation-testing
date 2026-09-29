@@ -1,6 +1,8 @@
 import re
 
-from playwright.sync_api import expect
+import pytest
+
+from playwright.sync_api import Error as PlaywrightError, expect
 
 from constants import StarSellerCopy as Ssc
 from locators.admin import star_seller_locators as L
@@ -34,6 +36,9 @@ class AdminSellerCueCardPage(BasePage):
         facts = describe(uid)
         tab = Ssc.STAR_SELLERS_TAB if facts["star"] else Ssc.NON_STAR_SELLERS_TAB
         sellers = AdminSellersPage(self.list_page).open_tab(tab).search(facts["sid"])
+        if not sellers.has_row(facts["sid"]):
+            # A biz user sees only their own sellers; a seller from an earlier admin case may not be one.
+            pytest.skip(f"{facts['sid']} is not in this user's \"{tab}\" list, so it can't be opened from there")
         if self.page is not self.list_page:
             self.page.close()
         self.page = sellers.view_cue_card(facts["sid"], uid)
@@ -46,7 +51,16 @@ class AdminSellerCueCardPage(BasePage):
         return self
 
     def reload(self):
-        self.page.reload()
+        """Reload the cue card tab. Saves (objective, additional details) make the app reload the page
+        itself; if that reload is still going, ours is aborted (net::ERR_ABORTED), which is harmless:
+        the page is being reloaded either way."""
+        self.page.wait_for_load_state("networkidle")
+        try:
+            self.page.reload()
+        except PlaywrightError as error:
+            if "ERR_ABORTED" not in str(error):
+                raise
+            self.page.wait_for_load_state("load")
         return self._wait_loaded()
 
     def seller_heading(self):

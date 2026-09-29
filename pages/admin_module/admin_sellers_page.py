@@ -30,6 +30,12 @@ class AdminSellersPage(BasePage):
     def open_star_sellers(self, search):
         return self.open_tab(Ssc.STAR_SELLERS_TAB).search(search)
 
+    def has_row(self, sid):
+        """After a search: True when the seller's row is listed, False on "No Results Found"."""
+        row = self.page.locator(L.SELLER_ROWS).filter(has_text=re.compile(rf"{re.escape(sid)}(?!\d)"))
+        expect(row.first.or_(self.page.get_by_text(Ssc.NO_RESULTS, exact=True))).to_be_visible(timeout=20_000)
+        return row.count() > 0
+
     def row(self, sid):
         # The name and S-id render run together ("Google LLCS6742⭐️"), so no word boundary before the S.
         row = self.page.locator(L.SELLER_ROWS).filter(has_text=re.compile(rf"{re.escape(sid)}(?!\d)")).first

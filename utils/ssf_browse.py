@@ -15,6 +15,8 @@ all use one "F-ready"); a later run picks again and naturally skips sellers an e
 """
 import json
 import os
+import sys
+from concurrent.futures import ThreadPoolExecutor
 import urllib.error
 import urllib.request
 
@@ -24,8 +26,9 @@ from config import settings
 
 FUNDING, ACQUISITION = "funding", "acquisition"
 # How many sellers of a tab the picker may read before giving up on a role (DD_SSF_SCAN_LIMIT).
-SCAN_LIMIT = int(os.getenv("DD_SSF_SCAN_LIMIT", "600"))
+SCAN_LIMIT = int(os.getenv("DD_SSF_SCAN_LIMIT", "300"))
 PAGE_SIZE = 50
+WORKERS = 8   # cue cards read in parallel while scanning a page of the list
 
 
 def _star(s):
@@ -71,32 +74,49 @@ BLOCKED = {
     "L-STAR": "a legacy star (funding, highlights, no pitch deck) must be starred BEFORE the release reaches QA",
 }
 
-_PICKED = {}      # role -> uid, for this run
-_TAKEN = set()    # uids given to a non-star role this run (one seller per role)
 _FACTS = {}       # uid -> facts, for this run
-_SCANNED = {True: [], False: []}   # tab -> uids read so far, in list order
-_NEXT_PAGE = {True: 1, False: 1}
-_EXHAUSTED = {True: False, False: False}
-_TOKEN = []
+# The login the picker browses as: the same one the test runs as, so it only picks sellers that
+# login can see (a biz user sees only their own sellers). Set by browse_as(); admin by default.
+_LOGIN = ["admin"]
+_BY_LOGIN = {}    # login -> that login's picks and scan progress, for this run
+
+
+def browse_as(login):
+    """Browse as `login` ("admin" / "biz_user") from now on; each login keeps its own picks."""
+    _LOGIN[0] = login
+
+
+def _mine():
+    return _BY_LOGIN.setdefault(_LOGIN[0], {
+        "picked": {},                       # role -> uid
+        "taken": set(),                     # uids given to a non-star role (one seller per role)
+        "scanned": {True: [], False: []},   # tab -> uids read so far, in list order
+        "next_page": {True: 1, False: 1},
+        "exhausted": {True: False, False: False},
+        "not_found": {},                    # role -> skip message, so later cases of it skip at once
+        "token": None,
+    })
 
 
 # ---------------------------------------------------------------- HTTP (read-only)
 
 def _token():
-    if not _TOKEN:
-        path = settings.admin_state
+    mine = _mine()
+    if not mine["token"]:
+        login = _LOGIN[0]
+        path = {"admin": settings.admin_state, "biz_user": settings.biz_user_state}[login]
         if not path.exists():
-            pytest.skip(f"no admin session at {path}: python scripts/save_auth_state.py admin")
+            pytest.skip(f"no {login} session at {path}: python scripts/save_auth_state.py {login}")
         state = json.loads(path.read_text())
         value = next((item["value"] for origin in state.get("origins", [])
                       for item in origin.get("localStorage", []) if item["name"] == "authToken"), None)
         if not value:
-            pytest.skip(f"no authToken in {path}; save the admin session again")
-        _TOKEN.append(value.strip('"'))
-    return _TOKEN[0]
+            pytest.skip(f"no authToken in {path}; save the {login} session again")
+        mine["token"] = value.strip('"')
+    return mine["token"]
 
 
-def _call(path, body=None):
+def _call(path, body=None, soft=False):
     req = urllib.request.Request(settings.api_url + path, method="POST" if body is not None else "GET",
                                  data=json.dumps(body).encode() if body is not None else None)
     req.add_header("Authorization", _token())
@@ -106,6 +126,8 @@ def _call(path, body=None):
         with urllib.request.urlopen(req, timeout=30) as res:
             return json.loads(res.read().decode() or "{}")
     except urllib.error.HTTPError as error:
+        if soft:
+            return None
         # A 5xx here means the backend itself is down (the admin Sellers page fails the same way),
         # not a test problem; say so in one line instead of a urllib traceback per test.
         pytest.fail(f"backend error {error.code} on {settings.api_url}{path.split('?')[0]} while browsing "
@@ -143,13 +165,22 @@ def _facts(card):
     }
 
 
-def describe(uid):
-    """Facts of one seller (S-id, star, objective, documents), read fresh from its cue card."""
-    data = (_call(f"company/cue/card?companyId={uid}") or {}).get("data") or {}
+def describe(uid, soft=False):
+    """Facts of one seller (S-id, star, objective, documents), read fresh from its cue card.
+    soft: None instead of failing when the cue card can't be read (one bad seller while scanning)."""
+    data = (_call(f"company/cue/card?companyId={uid}", soft=soft) or {}).get("data") or {}
     if not data.get("companyId"):
+        if soft:
+            return None
         raise AssertionError(f"no cue card for seller {uid}")
     _FACTS[uid] = _facts(data)
     return _FACTS[uid]
+
+
+def _progress(text):
+    """One line on the terminal while scanning (pytest captures stdout), so a long scan isn't mistaken for a hang."""
+    sys.__stderr__.write(f"\r  [ssf] {text}".ljust(90))
+    sys.__stderr__.flush()
 
 
 def _completed_seller_calls(facts):
@@ -162,27 +193,27 @@ def _completed_seller_calls(facts):
 
 def _scan(star):
     """Yield the tab's sellers in list order: first the ones read already, then further pages."""
+    mine = _mine()
     i = 0
     while True:
-        seen = _SCANNED[star]
+        seen = mine["scanned"][star]
         if i < len(seen):
             yield _FACTS[seen[i]]
             i += 1
             continue
-        if _EXHAUSTED[star] or len(seen) >= SCAN_LIMIT:
+        if mine["exhausted"][star] or len(seen) >= SCAN_LIMIT:
             return
-        rows = ((_call(f"buyer/browse?page={_NEXT_PAGE[star]}&size={PAGE_SIZE}", _list_body(star)) or {})
+        rows = ((_call(f"buyer/browse?page={mine['next_page'][star]}&size={PAGE_SIZE}", _list_body(star)) or {})
                 .get("data") or {}).get("elements") or []
-        _NEXT_PAGE[star] += 1
+        mine["next_page"][star] += 1
         if not rows:
-            _EXHAUSTED[star] = True
+            mine["exhausted"][star] = True
             return
-        for row in rows:
-            try:
-                facts = describe(row["companyId"])
-            except Exception:
-                continue
-            seen.append(facts["uid"])
+        with ThreadPoolExecutor(WORKERS) as pool:
+            for facts in pool.map(lambda row: describe(row["companyId"], soft=True), rows):
+                if facts:
+                    seen.append(facts["uid"])
+        _progress(f"read {len(seen)} sellers of \"{'Star' if star else 'Non Star'} Sellers\"")
 
 
 # ---------------------------------------------------------------- picking
@@ -194,27 +225,32 @@ def pick(role, case, exclude=()):
         pytest.skip(f"{case}: no {role} seller can be browsed for (BLOCKED: {BLOCKED[key]})")
     if role not in ROLES:
         raise KeyError(f"unknown SSF seller role {role!r}")
-    if role in _PICKED and _PICKED[role] not in exclude:
-        return _PICKED[role]
+    mine = _mine()
+    if role in mine["picked"] and mine["picked"][role] not in exclude:
+        return mine["picked"][role]
+    if role in mine["not_found"]:
+        pytest.skip(f"{case}: {mine['not_found'][role]}")
 
     star, fits, needs_no_call = ROLES[role]
     tab = "Star Sellers" if star else "Non Star Sellers"
+    _progress(f"{case}: looking for a {role} seller in \"{tab}\"...")
     for facts in _scan(star):
         uid = facts["uid"]
-        if uid in exclude or (not star and uid in _TAKEN):
+        if uid in exclude or (not star and uid in mine["taken"]):
             continue
         if (facts["star"] is not star) or not fits(facts):
             continue
         if needs_no_call and _completed_seller_calls(facts):
             continue
-        _PICKED[role] = uid
+        mine["picked"][role] = uid
         if not star:
-            _TAKEN.add(uid)
+            mine["taken"].add(uid)
         return uid
-    pytest.skip(f"{case}: no {role} seller found in the first {len(_SCANNED[star])} of \"{tab}\" "
-                f"(raise DD_SSF_SCAN_LIMIT to look further)")
+    mine["not_found"][role] = (f"no {role} seller found in the first {len(mine['scanned'][star])} of "
+                               f"\"{tab}\" as {_LOGIN[0]} (raise DD_SSF_SCAN_LIMIT to look further)")
+    pytest.skip(f"{case}: {mine['not_found'][role]}")
 
 
 def forget(role):
     """Drop the run's pick for `role`, so the next case of that role browses for a fresh seller."""
-    _PICKED.pop(role, None)
+    _mine()["picked"].pop(role, None)
