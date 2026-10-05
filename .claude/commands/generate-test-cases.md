@@ -29,7 +29,7 @@ case, and the assumptions.
 
 Ask the user to approve, or to change or drop rows ("all except S2-03", or "drop S3"). Apply their edits to
 `specs/features/<slug>/test-cases.md`, fill its `## Review` section with the date, and set
-`Status: APPROVED`.
+`Status: APPROVED`. Then run `python scripts/check_pipeline.py test-cases <slug>` and fix what it reports.
 
 ## 4. Next
 Once approved, the scripts come from **test-script-writer** — offer to run it, or point at

@@ -8,3 +8,4 @@ pyflakes==3.4.0
 PyYAML==6.0.2
 Pillow==10.4.0
 allure-pytest==2.16.1
+certifi==2026.7.22

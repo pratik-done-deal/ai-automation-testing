@@ -2,11 +2,11 @@
 # Run every automated test of star-seller-fundraising (SSF) in a visible Chromium window.
 #
 # Usage (from the suite folder: this repo, or donedeal-web/automation):
-#   scripts/run_star_seller_tests.sh               # against your local app, http://localhost:3000
-#   scripts/run_star_seller_tests.sh qa            # against QA (DD_APP_URL from .env)
-#   scripts/run_star_seller_tests.sh local -m smoke           # extra args go to pytest
-#   scripts/run_star_seller_tests.sh local -k s12_01          # one case
-#   SLOWMO=800 automation/scripts/run_star_seller_tests.sh               # slower, easier to follow
+#   scripts/run_star_seller_tests.sh               # against QA (DD_APP_URL from .env), the default
+#   scripts/run_star_seller_tests.sh local         # against your local app, http://localhost:3000
+#   scripts/run_star_seller_tests.sh qa -m smoke              # extra args go to pytest (name the target first)
+#   scripts/run_star_seller_tests.sh qa -k s12_01             # one case
+#   SLOWMO=800 scripts/run_star_seller_tests.sh               # slower, easier to follow
 #   scripts/run_star_seller_tests.sh local --pause-on-failure # keep the window open on a failure
 #
 # local: the feature is on your branch, so its pending_feature tests run as normal tests (DD_SHIPPED).
@@ -20,11 +20,11 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."   # automation/
 
-TARGET="${1:-local}"
+TARGET="${1:-qa}"
 if [[ "$TARGET" == "local" || "$TARGET" == "qa" ]]; then
   shift || true
 else
-  TARGET="local"
+  TARGET="qa"
 fi
 
 # --- Python environment (README "One-time setup") ---
@@ -62,7 +62,7 @@ if [[ ! -f "$BIZ_STATE" ]]; then
 fi
 
 # --- Run, in the order of test-cases.md section 6 (later files use sellers earlier ones produce) ---
-echo "Running star-seller-fundraising tests against $DD_APP_URL in Chromium (headed)..."
+echo "Running star-seller-fundraising tests against ${DD_APP_URL:-DD_APP_URL from .env} in Chromium (headed)..."
 exec "$PY" -m pytest \
   test_cases/admin_test_cases/test_admin_star_seller_marking.py \
   test_cases/admin_test_cases/test_admin_star_seller_objective.py \

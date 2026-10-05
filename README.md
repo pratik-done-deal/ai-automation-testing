@@ -206,7 +206,7 @@ The role marker comes from the folder a test sits in, so no module sets `pytestm
 
 Two ways a test gets written:
 
-- **A new feature** has a PRD and Figma: `/new-feature-tests` → analysis → impact on existing tests
+- **A new feature** has a PRD and Figma: `/new-feature-tests` (Codex: `new-feature-tests`) → analysis → impact on existing tests
   (you approve) → design refs → tests. When it goes live, `/ship-feature <slug>` folds its
   requirements into the module specs it changed.
 - **An existing module** has neither: `/map-module <slug>` derives a spec from the code, from walking
@@ -219,6 +219,49 @@ python -m impact.coverage --gaps         # what is still uncovered
 python -m impact.app_map --uncovered     # routes no module spec claims yet
 python -m impact.index --req BUY-CUE-04  # which tests cover a requirement
 python -m impact.find --src <file> --copy "old text"   # which tests a change can affect
+```
+
+## Running the pipeline in Claude Code or Codex
+
+Both tools follow the same files: the commands in `.claude/commands/` and the steps in
+`.claude/agents/`. Project rules are in `AGENTS.md`, which Codex reads directly and Claude Code reads
+through `CLAUDE.md`.
+
+| | Claude Code | Codex |
+|---|---|---|
+| Start a command | `/new-feature-tests specs/prd/<slug>.md` | `new-feature-tests specs/prd/<slug>.md` (no slash) |
+| Each step | runs as a subagent | Codex runs it itself from `.claude/agents/<step>.md` |
+| Review stops | same three stops | same three stops |
+| Access to `../donedeal-web` | `.claude/settings.json` | start Codex with `--add-dir ../donedeal-web`, or from the parent folder |
+| Figma | Figma MCP server in Claude Code | Figma MCP server in Codex (below) |
+
+To keep the output the same, every step runs `scripts/check_pipeline.py` on what it wrote and fixes
+it until it passes: same sections, same table columns, same ids and allowed values. Run it yourself to
+check a feature at any time:
+
+```bash
+python scripts/check_pipeline.py all <slug>
+```
+
+The wording of a document will still differ between runs, as it does between two Claude runs; its
+structure, ids and the files written do not.
+
+**Codex setup, once.** Add the Figma MCP server to `~/.codex/config.toml` and log in:
+
+```toml
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+```
+
+```bash
+codex mcp login figma
+```
+
+The steps walk QA with `scripts/explore.py`, which needs the network. Start Codex from this folder
+with network access and the app checkout added:
+
+```bash
+codex --sandbox workspace-write -c sandbox_workspace_write.network_access=true --add-dir ../donedeal-web
 ```
 
 ## When a feature changes an existing test

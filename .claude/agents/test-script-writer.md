@@ -152,6 +152,7 @@ python -m pyflakes conftest.py config.py constants.py paths.py locators pages ut
 python -m pytest --collect-only -q -m "<your new markers>"
 python -m pytest --collect-only -q -m "pending_feature or superseded_by"   # if you applied an impact
 python -m impact.coverage --gaps                                           # requirements still uncovered
+python scripts/check_pipeline.py scripts <slug>                            # every auto case has its test, P0s are smoke
 ```
 All must be clean. A `pending_feature` / `superseded_by` slug with no `feature.yml` is a collection
 error. Every requirement you covered must disappear from `--gaps`.

@@ -129,6 +129,11 @@ One line each, with the reason.
 
 Number every row so the user can approve with "all except 3, 7".
 
+## Check the format before reporting
+Run `python scripts/check_pipeline.py impact <slug>` from the repo root (`.venv/bin/python` if it has packages, else `python3`) and fix every
+`error` it reports, then run it again until it prints `OK`. It enforces the format above, so the
+document comes out the same shape whichever tool wrote it. Mention any `warning` in your report.
+
 ## Final report to the caller
 - The paths of impact.md and feature.yml.
 - The Summary line.

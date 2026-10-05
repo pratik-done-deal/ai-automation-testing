@@ -16,6 +16,7 @@ $ARGUMENTS
    if there is one.
 3. Show the summary, **the "Files to change" table in full**, the numbered `supersede` rows and the
    decisions, then **stop for approval**.
-4. After approval, fill impact.md's `## Approval` section and set `Status: APPROVED`. Ask whether to
+4. After approval, fill impact.md's `## Approval` section, set `Status: APPROVED`, and run
+   `python scripts/check_pipeline.py impact <slug>`. Ask whether to
    apply it now with **test-script-writer** — and, if the feature also redesigns screens an existing
    `flow.yaml` covers, whether to run `/design-checks <slug>`.

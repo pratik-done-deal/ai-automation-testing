@@ -57,7 +57,8 @@ Even when nothing is undecided, stop. Show:
 Ask the user to approve all, approve with exceptions ("all except 3, 7"), change rows, or answer the
 decisions. Don't continue until they reply. Then fill impact.md's `## Approval` with the approved,
 changed and rejected rows and today's date, and set `Status: APPROVED` (or `REJECTED` if every row is
-rejected — then step 6 writes only the new feature's tests).
+rejected — then step 6 writes only the new feature's tests). Then run
+`python scripts/check_pipeline.py impact <slug>` and fix what it reports.
 If impact.md found nothing affected, say so in one line and continue without waiting.
 
 ## 5. Write the test cases (test-case-generator subagent)
@@ -74,7 +75,8 @@ QA team actually cares about — don't summarise it. Then show:
 - the assumptions, numbered
 
 Ask the user to approve, or to change or drop rows ("all except S2-03", or "drop S3"). Apply their edits to
-test-cases.md, fill `## Review`, and set `Status: APPROVED`. Don't continue until they reply.
+test-cases.md, fill `## Review`, and set `Status: APPROVED`. Don't continue until they reply. Then run
+`python scripts/check_pipeline.py test-cases <slug>` and fix what it reports.
 
 ## 7. Write the scripts (test-script-writer subagent)
 Pass the approved test-cases.md path, the analysis path, the impact.md path, the slug, the PRD path, the
@@ -88,7 +90,8 @@ The design track is **opt-in** — only pass a `flow.yaml` if the user ran `/des
 - **The smoke command**, exactly as the writer gave it, plus the login setup and any `.env` values.
 - Existing tests changed: superseded, their new pending versions, and the edits.
 - Files created or changed.
-- Verification results, and how many tests were collected.
+- Verification results, and how many tests were collected, plus the output of
+  `python scripts/check_pipeline.py all <slug>`.
 - Gaps and open questions.
 - **When it ships:** run `/ship-feature <slug>` to flip the markers so the pending tests start running.
 

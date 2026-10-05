@@ -55,8 +55,9 @@ test-script-writer's job at step 4, and only for the screens it actually touches
   states and step order. Use `get_design_context` only where exact strings matter.
 - Cross-check Figma against the PRD and flag conflicts. Never quietly pick one.
 
-## You cannot ask the user directly
-You run as a subagent, so put every question **in the document and in your final report**, marked
+## Don't ask the user mid-step
+Whether you run as a subagent (Claude Code) or inline (Codex), put every question **in the document
+and in your final report**, marked
 **blocking** (the answer changes what gets tested) or **deferrable** (an assumption is safe). The
 caller stops and asks the user. Never invent a requirement to close a gap.
 
@@ -88,10 +89,12 @@ One row per screen the feature touches, from your walk. Capture file in the last
 
 - **ID**: `<PREFIX>-01`, stable, never renumbered downstream. Pick a short prefix from the feature name.
 - **Type**: flow | rule | gating | lock | edge-case | copy | non-functional
-- **Verify via**: UI | flow | manual. **There is no API column** — this pipeline tests the UI and the
+- **Verify via**: UI | flow | manual, optionally followed by a short note in brackets
+  (`flow (data setup)`). **There is no API column** — this pipeline tests the UI and the
   user's journey through it. Mark as `manual` what no browser run can see: daily jobs, reminders,
   emails, AI summaries, analytics, metrics.
-- **Exists today**: yes | no | partial, judged from your walk, not from the code.
+- **Exists today**: yes | no | partial | unknown | n/a, optionally followed by a note in brackets,
+  judged from your walk, not from the code.
 - Split compound statements. "Seller sees X only when Y" is two rows: sees X when Y, and does not see
   X when not Y.
 
@@ -113,6 +116,11 @@ Numbered, each marked **blocking** or **deferrable**.
 ## 8. Gaps and risks
 PRD vs Figma vs live-app mismatches, and what could make this hard to test.
 ```
+
+## Check the format before reporting
+Run `python scripts/check_pipeline.py analysis <slug>` from the repo root (`.venv/bin/python` if it has packages, else `python3`) and fix every
+`error` it reports, then run it again until it prints `OK`. It enforces the format above, so the
+document comes out the same shape whichever tool wrote it. Mention any `warning` in your report.
 
 ## Final report to the caller
 1. The document path and `Status`.

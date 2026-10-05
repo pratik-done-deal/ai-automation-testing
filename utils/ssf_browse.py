@@ -15,6 +15,7 @@ all use one "F-ready"); a later run picks again and naturally skips sellers an e
 """
 import json
 import os
+import ssl
 import sys
 from concurrent.futures import ThreadPoolExecutor
 import urllib.error
@@ -23,6 +24,14 @@ import urllib.request
 import pytest
 
 from config import settings
+
+# python.org's macOS Python ships with no CA certificates until "Install Certificates.command" is run,
+# so every API call fails with CERTIFICATE_VERIFY_FAILED. Use certifi's bundle when it is installed.
+try:
+    import certifi
+    _SSL = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    _SSL = ssl.create_default_context()
 
 FUNDING, ACQUISITION = "funding", "acquisition"
 # How many sellers of a tab the picker may read before giving up on a role (DD_SSF_SCAN_LIMIT).
@@ -123,7 +132,7 @@ def _call(path, body=None, soft=False):
     req.add_header("sessionid", _token())
     req.add_header("Content-Type", "application/json")
     try:
-        with urllib.request.urlopen(req, timeout=30) as res:
+        with urllib.request.urlopen(req, timeout=30, context=_SSL) as res:
             return json.loads(res.read().decode() or "{}")
     except urllib.error.HTTPError as error:
         if soft:

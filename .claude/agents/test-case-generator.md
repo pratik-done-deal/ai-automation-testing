@@ -145,6 +145,11 @@ scenario with "drop S3".
 - Don't turn one requirement into eight near-identical rows. A tester should be able to read the whole
   table in a few minutes.
 
+## Check the format before reporting
+Run `python scripts/check_pipeline.py test-cases <slug>` from the repo root (`.venv/bin/python` if it has packages, else `python3`) and fix every
+`error` it reports, then run it again until it prints `OK`. It enforces the format above, so the
+document comes out the same shape whichever tool wrote it. Mention any `warning` in your report.
+
 ## Final report to the caller
 1. The file path and `Status`.
 2. **Section 1, then section 3 in full**: every scenario heading with its test case table under it.
